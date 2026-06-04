@@ -1,0 +1,63 @@
+====================================================================
+EXPERIMENT 6 — STRENGTHENING ANALYSIS SUMMARY
+====================================================================
+
+PART A: STATISTICAL VALIDATION
+----------------------------------------
+  Configs tested:          9
+  Seeds per config:        5
+  Phase stable (all seeds same): 8/9
+  Low CV (<0.15):          8/9
+  Mean CV across configs:  0.0765
+  Verdict: ROBUST
+
+PART B: KYBER-512 DIRECT TEST
+----------------------------------------
+  Kyber-512 (sigma=1, theoretical)
+    Phase:     rugged
+    Rugosity:  0.1944
+    Classical: 299.3 bits
+    Grover:    271.6 bits
+    MATZOV:    212.7 bits
+
+  Kyber-512 (sigma=sqrt(1.5), CBD_3 exact)
+    Phase:     rugged
+    Rugosity:  0.1946
+    Classical: 299.3 bits
+    Grover:    271.6 bits
+    MATZOV:    212.7 bits
+
+  Kyber-512 (sigma=2, our baseline)
+    Phase:     rugged
+    Rugosity:  0.1951
+    Classical: 299.3 bits
+    Grover:    271.6 bits
+    MATZOV:    212.7 bits
+
+PART C: THREE BKZ COST MODELS
+----------------------------------------
+  Rugged configs: 9/42
+  Gaps at >80 bits: Grover=9, MATZOV=9
+  Gaps at >100 bits: Grover=9, MATZOV=9
+  Gaps at >128 bits: Grover=9, MATZOV=9
+
+PART D: PHASE BOUNDARY
+----------------------------------------
+  alpha*(n=128) = 20.0
+  alpha*(n=192) = 20.0
+  alpha*(n=256) = 60.0
+
+  Fitted: alpha*(n) = 0.000 * n^2.450
+  Predicted alpha*(256) = 57.6
+  Kyber-512 alpha       = 170.5
+  Kyber in rugged zone? YES
+
+====================================================================
+PAPER STRENGTHENING VERDICT
+====================================================================
+  1. Rugosity is statistically stable:  8/9 low-CV
+  2. Kyber-512 in rugged phase:         YES
+  3. Gaps survive quantum BKZ:          YES (Grover/MATZOV both show gaps)
+  4. Phase boundary fitted:             alpha*(n) = 0.00*n^2.45
+
+====================================================================

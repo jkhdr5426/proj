@@ -1,0 +1,60 @@
+======================================================================
+EXPERIMENT 13 — PER-INSTANCE VARIANCE + ξ_DUAL VALIDATION
+======================================================================
+
+PART A: PER-INSTANCE VARIANCE
+----------------------------------------
+
+  Config: hard (n=96, rugged)
+  n=96, q=235, sigma=2.0
+  roughness:  mean=0.1681  std=0.0140  CV=0.0834
+  efficiency: mean=0.0509  std=0.0036  CV=0.0710
+  tau_int:    mean=123.55  std=5.13  CV=0.0415
+  Verdict: Low variance — parameter-determined landscape
+
+  Config: easy (n=64, funnel)
+  n=64, q=193, sigma=2.0
+  roughness:  mean=0.1539  std=0.0276  CV=0.1795
+  efficiency: mean=0.0523  std=0.0035  CV=0.0675
+  tau_int:    mean=122.93  std=5.32  CV=0.0433
+  Verdict: SIGNIFICANT per-instance variance
+
+  KS test: stat=0.4000, p=0.0811
+  Not significant
+
+PART B: ξ_DUAL DIP VALIDATION
+----------------------------------------
+ sigma   d_ratio_mean   d_ratio_std    CV_d   reproducible
+------------------------------------------------------------
+  0.70        35.2544       29.3595   0.833             NO
+  0.80        33.3288       25.4466   0.764             NO
+  0.85        30.9094       22.7776   0.737             NO
+  0.90        76.6827      140.7190   1.835             NO
+  0.95        40.3416       64.7124   1.604             NO
+  1.00        35.8957       56.4150   1.572             NO
+  1.10        67.4432      134.5701   1.995             NO
+  1.30        31.9114       39.8954   1.250             NO
+  1.50        21.6814        8.8337   0.407             NO
+
+  Dip at sigma=1.50, CV=0.4074
+  Verdict: NOT reproducible — artifact
+
+======================================================================
+PAPER IMPLICATIONS
+======================================================================
+
+1. If Part A CV > 0.15 (significant per-instance variance):
+   → Umbrella sampling detects within-class instance weakness
+   → BKZ is blind to this: same gate count for all instances
+   → Claim: umbrella rugosity as a per-instance security supplement
+
+2. If Part B ξ_dual dip CV < 0.20 (reproducible):
+   → The dual reaction coordinate genuinely loses sensitivity
+     at the BDD/USVP family boundary
+   → Claim: ξ_dual tracks attack-family geometry
+
+3. If both are negative:
+   → Landscape is fully determined by (n,q,σ) parameters
+   → Umbrella sampling is a parameter-level tool, not instance-level
+   → Still useful: confirms BKZ completeness for within-class hardness
+======================================================================

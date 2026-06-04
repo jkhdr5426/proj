@@ -1,0 +1,44 @@
+================================================================================
+EXPERIMENT 8 — UMBRELLA TEXTURE VS REAL LATTICE-ESTIMATOR
+================================================================================
+
+GOALS
+- Replace old BKZ proxy bits with real lattice-estimator outputs.
+- Track bdd, usvp, dual, and dual_hybrid when available.
+- Compare rugosity against min attack cost, attack-family dominance, beta, and instability.
+
+PER-POINT RESULTS
+--------------------------------------------------------------------------------
+alpha=36.0  phase=funnel  rugosity=0.1560  mobility=0.1274  security=2^1.6  best_family=dual_hybrid  best_attack=dual_hybrid  dominance_gap=3.48
+  bdd=2^5.1,β=506.0, usvp=2^5.2,β=533.0, dual=2^8.5,β=558.0, dual_hybrid=2^1.6,β=540.0
+alpha=52.0  phase=funnel  rugosity=0.1563  mobility=0.1287  security=2^2.4  best_family=dual_hybrid  best_attack=dual_hybrid  dominance_gap=2.53
+  bdd=2^5.0,β=501.0, usvp=2^6.6,β=500.0, dual=2^7.1,β=523.0, dual_hybrid=2^2.4,β=509.0
+alpha=72.0  phase=funnel  rugosity=0.1563  mobility=0.1237  security=2^1.1  best_family=bdd  best_attack=bdd_mitm_hybrid  dominance_gap=1.04
+  bdd=2^1.1,β=475.0, usvp=2^3.4,β=474.0, dual=2^2.5,β=495.0, dual_hybrid=2^2.2,β=483.0
+alpha=96.0  phase=funnel  rugosity=0.1558  mobility=0.1246  security=2^2.3  best_family=dual  best_attack=dual  dominance_gap=1.59
+  bdd=2^6.9,β=453.0, usvp=2^3.9,β=452.0, dual=2^2.3,β=472.0, dual_hybrid=2^6.5,β=463.0
+alpha=128.0  phase=funnel  rugosity=0.1575  mobility=0.1252  security=2^1.5  best_family=bdd  best_attack=bdd  dominance_gap=1.47
+  bdd=2^1.5,β=410.0, usvp=2^6.8,β=432.0, dual=2^3.4,β=451.0, dual_hybrid=2^3.0,β=442.0
+alpha=160.0  phase=funnel  rugosity=0.1567  mobility=0.1275  security=2^1.3  best_family=dual  best_attack=dual  dominance_gap=1.16
+  bdd=2^4.9,β=417.0, usvp=2^3.3,β=417.0, dual=2^1.3,β=435.0, dual_hybrid=2^2.5,β=427.0
+alpha=208.0  phase=funnel  rugosity=0.1567  mobility=0.1257  security=2^1.3  best_family=usvp  best_attack=usvp  dominance_gap=0.71
+  bdd=2^3.4,β=380.0, usvp=2^1.3,β=401.0, dual=2^4.2,β=418.0, dual_hybrid=2^2.0,β=410.0
+
+KYBER1024 BASELINE
+--------------------------------------------------------------------------------
+min security ≈ 2^1.9
+best family: bdd
+best attack: bdd_mitm_hybrid
+
+AGGREGATES
+--------------------------------------------------------------------------------
+rugosity mean=0.1565, std=0.0005
+mobility mean=0.1261, std=0.0017
+min_bits mean=1.65, std=0.49
+
+FAMILY DOMINANCE COUNTS
+--------------------------------------------------------------------------------
+bdd: 2
+dual: 2
+dual_hybrid: 2
+usvp: 1

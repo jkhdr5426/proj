@@ -1,0 +1,45 @@
+================================================================================
+EXPERIMENT 9 — UMBRELLA FREE-ENERGY VS HARDNESS
+================================================================================
+
+GOALS
+- Compare free-energy geometry from umbrella sampling against lattice-estimator hardness.
+- Test whether barrier height, entropy, and mode structure track attack cost.
+
+CORRELATIONS
+--------------------------------------------------------------------------------
+barrier vs hardness: -0.3385
+entropy vs hardness: 0.4071
+roughness vs hardness: 0.8841
+peak separation vs hardness: n/a
+mode count vs hardness (Spearman): -0.5714
+
+PER-POINT RESULTS
+--------------------------------------------------------------------------------
+alpha=36.0  phase=funnel  hardness=2^178.4  best_family=bdd  best_attack=bdd  dominance_gap=6.700  barrier=702.052  entropy=0.297  roughness=0.148  peaks=1  peak_sep=n/a
+  bdd=2^178.4, usvp=2^185.1, dual=2^192.4, dual_hybrid=2^187.5
+alpha=52.0  phase=funnel  hardness=2^169.2  best_family=bdd  best_attack=bdd  dominance_gap=6.300  barrier=700.890  entropy=0.296  roughness=0.148  peaks=2  peak_sep=1993.568
+  bdd=2^169.2, usvp=2^175.5, dual=2^182.2, dual_hybrid=2^178.4
+alpha=72.0  phase=funnel  hardness=2^161.9  best_family=bdd  best_attack=bdd  dominance_gap=5.900  barrier=701.659  entropy=0.299  roughness=0.148  peaks=1  peak_sep=n/a
+  bdd=2^161.9, usvp=2^167.8, dual=2^174.0, dual_hybrid=2^171.0
+alpha=96.0  phase=funnel  hardness=2^155.8  best_family=bdd  best_attack=bdd  dominance_gap=5.600  barrier=702.411  entropy=0.292  roughness=0.147  peaks=1  peak_sep=n/a
+  bdd=2^155.8, usvp=2^161.4, dual=2^167.3, dual_hybrid=2^164.6
+alpha=128.0  phase=funnel  hardness=2^150.1  best_family=bdd  best_attack=bdd  dominance_gap=5.500  barrier=702.171  entropy=0.299  roughness=0.147  peaks=1  peak_sep=n/a
+  bdd=2^150.1, usvp=2^155.6, dual=2^161.2, dual_hybrid=2^158.4
+alpha=160.0  phase=funnel  hardness=2^146.0  best_family=bdd  best_attack=bdd  dominance_gap=5.200  barrier=701.718  entropy=0.292  roughness=0.147  peaks=2  peak_sep=6131.185
+  bdd=2^146.0, usvp=2^151.2, dual=2^156.5, dual_hybrid=2^154.1
+alpha=208.0  phase=funnel  hardness=2^141.3  best_family=bdd  best_attack=bdd  dominance_gap=5.200  barrier=702.077  entropy=0.294  roughness=0.147  peaks=1  peak_sep=n/a
+  bdd=2^141.3, usvp=2^146.5, dual=2^151.6, dual_hybrid=2^149.1
+
+KYBER1024 BASELINE
+--------------------------------------------------------------------------------
+min security ≈ 2^268.7
+best family: dual_hybrid
+best attack: dual_hybrid
+
+AGGREGATES
+--------------------------------------------------------------------------------
+hardness mean=157.53, std=12.22
+barrier mean=701.8539, std=0.4607
+entropy mean=0.2956, std=0.0027
+roughness mean=0.1473, std=0.0004

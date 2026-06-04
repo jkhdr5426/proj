@@ -1,0 +1,63 @@
+======================================================================
+EXPERIMENT 14 — BIMODAL ROUGHNESS INVESTIGATION
+======================================================================
+
+CONFIG: easy (n=64)
+----------------------------------------
+  n instances: 60
+  roughness mean: 0.1590
+  roughness std:  0.0300
+  CV:             0.1886
+  BC:             0.3095  (unimodal)
+  valley depth:   0.8000
+
+  SPECTRAL CORRELATIONS:
+           cond_number: r=-0.2081  p=0.1105
+            sv_entropy: r=+0.0850  p=0.5183
+              col_corr: r=+0.0053  p=0.9678
+         sv_tail_ratio: r=+0.2125  p=0.1031
+          spectral_gap: r=-0.0601  p=0.6482
+            efficiency: r=-0.2231  p=0.0866
+
+CONFIG: hard (n=96)
+----------------------------------------
+  n instances: 60
+  roughness mean: 0.1653
+  roughness std:  0.0104
+  CV:             0.0631
+  BC:             0.0411  (unimodal)
+  valley depth:   0.0000
+
+  SPECTRAL CORRELATIONS:
+           cond_number: r=-0.0312  p=0.8129
+            sv_entropy: r=-0.0928  p=0.4809
+              col_corr: r=-0.2952  p=0.0220 ***
+         sv_tail_ratio: r=+0.0336  p=0.7986
+          spectral_gap: r=+0.3425  p=0.0074 ***
+            efficiency: r=-0.2187  p=0.0931
+
+======================================================================
+INTERPRETATION
+======================================================================
+
+CASE 1 — BC > 0.555 AND significant spectral correlation:
+  → Bimodality is real and explained by A matrix structure.
+  → Umbrella sampling detects per-instance structural weakness.
+  → BKZ gives the same gate count to all instances; umbrella
+    discriminates between structurally strong and weak A matrices.
+  → PUBLISHABLE FINDING: "umbrella roughness as a per-instance
+    structural security supplement to BKZ"
+
+CASE 2 — BC > 0.555 BUT no spectral correlation:
+  → Bimodality is real but its cause is unknown.
+  → Could be WHAM sampling noise or a feature of the reaction
+    coordinate rather than the lattice.
+  → Inconclusive: need alternative explanations.
+
+CASE 3 — BC < 0.555:
+  → No confirmed bimodality. The Exp 13 CV=0.18 was not enough
+    data to see a clear bimodal structure.
+  → Landscape is parameter-determined, not instance-specific.
+  → Useful negative: confirms BKZ is complete for within-class
+    hardness characterization.
+======================================================================

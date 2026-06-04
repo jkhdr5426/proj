@@ -1,0 +1,44 @@
+====================================================================
+BKZ vs UMBRELLA SAMPLING — DISAGREEMENT REPORT v2
+====================================================================
+
+STRONG GAPS (6 configs)
+BKZ cannot fully break, but umbrella finds rugged landscape.
+These are the most significant findings.
+
+     n       q   alpha   rugosity   mobility   BKZ_beta   log2gates
+  ------------------------------------------------------------
+    24     177   18.06     0.1169     0.3899         97       28.32
+    24     255   26.03     0.0903     0.3764         97       28.32
+    24     353   36.03     0.1009     0.3667         97       28.32
+    28     191   18.05     0.1201     0.3853        113       33.00
+    28     275   25.99     0.1311     0.3715        113       33.00
+    28     381   36.00     0.1170     0.3585        113       33.00
+
+SOFT GAPS (0 configs)
+BKZ breaks but costs > 80 bits, and umbrella finds rugged.
+
+  None found at this scale.
+
+====================================================================
+INTERPRETATION
+====================================================================
+
+A 'rugged' free energy landscape means the Metropolis-Hastings
+sampler found multiple competing local minima when trying to
+navigate from a random guess toward the true secret.
+
+BKZ models a single-pathway lattice reduction. It does not
+account for metastability or landscape roughness. If umbrella
+sampling finds a rugged landscape in a region where BKZ also
+struggles (or fails entirely), this suggests the hardness of
+those instances comes from a different mechanism than BKZ assumes.
+
+STRONG GAP configs are the most interesting: BKZ cannot even
+find an attack path, yet the umbrella sampler sees structural
+complexity (rugosity > 0) rather than a flat cliff. This
+means the search space is not uniformly hard — it has texture
+that neither BKZ nor brute force can exploit cleanly.
+
+This is the novel contribution: umbrella sampling reveals
+hardness texture that BKZ security models miss entirely.
