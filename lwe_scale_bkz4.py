@@ -23,9 +23,7 @@ BG  = '#0f1117'
 PBG = '#1a1d27'
 PHASE_COLORS = {"funnel":"#69ff94","rugged":"#ffd93d","cliff":"#ff6b6b","unknown":"#888"}
 
-# ═══════════════════════════════════════════════════════
 # LWE CORE
-# ═══════════════════════════════════════════════════════
 
 @dataclass
 class LWEInstance:
@@ -47,9 +45,7 @@ def residual_norm(lwe, s):
 def umbrella_energy(xi, xc, k):
     return 0.5 * k * (xi - xc) ** 2
 
-# ═══════════════════════════════════════════════════════
 # SAMPLER
-# ═══════════════════════════════════════════════════════
 
 def mh_window(lwe, xi_center, k, T, n_steps, s_init=None, n_chains=3):
     n         = lwe.n
@@ -115,9 +111,7 @@ def wham(window_xis, xi_centers, k, T, xi_bins, n_iter=300, tol=1e-7):
     F = -np.log(np.where(rho > 0, rho, 1e-300)); F -= F.min()
     return bc, F
 
-# ═══════════════════════════════════════════════════════
 # RESULT — freeze_ratio replaced by window_gap
-# ═══════════════════════════════════════════════════════
 
 @dataclass
 class Result:
@@ -189,9 +183,7 @@ def run_config(n, q, sigma,
                   bin_centers=bc, F=F,
                   window_means=window_means, window_acc=window_acc)
 
-# ═══════════════════════════════════════════════════════
 # BKZ ESTIMATOR
-# ═══════════════════════════════════════════════════════
 
 def bkz_estimate(n, q, sigma, m_factor=3):
     m   = m_factor * n
@@ -229,9 +221,7 @@ def attach_bkz(results):
         print(f"  {r.n:>4}  {r.q:>5}  {r.bkz_beta:>6.0f}  "
               f"{r.bkz_log2gates:>10.2f}  {flag:>10}")
 
-# ═══════════════════════════════════════════════════════
 # CLUSTERING — fixed labeling
-# ═══════════════════════════════════════════════════════
 
 def cluster_results(results, n_clusters=3):
     X = np.array([[r.rugosity, r.window_gap, r.mobility]
@@ -271,9 +261,7 @@ def cluster_results(results, n_clusters=3):
 
     return labels, sil, centroids_orig, cluster_names, thresholds
 
-# ═══════════════════════════════════════════════════════
 # DISAGREEMENT DETECTION
-# ═══════════════════════════════════════════════════════
 
 def find_disagreements(results, bkz_hard_threshold=80.0):
     gaps_strong = []; gaps_soft = []
@@ -313,9 +301,6 @@ def write_disagreements(gaps_strong, gaps_soft, path="lwe_disagreements_v3.txt")
             f.write("  None found.\n")
     print(f"Disagreement report saved to {path}")
 
-# ═══════════════════════════════════════════════════════
-# PLOTTING
-# ═══════════════════════════════════════════════════════
 
 def plot_results(results, ns, alphas, sil, save="lwe_scale_results_v3.png"):
     fig = plt.figure(figsize=(20, 18))
@@ -475,9 +460,7 @@ def plot_results(results, ns, alphas, sil, save="lwe_scale_results_v3.png"):
     print(f"Plot saved to {save}")
     plt.close()
 
-# ═══════════════════════════════════════════════════════
 # CONCLUSIONS
-# ═══════════════════════════════════════════════════════
 
 def print_conclusions(results, gaps_strong, gaps_soft, sil, thresholds):
     counts = {p: sum(1 for r in results if r.phase_label==p)
@@ -526,9 +509,6 @@ def print_conclusions(results, gaps_strong, gaps_soft, sil, thresholds):
     print("  3. Test Kyber-512: n=256, q=3329, sigma~1")
     print(f"\n{sep}")
 
-# ═══════════════════════════════════════════════════════
-# MAIN
-# ═══════════════════════════════════════════════════════
 
 if __name__ == "__main__":
     ns     = [24, 28, 32, 36, 40, 48, 56, 64]

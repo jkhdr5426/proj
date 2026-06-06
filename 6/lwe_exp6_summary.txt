@@ -1,8 +1,6 @@
-====================================================================
-EXPERIMENT 6 — STRENGTHENING ANALYSIS SUMMARY
-====================================================================
-
-PART A: STATISTICAL VALIDATION
+===========EXPERIMENT 6 ï¿½ STRENGTHENING ANALYSIS summmarryyyy
+===========
+first partt :) : STATISTICAL VALIDATION
 ----------------------------------------
   Configs tested:          9
   Seeds per config:        5
@@ -11,7 +9,7 @@ PART A: STATISTICAL VALIDATION
   Mean CV across configs:  0.0765
   Verdict: ROBUST
 
-PART B: KYBER-512 DIRECT TEST
+second part :) : KYBER-512 DIRECT TEST
 ----------------------------------------
   Kyber-512 (sigma=1, theoretical)
     Phase:     rugged
@@ -52,12 +50,10 @@ PART D: PHASE BOUNDARY
   Kyber-512 alpha       = 170.5
   Kyber in rugged zone? YES
 
-====================================================================
-PAPER STRENGTHENING VERDICT
-====================================================================
-  1. Rugosity is statistically stable:  8/9 low-CV
+===========PAPER STRENGTHENING VERDICT
+===========  1. Rugosity is statistically stable:  8/9 low-CV
   2. Kyber-512 in rugged phase:         YES
   3. Gaps survive quantum BKZ:          YES (Grover/MATZOV both show gaps)
   4. Phase boundary fitted:             alpha*(n) = 0.00*n^2.45
 
-====================================================================
+===========

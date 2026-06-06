@@ -1,7 +1,5 @@
-====================================================================
-EXPERIMENT 7 — TARGETED FIXES SUMMARY
-====================================================================
-
+===========EXPERIMENT 7 ï¿½ TARGETED FIXES summmarryyyy
+===========
 FIX 1: WHAM STABILITY
 ----------------------------------------
   Adaptive k = k_base * (500 / xi_range)^2
@@ -23,7 +21,7 @@ FIX 3: UNSTABLE CONFIG (n=96, q=1411)
   10-seed mean rugosity: 0.1625
   10-seed CV:            0.1851
   Phase distribution:    {'funnel': 7, 'rugged': 3}
-  Verdict: boundary case — exclude from paper gap list
+  Verdict: boundary case ï¿½ exclude from paper gap list
 
 FIX 4: DILITHIUM PARAMETERS
 ----------------------------------------
@@ -51,14 +49,12 @@ FIX 4: DILITHIUM PARAMETERS
     rugosity = 0.1543
     BKZ classical = 299.3 bits
 
-====================================================================
-PAPER UPDATE CHECKLIST
-====================================================================
-  [x] WHAM stability fixed via adaptive k
+===========PAPER UPDATE CHECKLIST
+===========  [x] WHAM stability fixed via adaptive k
   [x] Boundary fit fixed via log-log regression
   [x] Unstable config clarified as boundary case
   [x] Dilithium tested and compared to Kyber
   [ ] Replace approx BKZ with real lattice-estimator
   [ ] Run at n=512 (Kyber-1024 territory)
   [ ] Submit to PQCrypto 2026 or CCS 2026
-====================================================================
+===========

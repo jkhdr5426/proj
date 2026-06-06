@@ -1,7 +1,6 @@
 """
 Experiment 6: Four Strengthening Directions for Publication
-===========================================================
-Runtime estimate: ~90 min on RTX 5070 Ti
+==Runtime estimate: ~90 min on RTX 5070 Ti
 
 Part A: Statistical Validation
   9 gap configs from Exp 5, each run with 5 independent seeds.
@@ -12,7 +11,7 @@ Part B: Kyber-512 Direct Test
   n=256, q=3329, sigma=1.0   (simplified Kyber analysis)
   n=256, q=3329, sigma=1.22  (CBD_3 exact: sigma = sqrt(3/2))
   Phase classification + rugosity + all three BKZ cost models.
-  If rugged: this is the headline result of the paper.
+  if rugged: this is the headline result of the paper.
 
 Part C: Three BKZ Cost Models (no new sampling needed)
   Classical BKZ:       log2(gates) = 0.292 * beta
@@ -42,7 +41,7 @@ from typing import List, Tuple, Dict
 import warnings, time, math
 warnings.filterwarnings('ignore')
 
-# ── PyTorch / GPU ─────────────────────────────────────────────────────────
+#  PyTorch / GPU ─
 try:
     import torch
     if torch.cuda.is_available():
@@ -65,9 +64,7 @@ BG   = '#0f1117'
 PBG  = '#1a1d27'
 PHASE_COLORS = {"funnel":"#69ff94","rugged":"#ffd93d","cliff":"#ff6b6b","unknown":"#888"}
 
-# ═══════════════════════════════════════════════════════════════════════════
 # SECTION 1 — LWE CORE  (seed-aware for statistical validation)
-# ═══════════════════════════════════════════════════════════════════════════
 
 @dataclass
 class LWEInstance:
@@ -100,9 +97,7 @@ def residual_norm_gpu(lwe, s_batch):
     r = torch.where(r > q // 2, r - q, r)
     return torch.norm(r.T, dim=1)
 
-# ═══════════════════════════════════════════════════════════════════════════
 # SECTION 2 — GPU MH SAMPLER  (unchanged from Exp 5)
-# ═══════════════════════════════════════════════════════════════════════════
 
 def mh_all_windows_gpu(lwe, xi_centers, k, T, n_steps,
                         n_chains=8, s_init_batch=None,
@@ -177,9 +172,7 @@ def wham(window_xis, xi_centers, k, T, xi_bins, n_iter=300, tol=1e-7):
     F = -np.log(np.where(rho>0, rho, 1e-300)); F -= F.min()
     return bc, F
 
-# ═══════════════════════════════════════════════════════════════════════════
 # SECTION 3 — RUN CONFIG (seed-aware, returns raw metrics)
-# ═══════════════════════════════════════════════════════════════════════════
 
 def run_config(n, q, sigma, seed=None,
                n_windows=16, n_steps_burn=600, n_steps_prod=2000,
@@ -221,9 +214,7 @@ def run_config(n, q, sigma, seed=None,
                 rugosity=rugosity, window_gap=window_gap, mobility=mobility,
                 bin_centers=bc, F=F)
 
-# ═══════════════════════════════════════════════════════════════════════════
 # SECTION 4 — THREE BKZ COST MODELS
-# ═══════════════════════════════════════════════════════════════════════════
 
 def bkz_all_models(n, q, sigma, m_factor=3):
     """
@@ -267,9 +258,7 @@ def bkz_all_models(n, q, sigma, m_factor=3):
 NIST_CLASSICAL = {1: 143, 3: 207, 5: 272}   # approximate classical
 NIST_QUANTUM   = {1:  64, 3:  96, 5: 128}   # approximate quantum (Grover-AES equiv)
 
-# ═══════════════════════════════════════════════════════════════════════════
 # SECTION 5 — CLUSTERING  (same as v3)
-# ═══════════════════════════════════════════════════════════════════════════
 
 def classify_phase(rugosity, window_gap, mobility,
                    rug_thresh=0.16, mob_thresh=0.015):
@@ -312,9 +301,7 @@ def cluster_results(results, n_clusters=3):
         r['phase'] = cluster_names[labels[i]]
     return labels, sil
 
-# ═══════════════════════════════════════════════════════════════════════════
-# PART A — STATISTICAL VALIDATION
-# ═══════════════════════════════════════════════════════════════════════════
+# first partt :)  — STATISTICAL VALIDATION
 
 # The 9 strong gap configs from Experiment 5
 GAP_CONFIGS = [
@@ -332,7 +319,7 @@ N_SEEDS = 5
 
 def part_a_statistical_validation():
     print("\n" + "="*65)
-    print("  PART A: Statistical Validation (5 seeds × 9 gap configs)")
+    print("  first partt :) : Statistical Validation (5 seeds × 9 gap configs)")
     print("="*65)
     print(f"  {'n':>4}  {'q':>6}  {'σ':>4}  {'α':>6}  "
           f"{'rug_mean':>9}  {'rug_std':>8}  {'CV':>6}  {'phase_stable':>12}")
@@ -381,13 +368,11 @@ def part_a_statistical_validation():
     print(f"  CV < 0.15 (low variance):  {n_low_cv}/{len(GAP_CONFIGS)}")
     return all_results
 
-# ═══════════════════════════════════════════════════════════════════════════
-# PART B — KYBER-512 DIRECT TEST
-# ═══════════════════════════════════════════════════════════════════════════
+# second part :)  — KYBER-512 DIRECT TEST
 
 def part_b_kyber_direct():
     print("\n" + "="*65)
-    print("  PART B: Kyber-512 Direct Test")
+    print("  second part :) : Kyber-512 Direct Test")
     print("="*65)
     print("  CBD_3 distribution: sigma = sqrt(3/2) = 1.2247")
     print("  Kyber-512: n=256, q=3329, k=2 (MLWE, treated as LWE here)")
@@ -421,7 +406,7 @@ def part_b_kyber_direct():
         print(f"    ({time.time()-t0:.0f}s)")
 
     # Summary
-    print(f"\n  KYBER-512 RESULT SUMMARY:")
+    print(f"\n  KYBER-512 RESULT summmarryyyy:")
     print(f"  {'Config':40s}  {'Phase':8s}  {'Rug':8s}  {'Classical':10s}  "
           f"{'Grover':8s}  {'MATZOV':8s}")
     print("  " + "-"*85)
@@ -441,9 +426,7 @@ def part_b_kyber_direct():
         print(f"  Note: our sigma may differ from Kyber's CBD distribution.")
     return results
 
-# ═══════════════════════════════════════════════════════════════════════════
-# PART C — THREE BKZ COST MODELS ON ALL EXP 5 CONFIGS
-# ═══════════════════════════════════════════════════════════════════════════
+# third part :) — THREE BKZ COST MODELS ON ALL EXP 5 CONFIGS
 
 # All Exp 5 configs with their phase labels from that run
 EXP5_CONFIGS = [
@@ -521,9 +504,7 @@ def part_c_three_cost_models():
     print(f"    MATZOV model:  {n_exceed_matzov}/{sum(1 for r in rows if r['phase']=='rugged')}")
     return rows
 
-# ═══════════════════════════════════════════════════════════════════════════
-# PART D — PHASE BOUNDARY PRECISION SCAN
-# ═══════════════════════════════════════════════════════════════════════════
+# third part :/— PHASE BOUNDARY PRECISION SCAN
 
 def part_d_phase_boundary():
     print("\n" + "="*65)
@@ -619,9 +600,7 @@ def part_d_phase_boundary():
     print(f"\n  Boundary scan completed in {time.time()-t0:.0f}s")
     return boundary_results, all_scan, transition_ns, transition_alphas, A, B
 
-# ═══════════════════════════════════════════════════════════════════════════
 # PLOTTING — all four parts in one figure set
-# ═══════════════════════════════════════════════════════════════════════════
 
 def plot_all(val_results, kyber_results, bkz_rows, boundary_results,
              transition_ns, transition_alphas, A, B,
@@ -639,7 +618,7 @@ def plot_all(val_results, kyber_results, bkz_rows, boundary_results,
         ax.tick_params(colors='white', labelsize=7)
         for sp in ax.spines.values(): sp.set_edgecolor('#444')
 
-    # ── A1: Error bars on rugosity for gap configs ─────────────────────
+    #  A1: Error bars on rugosity for gap configs ─
     ax0 = fig.add_subplot(gs[0, :2])
     ax0.set_facecolor(PBG)
     keys   = list(val_results.keys())
@@ -661,12 +640,12 @@ def plot_all(val_results, kyber_results, bkz_rows, boundary_results,
     ax0.axhline(0.16, color='#ffd93d', lw=1.5, linestyle='--',
                 label='rugged threshold (0.16)')
     styled(ax0,
-           'PART A — Rugosity Stability (5 seeds per gap config)\n'
+           'first partt :)  — Rugosity Stability (5 seeds per gap config)\n'
            'green = phase stable, red = phase varies across seeds',
            'config (n, q)', 'mean rugosity ± std', '#ffd93d')
     ax0.legend(fontsize=7, labelcolor='white', facecolor=PBG)
 
-    # ── A2: CV distribution ───────────────────────────────────────────
+    #  A2: CV distribution ─
     ax1 = fig.add_subplot(gs[0, 2])
     ax1.set_facecolor(PBG)
     ax1.hist(cvs, bins=8, color='#00d4ff', edgecolor='white', alpha=0.85)
@@ -674,11 +653,11 @@ def plot_all(val_results, kyber_results, bkz_rows, boundary_results,
                 label='CV=0.15 (stable threshold)')
     ax1.axvline(np.mean(cvs), color='#69ff94', lw=2, linestyle='-',
                 label=f'mean CV={np.mean(cvs):.3f}')
-    styled(ax1, 'PART A — CV Distribution\n(lower = more stable metric)',
+    styled(ax1, 'first partt :)  — CV Distribution\n(lower = more stable metric)',
            'coefficient of variation', 'count', '#00d4ff')
     ax1.legend(fontsize=7, labelcolor='white', facecolor=PBG)
 
-    # ── B: Kyber-512 F(xi) profiles ───────────────────────────────────
+    #  B: Kyber-512 F(xi) profiles ─
     ax2 = fig.add_subplot(gs[1, 0])
     ax2.set_facecolor(PBG)
     line_colors = ['#69ff94', '#ffd93d', '#00d4ff']
@@ -688,12 +667,12 @@ def plot_all(val_results, kyber_results, bkz_rows, boundary_results,
         lbl   = f"{r['label'].split('(')[1].rstrip(')')}\nphase={r['phase']}"
         ax2.plot(r['bin_centers'][valid], r['F'][valid],
                  color=line_colors[i], lw=2, label=lbl)
-    styled(ax2, 'PART B — Kyber-512 F(ξ) Profiles\n'
+    styled(ax2, 'second part :)  — Kyber-512 F(ξ) Profiles\n'
            '(n=256, q=3329, varying sigma)',
            'ξ (residual norm)', 'F(ξ) free energy', '#ffd93d')
     ax2.legend(fontsize=6.5, labelcolor='white', facecolor=PBG)
 
-    # ── C: Three BKZ cost models comparison ───────────────────────────
+    #  C: Three BKZ cost models comparison ─
     ax3 = fig.add_subplot(gs[1, 1])
     ax3.set_facecolor(PBG)
     rugged_rows = [r for r in bkz_rows if r['phase']=='rugged']
@@ -711,11 +690,11 @@ def plot_all(val_results, kyber_results, bkz_rows, boundary_results,
                 label='Quantum L1 (~64 bit)')
     rug_labels = [f"n={r['n']}\nα={r['alpha']:.0f}" for r in rugged_rows]
     ax3.set_xticks(xs_bkz); ax3.set_xticklabels(rug_labels, fontsize=6, color='white')
-    styled(ax3, 'PART C — BKZ Costs Under Three Models\n(rugged configs only)',
+    styled(ax3, 'third part :) — BKZ Costs Under Three Models\n(rugged configs only)',
            'rugged config', 'log₂(gates)', '#00d4ff')
     ax3.legend(fontsize=6, labelcolor='white', facecolor=PBG, ncol=1)
 
-    # ── C: Scatter classical vs quantum cost ──────────────────────────
+    #  C: Scatter classical vs quantum cost 
     ax4 = fig.add_subplot(gs[1, 2])
     ax4.set_facecolor(PBG)
     for r in bkz_rows:
@@ -733,13 +712,13 @@ def plot_all(val_results, kyber_results, bkz_rows, boundary_results,
              alpha=0.6, label='0.265/0.292 ratio')
     ax4.axvline(128, color='white', lw=0.8, linestyle='--', alpha=0.4)
     ax4.axhline(64,  color='white', lw=0.8, linestyle='--', alpha=0.4)
-    styled(ax4, 'PART C — Classical vs Grover Cost\n(triangle = rugged)',
+    styled(ax4, 'third part :) — Classical vs Grover Cost\n(triangle = rugged)',
            'classical log₂(gates)', 'quantum log₂(gates)')
     ax4.legend(handles=[Patch(color=PHASE_COLORS[p], label=p)
                          for p in ["funnel","rugged","cliff"]],
                fontsize=7, labelcolor='white', facecolor=PBG)
 
-    # ── D: Rugosity vs alpha per n (boundary scan) ────────────────────
+    #  D: Rugosity vs alpha per n (boundary scan) 
     ax5 = fig.add_subplot(gs[2, :2])
     ax5.set_facecolor(PBG)
     cmap_n = plt.cm.plasma
@@ -761,12 +740,12 @@ def plot_all(val_results, kyber_results, bkz_rows, boundary_results,
     ax5.axhline(0.16, color='#ffd93d', lw=1.5, linestyle='--',
                 label='rugged threshold (0.16)')
     styled(ax5,
-           'PART D — Phase Boundary Scan: Rugosity vs α\n'
+           'third part :/— Phase Boundary Scan: Rugosity vs α\n'
            '(triangles = rugged phase onset)',
            'α = q/(σ√n)', 'rugosity', '#69ff94')
     ax5.legend(fontsize=7, labelcolor='white', facecolor=PBG)
 
-    # ── D: Boundary curve fit ─────────────────────────────────────────
+    #  D: Boundary curve fit ─
     ax6 = fig.add_subplot(gs[2, 2])
     ax6.set_facecolor(PBG)
     if transition_ns and len(transition_ns) >= 2:
@@ -784,7 +763,7 @@ def plot_all(val_results, kyber_results, bkz_rows, boundary_results,
                         label=f'Kyber-512 (α={kyber_alpha:.0f})')
     ax6.set_xlim(60, 300)
     styled(ax6,
-           'PART D — Phase Boundary Curve\nα*(n) = A·n^B',
+           'third part :/— Phase Boundary Curve\nα*(n) = A·n^B',
            'dimension n', 'alpha* (rugged onset)', '#00d4ff')
     ax6.legend(fontsize=7, labelcolor='white', facecolor=PBG)
 
@@ -795,12 +774,10 @@ def plot_all(val_results, kyber_results, bkz_rows, boundary_results,
         color='white', fontsize=13, fontweight='bold', y=1.005)
 
     plt.savefig(save, dpi=150, bbox_inches='tight', facecolor=BG)
-    print(f"\nPlot saved → {save}")
+    print(f"\nPlot saved >>>> {save}")
     plt.close()
 
-# ═══════════════════════════════════════════════════════════════════════════
-# FINAL SUMMARY REPORT
-# ═══════════════════════════════════════════════════════════════════════════
+# FINAL summmarryyyy REPORT
 
 def write_summary(val_results, kyber_results, bkz_rows,
                   transition_ns, transition_alphas, A, B,
@@ -808,10 +785,10 @@ def write_summary(val_results, kyber_results, bkz_rows,
     with open(path, "w") as f:
         sep = "=" * 68
         f.write(sep + "\n")
-        f.write("EXPERIMENT 6 — STRENGTHENING ANALYSIS SUMMARY\n")
+        f.write("EXPERIMENT 6 — STRENGTHENING ANALYSIS summmarryyyy\n")
         f.write(sep + "\n\n")
 
-        f.write("PART A: STATISTICAL VALIDATION\n")
+        f.write("first partt :) : STATISTICAL VALIDATION\n")
         f.write("-" * 40 + "\n")
         n_stable = sum(1 for v in val_results.values() if v['phase_stable'])
         n_low_cv = sum(1 for v in val_results.values() if v['cv'] < 0.15)
@@ -826,7 +803,7 @@ def write_summary(val_results, kyber_results, bkz_rows,
                    else "WEAK")
         f.write(f"  Verdict: {verdict}\n\n")
 
-        f.write("PART B: KYBER-512 DIRECT TEST\n")
+        f.write("second part :) : KYBER-512 DIRECT TEST\n")
         f.write("-" * 40 + "\n")
         for r in kyber_results:
             bkz = r['bkz']
@@ -870,11 +847,8 @@ def write_summary(val_results, kyber_results, bkz_rows,
         f.write(f"  4. Phase boundary fitted:             alpha*(n) = {A:.2f}*n^{B:.2f}\n" if A else
                 f"  4. Phase boundary:                    insufficient data for fit\n")
         f.write(f"\n{sep}\n")
-    print(f"Summary saved → {path}")
+    print(f"Summary saved >>>> {path}")
 
-# ═══════════════════════════════════════════════════════════════════════════
-# MAIN
-# ═══════════════════════════════════════════════════════════════════════════
 
 if __name__ == "__main__":
     total_t0 = time.time()
@@ -898,7 +872,7 @@ if __name__ == "__main__":
     transition_ns, transition_alphas, A, B = part_d_phase_boundary()
 
     # Plots + summary
-    print("\nGenerating plots...")
+    print("\nplots generating.....")
     plot_all(val_results, kyber_results, bkz_rows, boundary_results,
              transition_ns, transition_alphas, A, B)
 

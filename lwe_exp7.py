@@ -1,6 +1,6 @@
 """
 Experiment 7: Targeted Fixes + Dilithium
-=========================================
+==================
 Fixes four specific issues from Experiment 6:
 
 FIX 1 — WHAM STABILITY AT EXTREME PARAMETERS
@@ -11,7 +11,7 @@ FIX 1 — WHAM STABILITY AT EXTREME PARAMETERS
   where xi_range_ref = 500 (the scale at n=64 from Exp 5).
 
 FIX 2 — BOUNDARY FIT
-  The power law A*n^B failed (A→0).
+  The power law A*n^B failed (A>>>>0).
   Use log-linear fit instead: log(alpha*) = a + b*log(n)
   which is the same power law but fitted in log-log space,
   giving a numerically stable result.
@@ -42,7 +42,7 @@ from typing import List, Tuple, Dict, Optional
 import warnings, time, math
 warnings.filterwarnings('ignore')
 
-# ── GPU setup ─────────────────────────────────────────────────────────────
+#  GPU setup ─
 try:
     import torch
     DEVICE   = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -57,9 +57,7 @@ BG  = '#0f1117'; PBG = '#1a1d27'
 PHASE_COLORS = {"funnel":"#69ff94","rugged":"#ffd93d",
                 "cliff":"#ff6b6b","unknown":"#888"}
 
-# ═══════════════════════════════════════════════════════════════════════════
 # CORE — LWE + GPU SAMPLER + WHAM  (same as Exp 5/6)
-# ═══════════════════════════════════════════════════════════════════════════
 
 @dataclass
 class LWEInstance:
@@ -131,7 +129,7 @@ def mh_all_windows_gpu(lwe, xi_centers, k, T, n_steps,
     acc_by_win = acc_rates.reshape(n_win, n_chains).mean(axis=1)
     return xi_trajs, s_batch, acc_by_win
 
-# ── FIX 1: WHAM with adaptive k scaling ──────────────────────────────────
+#  FIX 1: WHAM with adaptive k scaling 
 XI_RANGE_REF = 500.0   # reference scale from n=64 in Exp 5
 
 def wham_stable(window_xis, xi_centers, k, T, xi_bins, n_iter=400, tol=1e-8):
@@ -177,7 +175,6 @@ def run_config_stable(n, q, sigma, seed=None,
     xi_min     = max(xi_true * 0.75, 1.0)
     xi_range   = xi_max - xi_min + 1e-9
 
-    # FIX 1: adaptive k
     k_scaled   = k_base * (XI_RANGE_REF / xi_range) ** 2
     k_scaled   = max(k_scaled, 1e-10)   # numerical floor
 
@@ -237,9 +234,6 @@ def bkz_all_models(n, q, sigma, m_factor=3):
             'matzov':    0.2075*best_beta,
             'attack_full': attack_full}
 
-# ═══════════════════════════════════════════════════════════════════════════
-# FIX 2 — BOUNDARY SCAN (3 seeds + log-log fit)
-# ═══════════════════════════════════════════════════════════════════════════
 
 def part_fix2_boundary():
     print("\n" + "="*65)
@@ -296,7 +290,6 @@ def part_fix2_boundary():
         else:
             print(f"    n={n}: no transition found in alpha=[20,250]")
 
-    # FIX 2: log-log fit  →  log(alpha*) = a + b*log(n)
     fit_A, fit_B = None, None
     if len(transition_ns) >= 2:
         log_ns     = np.log(transition_ns)
@@ -316,9 +309,6 @@ def part_fix2_boundary():
     print(f"\n  Boundary scan: {time.time()-t0:.0f}s")
     return boundary_results, transition_ns, transition_alphas, fit_A, fit_B
 
-# ═══════════════════════════════════════════════════════════════════════════
-# FIX 3 — UNSTABLE CONFIG DEEP INVESTIGATION
-# ═══════════════════════════════════════════════════════════════════════════
 
 def part_fix3_unstable():
     print("\n" + "="*65)
@@ -352,13 +342,10 @@ def part_fix3_unstable():
     print(f"  ({time.time()-t0:.0f}s)")
     return rugs, phases
 
-# ═══════════════════════════════════════════════════════════════════════════
-# FIX 4 — DILITHIUM PARAMETERS
-# ═══════════════════════════════════════════════════════════════════════════
 
 DILITHIUM_CONFIGS = [
     # (name, n, q, sigma_approx)
-    # Dilithium-2: n=256, q=8380417, error from CBD eta=2 → sigma=sqrt(2)
+    # Dilithium-2: n=256, q=8380417, error from CBD eta=2 >>>> sigma=sqrt(2)
     ("Dilithium-2 (sigma=sqrt(2))",  256, 8380417, 1.414),
     # Dilithium-3: same n,q, different message space
     ("Dilithium-3 (sigma=sqrt(3))",  256, 8380417, 1.732),
@@ -410,9 +397,6 @@ def part_fix4_dilithium():
 
     return results
 
-# ═══════════════════════════════════════════════════════════════════════════
-# PLOTTING
-# ═══════════════════════════════════════════════════════════════════════════
 
 def plot_all(boundary_results, transition_ns, transition_alphas, fit_A, fit_B,
              unstable_rugs, unstable_phases,
@@ -434,7 +418,7 @@ def plot_all(boundary_results, transition_ns, transition_alphas, fit_A, fit_B,
     cmap_n = plt.cm.plasma
     ns_scan = list(boundary_results.keys())
 
-    # ── Row 0: Boundary scan (wide) + fit ────────────────────────────
+    #  Row 0: Boundary scan (wide) + fit 
     ax0 = fig.add_subplot(gs[0, :2])
     ax0.set_facecolor(PBG)
     for i, n in enumerate(ns_scan):
@@ -482,7 +466,7 @@ def plot_all(boundary_results, transition_ns, transition_alphas, fit_A, fit_B,
            'dimension n', 'α* (rugged onset)', '#00d4ff')
     ax1.legend(fontsize=6.5, labelcolor='white', facecolor=PBG)
 
-    # ── Row 1: Unstable config distribution + violin-style ───────────
+    #  Row 1: Unstable config distribution + violin-style ─
     ax2 = fig.add_subplot(gs[1, 0])
     ax2.set_facecolor(PBG)
     ax2.hist(unstable_rugs, bins=10, color='#ff6b6b',
@@ -536,7 +520,7 @@ def plot_all(boundary_results, transition_ns, transition_alphas, fit_A, fit_B,
     styled(ax4, 'FIX 4 — Dilithium vs Kyber Rugosity\n(all n=256)',
            'scheme', 'rugosity', '#ff6b6b')
 
-    # ── Row 2: Dilithium F(xi) profiles + summary table ──────────────
+    #  Row 2: Dilithium F(xi) profiles + summary table 
     ax5 = fig.add_subplot(gs[2, :2])
     ax5.set_facecolor(PBG)
     line_colors = ['#ff6b6b','#ff9944','#ffcc44','#69ff94']
@@ -581,7 +565,7 @@ def plot_all(boundary_results, transition_ns, transition_alphas, fit_A, fit_B,
         f"  n=96, q=1411",
         f"  mean rug = {np.mean(unstable_rugs):.4f}",
         f"  CV       = {np.std(unstable_rugs)/np.mean(unstable_rugs):.3f}",
-        f"  → boundary case, exclude from gap list",
+        f"  >>>> boundary case, exclude from gap list",
         "",
         "FIX 4: Dilithium",
     ]
@@ -600,12 +584,10 @@ def plot_all(boundary_results, transition_ns, transition_alphas, fit_A, fit_B,
         'Unstable Config  |  Dilithium',
         color='white', fontsize=13, fontweight='bold', y=1.005)
     plt.savefig(save, dpi=150, bbox_inches='tight', facecolor=BG)
-    print(f"\nPlot saved → {save}")
+    print(f"\nPlot saved >>>> {save}")
     plt.close()
 
-# ═══════════════════════════════════════════════════════════════════════════
-# SUMMARY REPORT
-# ═══════════════════════════════════════════════════════════════════════════
+# summmarryyyy REPORT
 
 def write_summary(boundary_results, transition_ns, transition_alphas,
                   fit_A, fit_B, unstable_rugs, unstable_phases,
@@ -613,7 +595,7 @@ def write_summary(boundary_results, transition_ns, transition_alphas,
     with open(path, "w") as f:
         sep = "=" * 68
         f.write(sep + "\n")
-        f.write("EXPERIMENT 7 — TARGETED FIXES SUMMARY\n")
+        f.write("EXPERIMENT 7 — TARGETED FIXES summmarryyyy\n")
         f.write(sep + "\n\n")
 
         f.write("FIX 1: WHAM STABILITY\n" + "-"*40 + "\n")
@@ -658,11 +640,8 @@ def write_summary(boundary_results, transition_ns, transition_alphas,
         f.write("  [ ] Run at n=512 (Kyber-1024 territory)\n")
         f.write("  [ ] Submit to PQCrypto 2026 or CCS 2026\n")
         f.write(sep + "\n")
-    print(f"Summary → {path}")
+    print(f"Summary >>>> {path}")
 
-# ═══════════════════════════════════════════════════════════════════════════
-# MAIN
-# ═══════════════════════════════════════════════════════════════════════════
 
 if __name__ == "__main__":
     t0 = time.time()
@@ -671,17 +650,14 @@ if __name__ == "__main__":
     print(f"  Device: {GPU_NAME}")
     print("="*65)
 
-    # Fix 2 (~40 min on GPU — 3 seeds × 13 alphas × 3 dims)
     boundary_results, transition_ns, transition_alphas, fit_A, fit_B = \
         part_fix2_boundary()
 
-    # Fix 3 (~8 min on GPU — 10 seeds)
     unstable_rugs, unstable_phases = part_fix3_unstable()
 
-    # Fix 4 (~6 min on GPU — 4 configs)
     dilithium_results = part_fix4_dilithium()
 
-    print("\nGenerating plots...")
+    print("\nplots generating.....")
     plot_all(boundary_results, transition_ns, transition_alphas, fit_A, fit_B,
              unstable_rugs, unstable_phases, dilithium_results)
 

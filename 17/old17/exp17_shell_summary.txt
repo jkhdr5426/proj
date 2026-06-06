@@ -1,0 +1,41 @@
+EXPERIMENT 17 — HARDNESS-CONSTANT MANIFOLD TEST
+
+target_bits=37.5
+tol=0.5
+selected_points=12
+seeds=2
+quick=True
+proxy=False
+elapsed=19.7 min
+
+correlations with hardness (bits):
+  warning_density    n= 12  Pearson=n/a  Spearman=n/a  p=n/a
+  survey_entropy     n= 12  Pearson=n/a  Spearman=n/a  p=n/a
+  overlap_proxy      n= 12  Pearson=n/a  Spearman=n/a  p=n/a
+  complexity_proxy   n= 12  Pearson=n/a  Spearman=n/a  p=n/a
+
+correlations with hardness deviation from target:
+  warning_density    n= 12  Pearson=n/a  Spearman=n/a  p=n/a
+  survey_entropy     n= 12  Pearson=n/a  Spearman=n/a  p=n/a
+  overlap_proxy      n= 12  Pearson=n/a  Spearman=n/a  p=n/a
+  complexity_proxy   n= 12  Pearson=n/a  Spearman=n/a  p=n/a
+
+per-point means:
+    bits     Δbits     n     q  sigma        family    H_surv   overlap    Sigma*
+  2^37.5     0.000    40   115   2.00           bdd    0.4006    0.0292    16.508
+  2^37.5     0.000    40   127   2.00           bdd    0.3916    0.0451    16.425
+  2^37.5     0.000    40   175   2.50           bdd    0.3731    0.0119    15.103
+  2^37.5     0.000    40   191   2.50           bdd    0.3660    0.0117    14.813
+  2^37.5     0.000    40   247   3.00           bdd    0.3498    0.0075    14.099
+  2^37.5     0.000    40   267   3.00           bdd    0.3452    0.0025    13.844
+  2^37.5     0.000    40   285   3.00           bdd    0.3414    0.0072    13.753
+  2^37.5     0.000    40   405   4.00           bdd    0.3231    0.0051    12.992
+  2^37.5     0.000    48    63   1.00           bdd    0.4520    0.0375    22.544
+  2^37.5     0.000    48    69   1.00           bdd    0.4437    0.0235    21.808
+  2^37.5     0.000    48    77   1.00           bdd    0.4359    0.0125    21.186
+  2^37.5     0.000    48   105   1.25           bdd    0.4098    0.0207    20.085
+
+Interpretation guide:
+- if SP remains structured inside the hardness shell, it is not merely a hardness proxy.
+- if SP collapses when hardness is held fixed, it is mostly tracking attack cost.
+- complexity_proxy is the main candidate to watch in this test.

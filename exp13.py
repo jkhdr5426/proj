@@ -1,10 +1,9 @@
 """
 Experiment 13: Per-Instance Hardness Variance + ξ_dual Dip Validation
-======================================================================
-Run with:  sage -python experiment13.py
+=============Run with:  sage -python experiment13.py
            sage -python experiment13.py --quick
 
-PART A: Per-Instance Hardness Variance
+first partt :) : Per-Instance Hardness Variance
 ---------------------------------------
 BKZ gives ONE hardness number for a given (n, q, σ).
 Every instance with those parameters gets the same security label.
@@ -16,10 +15,10 @@ depends on the specific A matrix, not just its statistics.
 Question: Do F(ξ) metrics (roughness, mean_eff, τ_int) vary
 significantly across instances with the same (n, q, σ)?
 
-If YES: Umbrella sampling detects per-instance weakness that
+if YES: Umbrella sampling detects per-instance weakness that
 BKZ cannot see. This is genuinely novel.
 
-If NO: The landscape is parameter-determined, not instance-specific.
+if NO: The landscape is parameter-determined, not instance-specific.
 Still a useful negative result — confirms BKZ is complete for
 within-class hardness.
 
@@ -32,7 +31,7 @@ Protocol:
   - Kolmogorov-Smirnov test: are roughness values from hard vs easy
     params drawn from different distributions?
 
-PART B: ξ_dual Dip Validation
+second part :) : ξ_dual Dip Validation
 -------------------------------
 Experiment 12 showed ξ_d_ratio = 11.74 at sigma=0.90 (the exact
 BDD/other boundary), vs 49 and 42 on either side. Could be:
@@ -43,9 +42,9 @@ Protocol:
   - Fix n=64, sweep sigma = 0.70, 0.80, 0.85, 0.90, 0.95, 1.00, 1.10
   - Run 10 seeds per sigma value
   - Report mean ± std of ξ_d_ratio
-  - If dip is reproducible (std small, dip consistent across seeds):
-    real geometric signal → publishable.
-  - If high std: artifact → not reproducible, just noise.
+  - if dip is reproducible (std small, dip consistent across seeds):
+    real geometric signal >>>> publishable.
+  - if high std: artifact >>>> not reproducible, just noise.
 """
 
 from __future__ import annotations
@@ -67,7 +66,6 @@ warnings.filterwarnings("ignore")
 DEFAULT_REPO = os.path.expanduser("~/lattice-estimator")
 BG = "#0f1117"; PBG = "#1a1d27"
 
-# ── GPU ──────────────────────────────────────────────────────────────────────
 try:
     import torch
     DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -76,7 +74,6 @@ try:
 except Exception:
     torch = None; DEVICE = "cpu"; DNAME = "CPU"; TORCH = False
 
-# ── Estimator ─────────────────────────────────────────────────────────────────
 if os.path.isdir(DEFAULT_REPO) and DEFAULT_REPO not in sys.path:
     sys.path.insert(0, DEFAULT_REPO)
 
@@ -89,9 +86,7 @@ except Exception:
 
 JOBS = max(1, min(16, os.cpu_count() or 1))
 
-# ═══════════════════════════════════════════════════════════════════════════════
 # CORE: LWE generation, dual vector, samplers
-# ═══════════════════════════════════════════════════════════════════════════════
 
 @dataclass
 class LWE_:
@@ -269,9 +264,7 @@ def run_dual_metrics(n, q, sigma, seed):
         "xi_p_rand":  xi_pr, "xi_d_rand":  xi_dr,
     }
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# PART A: PER-INSTANCE VARIANCE
-# ═══════════════════════════════════════════════════════════════════════════════
+# first partt :) : PER-INSTANCE VARIANCE
 
 def part_a(n_seeds=20, kw=None):
     """
@@ -288,7 +281,7 @@ def part_a(n_seeds=20, kw=None):
     ]
 
     print("\n" + "="*70)
-    print("PART A: Per-Instance Variance")
+    print("first partt :) : Per-Instance Variance")
     print("="*70)
 
     results = {}
@@ -316,7 +309,7 @@ def part_a(n_seeds=20, kw=None):
         cv_tau  = float(np.std(taus)  / (np.mean(taus)  + 1e-9))
         cv_wgap = float(np.std(wgaps) / (np.mean(wgaps) + 1e-9))
 
-        print(f"\n  SUMMARY for {label}:")
+        print(f"\n  summmarryyyy for {label}:")
         print(f"    roughness: mean={np.mean(rugs):.4f}  "
               f"std={np.std(rugs):.4f}  CV={cv_rug:.4f}")
         print(f"    efficiency: mean={np.mean(effs):.4f}  "
@@ -358,20 +351,18 @@ def part_a(n_seeds=20, kw=None):
 
     return results
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# PART B: ξ_DUAL DIP VALIDATION
-# ═══════════════════════════════════════════════════════════════════════════════
+# second part :) : ξ_DUAL DIP VALIDATION
 
 def part_b(n_seeds=10):
     """
     Validate the ξ_dual dip at sigma=0.90 with multiple seeds.
-    If the dip is real, it should be consistent (low std) across seeds.
+    if the dip is real, it should be consistent (low std) across seeds.
     """
     sigmas_fine = [0.70, 0.80, 0.85, 0.90, 0.95, 1.00, 1.10, 1.30, 1.50]
     n = 64; alpha = 12.0
 
     print("\n" + "="*70)
-    print("PART B: ξ_dual Dip Validation (n=64, alpha=12)")
+    print("second part :) : ξ_dual Dip Validation (n=64, alpha=12)")
     print("  Is the dip at sigma=0.90 reproducible across seeds?")
     print("="*70)
     print(f"\n  {'sigma':>6}  {'q':>5}  {'ξ_d_ratio_mean':>15}  "
@@ -426,13 +417,10 @@ def part_b(n_seeds=10):
             print(f"  ~ Dip is partially real but noisy.")
         else:
             print(f"  High variance (CV={cv_at_dip:.3f}): dip is not reproducible.")
-            print(f"  → The sigma=0.90 dip in Exp 12 was a one-seed artifact.")
+            print(f"  >>>> The sigma=0.90 dip in Exp 12 was a one-seed artifact.")
 
     return all_rows
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# PLOTTING
-# ═══════════════════════════════════════════════════════════════════════════════
 
 def plot_all(part_a_res, part_b_res, save="exp13_results.png"):
     fig = plt.figure(figsize=(22, 16))
@@ -447,7 +435,7 @@ def plot_all(part_a_res, part_b_res, save="exp13_results.png"):
         ax.tick_params(colors="white", labelsize=7)
         for sp in ax.spines.values(): sp.set_edgecolor("#444")
 
-    # ── PART A: roughness distributions ──────────────────────────────────────
+    # ── first partt :) : roughness distributions ──────────────────────────────────────
     ax0 = fig.add_subplot(gs[0, 0])
     ax0.set_facecolor(PBG)
     labels = [k for k in part_a_res if k not in ("ks_stat","ks_pvalue")]
@@ -457,7 +445,7 @@ def plot_all(part_a_res, part_b_res, save="exp13_results.png"):
         col  = d["color"]
         ax0.hist(rugs, bins=8, alpha=0.7, color=col, label=label, density=True)
         ax0.axvline(float(np.mean(rugs)), color=col, lw=2.5, linestyle="--")
-    sty(ax0, "PART A — Roughness Distribution\n(20 instances per config)",
+    sty(ax0, "first partt :)  — Roughness Distribution\n(20 instances per config)",
         "roughness", "density", "#ffd93d")
     ax0.legend(fontsize=7, labelcolor="white", facecolor=PBG)
     if "ks_pvalue" in part_a_res:
@@ -476,7 +464,7 @@ def plot_all(part_a_res, part_b_res, save="exp13_results.png"):
                  label=label, density=True)
         ax1.axvline(float(np.mean(d["effs"])), color=d["color"],
                     lw=2.5, linestyle="--")
-    sty(ax1, "PART A — Efficiency Distribution\n(ESS/n_steps per instance)",
+    sty(ax1, "first partt :)  — Efficiency Distribution\n(ESS/n_steps per instance)",
         "efficiency", "density", "#69ff94")
     ax1.legend(fontsize=7, labelcolor="white", facecolor=PBG)
 
@@ -491,11 +479,11 @@ def plot_all(part_a_res, part_b_res, save="exp13_results.png"):
                  alpha=0.85, label=f"{label}\nCV={d['cv_rug']:.3f}")
         ax2.axhline(float(np.mean(rugs)), color=d["color"],
                     lw=1.5, linestyle="--", alpha=0.6)
-    sty(ax2, "PART A — Roughness per Instance\n(seed index = different A matrix)",
+    sty(ax2, "first partt :)  — Roughness per Instance\n(seed index = different A matrix)",
         "seed (different instance)", "roughness", "#ffd93d")
     ax2.legend(fontsize=7, labelcolor="white", facecolor=PBG)
 
-    # ── PART B: ξ_dual ratio vs sigma ────────────────────────────────────────
+    # ── second part :) : ξ_dual ratio vs sigma ────────────────────────────────────────
     if part_b_res:
         sigs   = [r["sigma"]  for r in part_b_res]
         d_mean = [r["d_mean"] for r in part_b_res]
@@ -524,7 +512,7 @@ def plot_all(part_a_res, part_b_res, save="exp13_results.png"):
         ax3.axvline(sigs[dip_i], color="white", lw=1.5,
                     linestyle=":", alpha=0.6)
         sty(ax3,
-            "PART B — ξ_dual Ratio vs sigma (n=64, alpha=12)\n"
+            "second part :)  — ξ_dual Ratio vs sigma (n=64, alpha=12)\n"
             "10 seeds per sigma — is the dip at sigma=0.90 reproducible?",
             "sigma", "ratio (xi_random / xi_true)", "#ffd93d")
         ax3.legend(fontsize=7, labelcolor="white", facecolor=PBG)
@@ -546,7 +534,7 @@ def plot_all(part_a_res, part_b_res, save="exp13_results.png"):
             ax4.text(bar.get_x()+bar.get_width()/2,
                      bar.get_height()+0.005,
                      f"{cv:.2f}", ha="center", color="white", fontsize=7)
-        sty(ax4, "PART B — CV of ξ_dual at each sigma\n"
+        sty(ax4, "second part :)  — CV of ξ_dual at each sigma\n"
                  "(low CV = reproducible = real signal)",
             "sigma", "CV = std/mean", "#00d4ff")
         ax4.legend(fontsize=7, labelcolor="white", facecolor=PBG)
@@ -556,12 +544,10 @@ def plot_all(part_a_res, part_b_res, save="exp13_results.png"):
                  "Is the ξ_dual boundary signal real?",
                  color="white", fontsize=12, fontweight="bold", y=1.005)
     plt.savefig(save, dpi=150, bbox_inches="tight", facecolor=BG)
-    print(f"Plot → {save}")
+    print(f"Plot >>>> {save}")
     plt.close()
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# SUMMARY FILE
-# ═══════════════════════════════════════════════════════════════════════════════
+# summmarryyyy FILE
 
 def write_summary(part_a_res, part_b_res, path="exp13_summary.txt"):
     with open(path, "w") as f:
@@ -570,7 +556,7 @@ def write_summary(part_a_res, part_b_res, path="exp13_summary.txt"):
         f.write("EXPERIMENT 13 — PER-INSTANCE VARIANCE + ξ_DUAL VALIDATION\n")
         f.write(sep+"\n\n")
 
-        f.write("PART A: PER-INSTANCE VARIANCE\n"+"-"*40+"\n")
+        f.write("first partt :) : PER-INSTANCE VARIANCE\n"+"-"*40+"\n")
         labels = [k for k in part_a_res if k not in ("ks_stat","ks_pvalue")]
         for label in labels:
             d = part_a_res[label]
@@ -592,7 +578,7 @@ def write_summary(part_a_res, part_b_res, path="exp13_summary.txt"):
             f.write("  " + ("SIGNIFICANT" if part_a_res['ks_pvalue']<0.05
                             else "Not significant") + "\n")
 
-        f.write("\nPART B: ξ_DUAL DIP VALIDATION\n"+"-"*40+"\n")
+        f.write("\nsecond part :) : ξ_DUAL DIP VALIDATION\n"+"-"*40+"\n")
         if part_b_res:
             f.write(f"{'sigma':>6}  {'d_ratio_mean':>13}  {'d_ratio_std':>12}  "
                     f"{'CV_d':>6}  {'reproducible':>13}\n")
@@ -612,27 +598,24 @@ def write_summary(part_a_res, part_b_res, path="exp13_summary.txt"):
         f.write("\n"+sep+"\n")
         f.write("PAPER IMPLICATIONS\n"+sep+"\n")
         f.write("""
-1. If Part A CV > 0.15 (significant per-instance variance):
-   → Umbrella sampling detects within-class instance weakness
-   → BKZ is blind to this: same gate count for all instances
-   → Claim: umbrella rugosity as a per-instance security supplement
+1. if Part A CV > 0.15 (significant per-instance variance):
+   >>>> Umbrella sampling detects within-class instance weakness
+   >>>> BKZ is blind to this: same gate count for all instances
+   >>>> Claim: umbrella rugosity as a per-instance security supplement
 
-2. If Part B ξ_dual dip CV < 0.20 (reproducible):
-   → The dual reaction coordinate genuinely loses sensitivity
+2. if Part B ξ_dual dip CV < 0.20 (reproducible):
+   >>>> The dual reaction coordinate genuinely loses sensitivity
      at the BDD/USVP family boundary
-   → Claim: ξ_dual tracks attack-family geometry
+   >>>> Claim: ξ_dual tracks attack-family geometry
 
-3. If both are negative:
-   → Landscape is fully determined by (n,q,σ) parameters
-   → Umbrella sampling is a parameter-level tool, not instance-level
-   → Still useful: confirms BKZ completeness for within-class hardness
+3. if both are negative:
+   >>>> Landscape is fully determined by (n,q,σ) parameters
+   >>>> Umbrella sampling is a parameter-level tool, not instance-level
+   >>>> Still useful: confirms BKZ completeness for within-class hardness
 """)
         f.write(sep+"\n")
-    print(f"Summary → {path}")
+    print(f"Summary >>>> {path}")
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# MAIN
-# ═══════════════════════════════════════════════════════════════════════════════
 
 if __name__ == "__main__":
     import argparse
@@ -663,12 +646,12 @@ if __name__ == "__main__":
     part_a_res = part_a(n_seeds=n_seeds_a, kw=kw)
     part_b_res = part_b(n_seeds=n_seeds_b)
 
-    print("\nGenerating plots...")
+    print("\nplots generating.....")
     plot_all(part_a_res, part_b_res)
     write_summary(part_a_res, part_b_res)
 
     print(f"\nTotal: {(time.time()-t0)/60:.1f} min")
     print("\nKEY OUTCOMES TO LOOK FOR:")
-    print("  Part A CV > 0.15  → per-instance variance is real")
-    print("  Part B CV < 0.20 at dip → ξ_dual signal is reproducible")
+    print("  Part A CV > 0.15  >>>> per-instance variance is real")
+    print("  Part B CV < 0.20 at dip >>>> ξ_dual signal is reproducible")
     print("  Either of these = publishable novel contribution")

@@ -1,7 +1,5 @@
-======================================================================
-EXPERIMENT 14 — BIMODAL ROUGHNESS INVESTIGATION
-======================================================================
-
+=============EXPERIMENT 14 — BIMODAL ROUGHNESS INVESTIGATION
+=============
 CONFIG: easy (n=64)
 ----------------------------------------
   n instances: 60
@@ -36,28 +34,26 @@ CONFIG: hard (n=96)
           spectral_gap: r=+0.3425  p=0.0074 ***
             efficiency: r=-0.2187  p=0.0931
 
-======================================================================
-INTERPRETATION
-======================================================================
-
+=============INTERPRETATION
+=============
 CASE 1 — BC > 0.555 AND significant spectral correlation:
-  → Bimodality is real and explained by A matrix structure.
-  → Umbrella sampling detects per-instance structural weakness.
-  → BKZ gives the same gate count to all instances; umbrella
+  >>>> Bimodality is real and explained by A matrix structure.
+  >>>> Umbrella sampling detects per-instance structural weakness.
+  >>>> BKZ gives the same gate count to all instances; umbrella
     discriminates between structurally strong and weak A matrices.
-  → PUBLISHABLE FINDING: "umbrella roughness as a per-instance
+  >>>> PUBLISHABLE FINDING: "umbrella roughness as a per-instance
     structural security supplement to BKZ"
 
 CASE 2 — BC > 0.555 BUT no spectral correlation:
-  → Bimodality is real but its cause is unknown.
-  → Could be WHAM sampling noise or a feature of the reaction
+  >>>> Bimodality is real but its cause is unknown.
+  >>>> Could be WHAM sampling noise or a feature of the reaction
     coordinate rather than the lattice.
-  → Inconclusive: need alternative explanations.
+  >>>> Inconclusive: need alternative explanations.
 
 CASE 3 — BC < 0.555:
-  → No confirmed bimodality. The Exp 13 CV=0.18 was not enough
+  >>>> No confirmed bimodality. The Exp 13 CV=0.18 was not enough
     data to see a clear bimodal structure.
-  → Landscape is parameter-determined, not instance-specific.
-  → Useful negative: confirms BKZ is complete for within-class
+  >>>> Landscape is parameter-determined, not instance-specific.
+  >>>> Useful negative: confirms BKZ is complete for within-class
     hardness characterization.
-======================================================================
+=============

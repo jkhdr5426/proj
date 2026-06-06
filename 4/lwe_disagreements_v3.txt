@@ -1,7 +1,5 @@
-====================================================================
-BKZ vs UMBRELLA SAMPLING — DISAGREEMENT REPORT v3
-====================================================================
-
+===========BKZ vs UMBRELLA SAMPLING ï¿½ DISAGREEMENT REPORT v3
+===========
 STRONG GAPS (8 configs)
 BKZ cannot fully break AND umbrella finds rugged landscape.
 

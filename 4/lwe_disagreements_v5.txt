@@ -1,7 +1,5 @@
-========================================================================
-BKZ vs UMBRELLA SAMPLING — DISAGREEMENT REPORT v5 (GPU scale)
-========================================================================
-
+===============BKZ vs UMBRELLA SAMPLING ï¿½ DISAGREEMENT REPORT v5 (GPU scale)
+===============
 STRONG GAPS (9 configs)
 BKZ cannot fully break AND umbrella finds rugged landscape.
 

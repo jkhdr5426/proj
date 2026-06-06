@@ -1,8 +1,6 @@
-======================================================================
-EXPERIMENT 13 — PER-INSTANCE VARIANCE + ξ_DUAL VALIDATION
-======================================================================
-
-PART A: PER-INSTANCE VARIANCE
+=============EXPERIMENT 13 — PER-INSTANCE VARIANCE + ξ_DUAL VALIDATION
+=============
+first partt :) : PER-INSTANCE VARIANCE
 ----------------------------------------
 
   Config: hard (n=96, rugged)
@@ -22,7 +20,7 @@ PART A: PER-INSTANCE VARIANCE
   KS test: stat=0.4000, p=0.0811
   Not significant
 
-PART B: ξ_DUAL DIP VALIDATION
+second part :) : ξ_DUAL DIP VALIDATION
 ----------------------------------------
  sigma   d_ratio_mean   d_ratio_std    CV_d   reproducible
 ------------------------------------------------------------
@@ -39,22 +37,20 @@ PART B: ξ_DUAL DIP VALIDATION
   Dip at sigma=1.50, CV=0.4074
   Verdict: NOT reproducible — artifact
 
-======================================================================
-PAPER IMPLICATIONS
-======================================================================
+=============PAPER IMPLICATIONS
+=============
+1. if Part A CV > 0.15 (significant per-instance variance):
+   >>>> Umbrella sampling detects within-class instance weakness
+   >>>> BKZ is blind to this: same gate count for all instances
+   >>>> Claim: umbrella rugosity as a per-instance security supplement
 
-1. If Part A CV > 0.15 (significant per-instance variance):
-   → Umbrella sampling detects within-class instance weakness
-   → BKZ is blind to this: same gate count for all instances
-   → Claim: umbrella rugosity as a per-instance security supplement
-
-2. If Part B ξ_dual dip CV < 0.20 (reproducible):
-   → The dual reaction coordinate genuinely loses sensitivity
+2. if Part B ξ_dual dip CV < 0.20 (reproducible):
+   >>>> The dual reaction coordinate genuinely loses sensitivity
      at the BDD/USVP family boundary
-   → Claim: ξ_dual tracks attack-family geometry
+   >>>> Claim: ξ_dual tracks attack-family geometry
 
-3. If both are negative:
-   → Landscape is fully determined by (n,q,σ) parameters
-   → Umbrella sampling is a parameter-level tool, not instance-level
-   → Still useful: confirms BKZ completeness for within-class hardness
-======================================================================
+3. if both are negative:
+   >>>> Landscape is fully determined by (n,q,σ) parameters
+   >>>> Umbrella sampling is a parameter-level tool, not instance-level
+   >>>> Still useful: confirms BKZ completeness for within-class hardness
+=============

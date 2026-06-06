@@ -1,8 +1,6 @@
-======================================================================
-EXPERIMENT 12 — DUAL COORDINATE + EFFICIENCY ANALYSIS
-======================================================================
-
-PART A: ξ_DUAL (n=64, sigma sweep)
+=============EXPERIMENT 12 — DUAL COORDINATE + EFFICIENCY ANALYSIS
+=============
+first partt :) : ξ_DUAL (n=64, sigma sweep)
 ----------------------------------------
  sigma        family   xi_p_ratio   xi_d_ratio   efficiency
 --------------------------------------------------------
@@ -15,7 +13,7 @@ PART A: ξ_DUAL (n=64, sigma sweep)
   3.00           bdd      26.5841      33.2260       0.0539
   4.00           bdd      26.5284      32.8989       0.0531
 
-PART B: EFFICIENCY VS BKZ (sigma=2.0)
+second part :) : EFFICIENCY VS BKZ (sigma=2.0)
 ----------------------------------------
    n     beta      bits   efficiency   tau_int   fp_time
 ----------------------------------------------------
@@ -33,4 +31,4 @@ corr(β, efficiency): -0.4002
 corr(β, tau_int):    0.5034
 corr(β, fp_time):    n/a
 
-======================================================================
+=============

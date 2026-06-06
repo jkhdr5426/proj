@@ -1,0 +1,59 @@
+EXPERIMENT 17 — HARDNESS-CONSTANT MANIFOLD TEST
+
+target_bits=37.5
+tol=0.4
+selected_points=30
+seeds=18
+quick=True
+proxy=False
+elapsed=279.1 min
+
+correlations with hardness (bits):
+  warning_density    n= 30  Pearson=0.1546  Spearman=0.2214  p=0.2398
+  survey_entropy     n= 30  Pearson=0.0372  Spearman=0.0790  p=0.6783
+  overlap_proxy      n= 30  Pearson=0.0361  Spearman=0.0827  p=0.6639
+  complexity_proxy   n= 30  Pearson=0.2117  Spearman=0.2331  p=0.2150
+
+correlations with hardness deviation from target:
+  warning_density    n= 30  Pearson=0.1546  Spearman=0.2214  p=0.2398
+  survey_entropy     n= 30  Pearson=0.0372  Spearman=0.0790  p=0.6783
+  overlap_proxy      n= 30  Pearson=0.0361  Spearman=0.0827  p=0.6639
+  complexity_proxy   n= 30  Pearson=0.2117  Spearman=0.2331  p=0.2150
+
+per-point means:
+    bits     Δbits     n     q  sigma        family    H_surv   overlap    Sigma*
+  2^37.5     0.000    40   115   2.00           bdd    0.4019    0.0221    16.442
+  2^37.5     0.000    40   127   2.00           bdd    0.3934    0.0243    16.135
+  2^37.5     0.000    40   175   2.50           bdd    0.3722    0.0128    15.083
+  2^37.5     0.000    40   191   2.50           bdd    0.3663    0.0107    14.813
+  2^37.5     0.000    40   247   3.00           bdd    0.3499    0.0107    14.148
+  2^37.5     0.000    40   267   3.00           bdd    0.3454    0.0083    13.931
+  2^37.5     0.000    40   285   3.00           bdd    0.3414    0.0090    13.782
+  2^37.5     0.000    40   405   4.00           bdd    0.3226    0.0048    12.967
+  2^37.5     0.000    48    63   1.00           bdd    0.4521    0.0397    22.608
+  2^37.5     0.000    48    69   1.00           bdd    0.4433    0.0314    21.973
+  2^37.5     0.000    48    77   1.00           bdd    0.4349    0.0255    21.428
+  2^37.5     0.000    48   105   1.25           bdd    0.4084    0.0254    20.116
+  2^37.5     0.000    48   113   1.25           bdd    0.4027    0.0262    19.852
+  2^37.5     0.000    48   121   1.25           bdd    0.3974    0.0214    19.493
+  2^37.5     0.000    48   131   1.25           bdd    0.3920    0.0174    19.151
+  2^37.5     0.000    48   157   1.50           bdd    0.3790    0.0171    18.513
+  2^37.5     0.000    48   167   1.50           bdd    0.3749    0.0125    18.224
+  2^37.5     0.000    56    79   0.75           bdd    0.4315    0.0294    24.900
+  2^37.5     0.000    56    85   0.75           bdd    0.4258    0.0289    24.555
+  2^37.5     0.000    56    91   0.75           bdd    0.4198    0.0268    24.156
+  2^37.4    -0.100    32   181   4.00           bdd    0.3708    0.0162    12.063
+  2^37.4    -0.100    32   205   4.00           bdd    0.3624    0.0135    11.756
+  2^37.4    -0.100    40    77   1.50           bdd    0.4346    0.0341    18.000
+  2^37.4    -0.100    40    85   1.50           bdd    0.4257    0.0327    17.608
+  2^37.6     0.100    40   101   2.00           bdd    0.4114    0.0303    16.975
+  2^37.4    -0.100    40   139   2.00           bdd    0.3872    0.0174    15.763
+  2^37.4    -0.100    40   153   2.00           bdd    0.3809    0.0167    15.499
+  2^37.6     0.100    40   143   2.50           bdd    0.3862    0.0175    15.723
+  2^37.6     0.100    40   159   2.50           bdd    0.3779    0.0180    15.394
+  2^37.4    -0.100    40   207   2.50           bdd    0.3609    0.0115    14.602
+
+Interpretation guide:
+- if SP remains structured inside the hardness shell, it is not merely a hardness proxy.
+- if SP collapses when hardness is held fixed, it is mostly tracking attack cost.
+- complexity_proxy is the main candidate to watch in this test.

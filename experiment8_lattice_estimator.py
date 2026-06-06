@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
 Experiment 8: Umbrella texture vs real lattice-estimator
-=========================================================
 
 Run:
     sage -python experiment8_lattice_estimator.py
@@ -39,9 +38,7 @@ import matplotlib.gridspec as gridspec
 warnings.filterwarnings("ignore")
 
 
-# =============================================================================
 # Optional torch setup
-# =============================================================================
 try:
     import torch
 
@@ -53,9 +50,7 @@ except Exception as exc:
     ) from exc
 
 
-# =============================================================================
 # Optional lattice-estimator setup
-# =============================================================================
 ESTIMATOR_AVAILABLE = False
 LWE = None
 ND = None
@@ -70,9 +65,7 @@ except Exception:
     ESTIMATOR_AVAILABLE = False
 
 
-# =============================================================================
 # Styling
-# =============================================================================
 BG = "#0f1117"
 PBG = "#1a1d27"
 
@@ -96,9 +89,7 @@ USE_FULL_ESTIMATOR = True
 RED_COST_MODEL = getattr(RC, "BDGL16", None)
 
 
-# =============================================================================
 # Small utilities
-# =============================================================================
 def fmt_bits(x: Optional[float]) -> str:
     return "n/a" if x is None else f"2^{x:.1f}"
 
@@ -227,9 +218,7 @@ def clean_for_json(x: Any) -> Any:
     return str(x)
 
 
-# =============================================================================
 # Estimator wrappers
-# =============================================================================
 def make_secret_dist(q: int):
     if not ESTIMATOR_AVAILABLE:
         raise RuntimeError("lattice-estimator unavailable")
@@ -471,9 +460,7 @@ def estimate_kyber1024_baseline(full: bool = True, jobs: Optional[int] = None) -
         return {}
 
 
-# =============================================================================
 # LWE instance generation and umbrella sampler
-# =============================================================================
 @dataclass
 class LWEInstance:
     n: int
@@ -738,9 +725,7 @@ def run_config_stable(
     }
 
 
-# =============================================================================
 # Plotting and summary
-# =============================================================================
 def style_axis(ax, title: str, xlabel: str = "", ylabel: str = "", title_color: str = "white"):
     ax.set_facecolor(PBG)
     ax.set_title(title, color=title_color, fontsize=11, pad=8)
@@ -905,7 +890,7 @@ def plot_experiment_8(results: List[Dict[str, Any]], baseline: Dict[str, Any], s
     )
     plt.savefig(save, dpi=160, bbox_inches="tight", facecolor=BG)
     plt.close(fig)
-    print(f"Plot saved → {save}")
+    print(f"Plot saved >>>> {save}")
 
 
 def write_summary(
@@ -986,7 +971,7 @@ def write_summary(
         for fam, cnt in sorted(fam_counts.items(), key=lambda x: (-x[1], x[0])):
             f.write(f"{fam}: {cnt}\n")
 
-    print(f"Summary saved → {path}")
+    print(f"Summary saved >>>> {path}")
 
 
 def save_json(results: List[Dict[str, Any]], baseline: Dict[str, Any], path: str = "lwe_exp8_data.json"):
@@ -996,12 +981,9 @@ def save_json(results: List[Dict[str, Any]], baseline: Dict[str, Any], path: str
     }
     with open(path, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2)
-    print(f"JSON saved → {path}")
+    print(f"JSON saved >>>> {path}")
 
 
-# =============================================================================
-# Main
-# =============================================================================
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--n", type=int, default=512)

@@ -1,0 +1,69 @@
+EXPERIMENT 16 — CONTROLLED FOLLOW-UP TO EXPERIMENT 15
+
+Purpose: one-parameter-at-a-time sweeps to separate hardness from
+dimension/modulus/noise effects.
+
+[SIGMA SWEEP]
+fixed_n=48 fixed_q=101 fixed_sigma=1.5
+seeds=2 quick=True proxy=False
+elapsed=6.5 min
+correlations vs hardness (bits):
+  warning_density    n=  7  Pearson=-0.9517  Spearman=-1.0000  p=0.0000
+  survey_entropy     n=  7  Pearson=0.8849  Spearman=0.8929  p=0.0068
+  overlap_proxy      n=  7  Pearson=-0.3164  Spearman=-0.6786  p=0.0938
+  complexity_proxy   n=  7  Pearson=0.5692  Spearman=0.0000  p=1.0000
+
+per-point means:
+     val     n     q  sigma        family      bits    H_surv   overlap    Sigma*
+   0.500    48   101   0.50          usvp    2^37.0    0.4122    0.0310    20.423
+   0.750    48   101   0.75          usvp    2^37.2    0.4096    0.0314    20.300
+   1.000    48   101   1.00           bdd    2^37.4    0.4103    0.0218    20.136
+   1.500    48   101   1.50           bdd    2^37.7    0.4135    0.0165    20.179
+   2.000    48   101   2.00           bdd    2^38.4    0.4135    0.0097    20.044
+   3.000    48   101   3.00           bdd    2^44.8    0.4138    0.0214    20.297
+   4.000    48   101   4.00           bdd    2^51.1    0.4198    0.0165    20.486
+
+[N SWEEP]
+fixed_n=48 fixed_q=101 fixed_sigma=1.5
+seeds=2 quick=True proxy=False
+elapsed=5.4 min
+correlations vs hardness (bits):
+  warning_density    n=  6  Pearson=-0.3638  Spearman=-0.2571  p=0.6228
+  survey_entropy     n=  6  Pearson=-0.7474  Spearman=-0.6571  p=0.1562
+  overlap_proxy      n=  6  Pearson=0.8554  Spearman=0.7143  p=0.1108
+  complexity_proxy   n=  6  Pearson=0.9131  Spearman=1.0000  p=0.0000
+
+per-point means:
+     val     n     q  sigma        family      bits    H_surv   overlap    Sigma*
+  24.000    24   101   1.50          usvp    2^36.4    0.4147    0.0130    10.084
+  32.000    32   101   1.50          usvp    2^36.9    0.4113    0.0239    13.486
+  40.000    40   101   1.50           bdd    2^37.3    0.4151    0.0096    16.767
+  48.000    48   101   1.50           bdd    2^37.7    0.4135    0.0165    20.179
+  56.000    56   101   1.50           bdd    2^38.4    0.4079    0.0512    24.075
+  64.000    64   101   1.50           bdd    2^41.1    0.4080    0.0596    27.772
+
+[Q SWEEP]
+fixed_n=48 fixed_q=101 fixed_sigma=1.5
+seeds=2 quick=True proxy=False
+elapsed=5.5 min
+correlations vs hardness (bits):
+  warning_density    n=  6  Pearson=-0.9508  Spearman=-0.9856  p=0.0003
+  survey_entropy     n=  6  Pearson=0.8964  Spearman=0.9856  p=0.0003
+  overlap_proxy      n=  6  Pearson=0.6190  Spearman=0.6377  p=0.1731
+  complexity_proxy   n=  6  Pearson=0.8945  Spearman=0.9856  p=0.0003
+
+per-point means:
+     val     n     q  sigma        family      bits    H_surv   overlap    Sigma*
+  59.000    48    59   1.50           bdd    2^38.7    0.4534    0.0474    22.843
+  73.000    48    73   1.50           bdd    2^38.1    0.4362    0.0407    21.828
+  89.000    48    89   1.50           bdd    2^37.8    0.4221    0.0507    21.344
+ 101.000    48   101   1.50           bdd    2^37.7    0.4135    0.0165    20.179
+ 127.000    48   127   1.50           bdd    2^37.6    0.3936    0.0299    19.472
+ 149.000    48   149   1.50           bdd    2^37.6    0.3814    0.0250    18.783
+
+Interpretation guide:
+- if correlations stay strong in the sigma sweep but weaken in the n/q sweeps,
+  SP is probably tracking noise-driven clustering rather than hardness itself.
+- if complexity_proxy remains strong in all three sweeps, that is the best
+  evidence that SP is detecting a hardness-linked geometric signal.
+- if only one axis drives the signal, then the pilot result was confounded.

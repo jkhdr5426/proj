@@ -48,9 +48,7 @@ import matplotlib.gridspec as gridspec
 
 warnings.filterwarnings("ignore")
 
-# =============================================================================
 # Config
-# =============================================================================
 DEFAULT_REPO_PATH = os.path.expanduser("~/lattice-estimator")
 BG = "#0f1117"
 PBG = "#1a1d27"
@@ -74,9 +72,7 @@ DEFAULT_JOBS = max(1, min(16, os.cpu_count() or 1))
 USE_FULL_ESTIMATOR = True
 RED_COST_MODEL = None  # filled after import if available
 
-# =============================================================================
 # Optional torch
-# =============================================================================
 try:
     import torch
 
@@ -89,9 +85,7 @@ except Exception:
     DEVICE = "cpu"
     DEVICE_NAME = "CPU (torch unavailable)"
 
-# =============================================================================
 # Local lattice-estimator import
-# =============================================================================
 if os.path.isdir(DEFAULT_REPO_PATH) and DEFAULT_REPO_PATH not in sys.path:
     sys.path.insert(0, DEFAULT_REPO_PATH)
 
@@ -108,9 +102,7 @@ try:
 except Exception:
     ESTIMATOR_AVAILABLE = False
 
-# =============================================================================
 # Helpers
-# =============================================================================
 def fmt_bits(x: Optional[float]) -> str:
     return "n/a" if x is None else f"2^{x:.1f}"
 
@@ -337,9 +329,7 @@ def overall_best_attack(attack_table: Dict[str, Dict[str, Optional[float]]]) -> 
     }
 
 
-# =============================================================================
 # Estimator
-# =============================================================================
 def make_secret_dist(q: int):
     if not ESTIMATOR_AVAILABLE:
         raise RuntimeError("lattice-estimator unavailable")
@@ -558,9 +548,7 @@ def estimate_from_params(params, full: bool = True, jobs: Optional[int] = None) 
     }
 
 
-# =============================================================================
 # LWE instance + umbrella sampling
-# =============================================================================
 @dataclass
 class LWEInstance:
     n: int
@@ -888,9 +876,7 @@ def run_one_point(
     }
 
 
-# =============================================================================
 # Plotting / summary
-# =============================================================================
 def style_axis(ax, title: str, xlabel: str = "", ylabel: str = "", title_color: str = "white"):
     ax.set_facecolor(PBG)
     ax.set_title(title, color=title_color, fontsize=11, pad=8)
@@ -955,7 +941,7 @@ def plot_results(results: List[Dict[str, Any]], baseline: Dict[str, Any], save: 
     ax3.axis("off")
 
     lines = [
-        "EXPERIMENT 9 — SUMMARY",
+        "EXPERIMENT 9 — summmarryyyy",
         "",
         f"Device: {DEVICE_NAME}",
         f"Estimator mode: {'full' if USE_FULL_ESTIMATOR else 'rough'}",
@@ -1011,7 +997,7 @@ def plot_results(results: List[Dict[str, Any]], baseline: Dict[str, Any], save: 
     )
     plt.savefig(save, dpi=160, bbox_inches="tight", facecolor=BG)
     plt.close(fig)
-    print(f"Plot saved → {save}")
+    print(f"Plot saved >>>> {save}")
 
 
 def write_summary(results: List[Dict[str, Any]], baseline: Dict[str, Any], path: str = "exp9_summary.txt"):
@@ -1082,7 +1068,7 @@ def write_summary(results: List[Dict[str, Any]], baseline: Dict[str, Any], path:
         f.write(f"entropy mean={np.nanmean(entropy):.4f}, std={np.nanstd(entropy):.4f}\n")
         f.write(f"roughness mean={np.nanmean(roughness):.4f}, std={np.nanstd(roughness):.4f}\n")
 
-    print(f"Summary saved → {path}")
+    print(f"Summary saved >>>> {path}")
 
 
 def save_json(results: List[Dict[str, Any]], baseline: Dict[str, Any], path: str = "exp9_data.json"):
@@ -1106,12 +1092,9 @@ def save_json(results: List[Dict[str, Any]], baseline: Dict[str, Any], path: str
     }
     with open(path, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2)
-    print(f"JSON saved → {path}")
+    print(f"JSON saved >>>> {path}")
 
 
-# =============================================================================
-# Main
-# =============================================================================
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--n", type=int, default=512)

@@ -1,6 +1,6 @@
 """
 Experiment 5 — GPU-Accelerated Umbrella Sampling
-=================================================
+===
 Hardware target: NVIDIA 5070 Ti (16GB VRAM)
 CPU:             AMD 7800 X3D
 
@@ -22,7 +22,7 @@ GPU batching strategy:
 Memory estimate at n=256, m=768, batch=42×8=336 chains:
   A matrix:   768 × 256 × 4 bytes = 768 KB
   s batch:    336 × 256 × 4 bytes = 344 KB
-  Total per config: ~2 MB  →  well within 16 GB
+  Total per config: ~2 MB  >>>>  well within 16 GB
 """
 
 import numpy as np
@@ -38,7 +38,7 @@ from typing import List, Tuple
 import warnings, time, math
 warnings.filterwarnings('ignore')
 
-# ── PyTorch import with CUDA check ───────────────────────────────────────
+#  PyTorch import with CUDA check ─
 try:
     import torch
     if torch.cuda.is_available():
@@ -59,9 +59,7 @@ BG  = '#0f1117'
 PBG = '#1a1d27'
 PHASE_COLORS = {"funnel":"#69ff94","rugged":"#ffd93d","cliff":"#ff6b6b","unknown":"#888"}
 
-# ═══════════════════════════════════════════════════════════════════════════
 # LWE GENERATION (CPU — done once per config)
-# ═══════════════════════════════════════════════════════════════════════════
 
 @dataclass
 class LWEInstance:
@@ -83,11 +81,9 @@ def generate_lwe(n, m, q, sigma):
     b = (A @ s + e) % q
     return LWEInstance(n=n, m=m, q=q, sigma=sigma, A=A, b=b, s_true=s)
 
-# ═══════════════════════════════════════════════════════════════════════════
 # GPU-BATCHED RESIDUAL NORM
 # Input:  s_batch (B, n) float32 tensor on GPU
 # Output: norms   (B,)  float32 tensor on GPU
-# ═══════════════════════════════════════════════════════════════════════════
 
 def residual_norm_gpu(lwe: LWEInstance, s_batch: torch.Tensor) -> torch.Tensor:
     """
@@ -96,7 +92,7 @@ def residual_norm_gpu(lwe: LWEInstance, s_batch: torch.Tensor) -> torch.Tensor:
     s_batch shape: (B, n)
     """
     q = lwe.q
-    # (m, n) @ (n, B) → (m, B) → (B, m)
+    # (m, n) @ (n, B) >>>> (m, B) >>>> (B, m)
     r = (lwe.A_gpu @ s_batch.T - lwe.b_gpu.unsqueeze(1)) % q
     r = torch.where(r > q // 2, r - q, r)
     return torch.norm(r.T, dim=1)   # (B,)
@@ -106,11 +102,9 @@ def residual_norm_cpu(lwe: LWEInstance, s: np.ndarray) -> float:
     r = np.where(r > lwe.q // 2, r - lwe.q, r)
     return float(np.linalg.norm(r))
 
-# ═══════════════════════════════════════════════════════════════════════════
 # GPU-BATCHED MH WINDOW
 # Runs n_windows × n_chains chains simultaneously on GPU.
 # All proposals are computed in one batched step.
-# ═══════════════════════════════════════════════════════════════════════════
 
 def umbrella_energy_gpu(xi: torch.Tensor, xc: torch.Tensor, k: float) -> torch.Tensor:
     return 0.5 * k * (xi - xc) ** 2
@@ -203,9 +197,7 @@ def mh_all_windows_gpu(
 
     return xi_trajs, s_batch, acc_by_win
 
-# ═══════════════════════════════════════════════════════════════════════════
 # WHAM (CPU — fast enough, operates on histograms not raw data)
-# ═══════════════════════════════════════════════════════════════════════════
 
 def wham(window_xis, xi_centers, k, T, xi_bins, n_iter=300, tol=1e-7):
     n_win  = len(window_xis)
@@ -229,9 +221,7 @@ def wham(window_xis, xi_centers, k, T, xi_bins, n_iter=300, tol=1e-7):
     F = -np.log(np.where(rho > 0, rho, 1e-300)); F -= F.min()
     return bc, F
 
-# ═══════════════════════════════════════════════════════════════════════════
 # RESULT
-# ═══════════════════════════════════════════════════════════════════════════
 
 @dataclass
 class Result:
@@ -268,16 +258,16 @@ def run_config(n, q, sigma,
     xi_range   = xi_max - xi_min + 1e-9
     xi_centers = np.linspace(xi_max, xi_min, n_windows)
 
-    # ── Burn-in (all windows in parallel) ──────────────────────────────
+    #  Burn-in (all windows in parallel) 
     _, s_batch, _ = mh_all_windows_gpu(
         lwe, xi_centers, k, T, n_steps_burn, n_chains=n_chains)
 
-    # ── Production (all windows in parallel) ───────────────────────────
+    #  Production (all windows in parallel) ─
     xi_trajs, s_batch, acc_by_win = mh_all_windows_gpu(
         lwe, xi_centers, k, T, n_steps_prod,
         n_chains=n_chains, s_init_batch=s_batch)
 
-    # ── Metrics ────────────────────────────────────────────────────────
+    #  Metrics 
     window_means = xi_trajs.mean(axis=1)   # (n_windows,)
     window_gap   = float(np.mean(np.abs(window_means - xi_centers) / xi_range))
     mobility     = float(acc_by_win.mean())
@@ -300,9 +290,7 @@ def run_config(n, q, sigma,
                   rugosity=rugosity, window_gap=window_gap, mobility=mobility,
                   bin_centers=bc, F=F)
 
-# ═══════════════════════════════════════════════════════════════════════════
 # BKZ ESTIMATOR
-# ═══════════════════════════════════════════════════════════════════════════
 
 def bkz_estimate(n, q, sigma, m_factor=3):
     m   = m_factor * n
@@ -340,9 +328,7 @@ def attach_bkz(results):
         print(f"  {r.n:>5}  {r.q:>6}  {r.bkz_beta:>6.0f}  "
               f"{r.bkz_log2gates:>10.2f}  {flag:>12}")
 
-# ═══════════════════════════════════════════════════════════════════════════
 # CLUSTERING
-# ═══════════════════════════════════════════════════════════════════════════
 
 def cluster_results(results, n_clusters=3):
     X = np.array([[r.rugosity, r.window_gap, r.mobility] for r in results])
@@ -371,9 +357,7 @@ def cluster_results(results, n_clusters=3):
         r.cluster_id = int(labels[i]); r.phase_label = cluster_names[labels[i]]
     return labels, sil, centroids_orig, cluster_names, thresholds
 
-# ═══════════════════════════════════════════════════════════════════════════
 # DISAGREEMENT DETECTION
-# ═══════════════════════════════════════════════════════════════════════════
 
 def find_disagreements(results, bkz_hard_threshold=100.0):
     gaps_strong = []; gaps_soft = []
@@ -410,11 +394,8 @@ def write_disagreements(gaps_strong, gaps_soft, path="lwe_disagreements_v5.txt")
                         f"log2gates={r.bkz_log2gates:.2f}\n")
         else:
             f.write("  None found.\n")
-    print(f"Disagreement report → {path}")
+    print(f"Disagreement report >>>> {path}")
 
-# ═══════════════════════════════════════════════════════════════════════════
-# PLOTTING
-# ═══════════════════════════════════════════════════════════════════════════
 
 def plot_results(results, ns, alphas, sil,
                  save="lwe_gpu_results.png"):
@@ -568,12 +549,10 @@ def plot_results(results, ns, alphas, sil,
         f'n = 64 – 256  |  Approaching Kyber-512 territory (n=256, q=3329)',
         color='white', fontsize=12, fontweight='bold', y=1.005)
     plt.savefig(save, dpi=150, bbox_inches='tight', facecolor=BG)
-    print(f"Plot saved → {save}")
+    print(f"Plot saved >>>> {save}")
     plt.close()
 
-# ═══════════════════════════════════════════════════════════════════════════
 # CONCLUSIONS
-# ═══════════════════════════════════════════════════════════════════════════
 
 def print_conclusions(results, gaps_strong, gaps_soft, sil, thresholds):
     counts = {p: sum(1 for r in results if r.phase_label==p)
@@ -628,9 +607,6 @@ def print_conclusions(results, gaps_strong, gaps_soft, sil, thresholds):
           f"{'YES — near Kyber alpha range' if kyber_in_rugged else 'NO — outside range tested'}")
     print(f"\n{sep}\n")
 
-# ═══════════════════════════════════════════════════════════════════════════
-# MAIN
-# ═══════════════════════════════════════════════════════════════════════════
 
 if __name__ == "__main__":
     # Cryptographically approaching Kyber territory

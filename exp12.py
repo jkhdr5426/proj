@@ -1,10 +1,9 @@
 """
 Experiment 12: ξ_dual Coordinate + Sampler Efficiency Analysis
-================================================================
-Run with:  sage -python experiment12.py
+=======Run with:  sage -python experiment12.py
            sage -python experiment12.py --quick   (fast test)
 
-PART A: Dual Reaction Coordinate ξ_dual
+first partt :) : Dual Reaction Coordinate ξ_dual
   Experiment 11 showed (p=0.404) that ξ_primal = ||As - b||
   does not detect attack-family transitions (BDD vs USVP vs Dual).
 
@@ -17,12 +16,12 @@ PART A: Dual Reaction Coordinate ξ_dual
   captures the DIRECTION of e relative to the dual lattice.
 
   v* is computed as the smallest left singular vector of A:
-    A = U Σ V^T  →  v* = U[:, n]  (first left null-space vector)
+    A = U Σ V^T  >>>>  v* = U[:, n]  (first left null-space vector)
 
   At the BDD/Dual boundary, ξ_dual_ratio (random/true) should
   exceed ξ_primal_ratio, making it more attack-family sensitive.
 
-PART B: Sampler Efficiency vs BKZ Hardness
+second part :) : Sampler Efficiency vs BKZ Hardness
   For each config we measure:
     tau_int:     integrated autocorrelation time (τ = 0.5 + Σ ρ(k))
     ESS:         effective sample size = n_steps / (2τ)
@@ -31,7 +30,7 @@ PART B: Sampler Efficiency vs BKZ Hardness
     fp_time:     first-passage steps until any chain reaches 1.5×ξ_true
 
   Hypothesis: efficiency anti-correlates with BKZ β.
-  If confirmed → umbrella difficulty tracks cryptographic hardness.
+  if confirmed >>>> umbrella difficulty tracks cryptographic hardness.
 """
 
 from __future__ import annotations
@@ -56,7 +55,6 @@ BG = "#0f1117"; PBG = "#1a1d27"
 FAM_COL = {"bdd":"#69ff94","usvp":"#00d4ff",
             "dual":"#ffd93d","dual_hybrid":"#ff6b6b","other":"#b0b0b0"}
 
-# ── GPU ──────────────────────────────────────────────────────────────────────
 try:
     import torch
     DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -65,7 +63,6 @@ try:
 except Exception:
     torch = None; DEVICE = "cpu"; DNAME = "CPU"; TORCH = False
 
-# ── Estimator ─────────────────────────────────────────────────────────────────
 if os.path.isdir(DEFAULT_REPO) and DEFAULT_REPO not in sys.path:
     sys.path.insert(0, DEFAULT_REPO)
 
@@ -78,9 +75,7 @@ except Exception:
 
 JOBS = max(1, min(16, os.cpu_count() or 1))
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# PART A — DUAL REACTION COORDINATE
-# ═══════════════════════════════════════════════════════════════════════════════
+# first partt :)  — DUAL REACTION COORDINATE
 
 def compute_dual_vector(A: np.ndarray) -> np.ndarray:
     """
@@ -115,9 +110,7 @@ def xi_dual(A, b, s, q, v_star):
     r = np.where(r > q//2, r-q, r)
     return float(abs(np.dot(v_star, r.astype(np.float64))))
 
-# ═══════════════════════════════════════════════════════════════════════════════
 # LWE GENERATION
-# ═══════════════════════════════════════════════════════════════════════════════
 
 @dataclass
 class LWE_:
@@ -137,9 +130,7 @@ def gen(n, m, q, sigma, seed):
     e = np.round(rng.normal(0, sigma, m)).astype(np.int64)
     return LWE_(n=n, m=m, q=q, sigma=sigma, A=A, b=(A@s+e)%q, s=s)
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# PART B — EFFICIENCY METRICS
-# ═══════════════════════════════════════════════════════════════════════════════
+# second part :)  — EFFICIENCY METRICS
 
 def integrated_autocorr(x: np.ndarray, max_lag: int = 200) -> float:
     """
@@ -203,9 +194,7 @@ class ConfigResult:
     # Estimator
     family: str; bits: float; beta_bkz: float; dgap: float
 
-# ═══════════════════════════════════════════════════════════════════════════════
 # GPU SAMPLER — modified to return raw per-chain trajectories
-# ═══════════════════════════════════════════════════════════════════════════════
 
 XI_REF = 500.
 
@@ -284,9 +273,7 @@ def wham(wxis, centers, k, T, bins, it=400, tol=1e-8):
     if v.any(): F=np.clip(F,0,np.nanpercentile(F[v],95))
     return bc,F
 
-# ═══════════════════════════════════════════════════════════════════════════════
 # ESTIMATOR WRAPPER
-# ═══════════════════════════════════════════════════════════════════════════════
 
 def parse_rop(t):
     m=re.search(r"rop:\s*≈?\s*2\^([0-9]+(?:\.[0-9]+)?)",t)
@@ -353,9 +340,7 @@ def run_est(n, q, sigma):
     dg=float(valid[1][1]-valid[0][1]) if len(valid)>=2 else 0.
     return bf, bb, bb_v, dg
 
-# ═══════════════════════════════════════════════════════════════════════════════
 # MAIN CONFIG RUNNER
-# ═══════════════════════════════════════════════════════════════════════════════
 
 def run_config(n, q, sigma, seed=0, W=14, n_burn=300, n_prod=1000,
                n_chains=5, k=0.006, T=1.) -> ConfigResult:
@@ -363,10 +348,10 @@ def run_config(n, q, sigma, seed=0, W=14, n_burn=300, n_prod=1000,
     lwe = gen(n, 3*n, q, sigma, seed).gpu()
     alpha = q / (sigma * math.sqrt(n))
 
-    # ── Dual vector (CPU, once per config) ──────────────────────────────
+    #  Dual vector (CPU, once per config) 
     v_star = compute_dual_vector(lwe.A)
 
-    # ── Baseline xi values ──────────────────────────────────────────────
+    #  Baseline xi values 
     xi_pt = xi_primal(lwe.A, lwe.b, lwe.s, q)
     xi_dt = xi_dual(lwe.A, lwe.b, lwe.s, q, v_star)
 
@@ -378,7 +363,7 @@ def run_config(n, q, sigma, seed=0, W=14, n_burn=300, n_prod=1000,
     xi_d_ratio = xi_dr / (xi_dt + 1e-9)
     xi_p_ratio = xi_pr / (xi_pt + 1e-9)
 
-    # ── Window setup ─────────────────────────────────────────────────────
+    #  Window setup ─
     xi_max   = xi_pr * 1.03
     xi_min   = max(xi_pt * 0.75, 1.)
     xi_range = xi_max - xi_min + 1e-9
@@ -386,14 +371,14 @@ def run_config(n, q, sigma, seed=0, W=14, n_burn=300, n_prod=1000,
     cen      = np.linspace(xi_max, xi_min, W)
     fp_thr   = xi_pt * 1.5     # "close to secret" threshold
 
-    # ── Burn-in ──────────────────────────────────────────────────────────
+    #  Burn-in 
     _, _, s0, _, _ = mh_run(lwe, cen, k_sc, T, n_burn, n_chains)
 
-    # ── Production with efficiency tracking ─────────────────────────────
+    #  Production with efficiency tracking ─
     trajs, raw, s_fin, acc_w, fp_time = mh_run(
         lwe, cen, k_sc, T, n_prod, n_chains, s0=s0, fp_thresh=fp_thr)
 
-    # ── Per-window metrics ───────────────────────────────────────────────
+    #  Per-window metrics ─
     windows = []
     for w in range(W):
         xi_c   = float(cen[w])
@@ -423,10 +408,10 @@ def run_config(n, q, sigma, seed=0, W=14, n_burn=300, n_prod=1000,
     mean_bi   = float(np.mean([w.burnin     for w in windows]))
     fp_rate   = 1.0 / fp_time if fp_time < n_prod else 0.0
 
-    # ── Estimator ────────────────────────────────────────────────────────
+    #  Estimator 
     family, bits, beta_bkz, dgap = run_est(n, q, sigma)
 
-    # ── Cleanup ──────────────────────────────────────────────────────────
+    #  Cleanup 
     try:
         del lwe.Ag, lwe.bg, s0, s_fin, trajs, raw
         if TORCH and torch: torch.cuda.empty_cache()
@@ -444,9 +429,6 @@ def run_config(n, q, sigma, seed=0, W=14, n_burn=300, n_prod=1000,
         family=family, bits=bits, beta_bkz=beta_bkz, dgap=dgap,
     )
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# CORRELATION HELPER
-# ═══════════════════════════════════════════════════════════════════════════════
 
 def corr(x, y):
     xa, ya = np.array(x, float), np.array(y, float)
@@ -458,9 +440,6 @@ def corr(x, y):
 def fmt(x, d=4):
     return "n/a" if (x is None or not np.isfinite(float(x))) else f"{float(x):.{d}f}"
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# PLOTTING
-# ═══════════════════════════════════════════════════════════════════════════════
 
 def plot_all(s1: List[ConfigResult], s2: List[ConfigResult],
              save="exp12_results.png"):
@@ -477,7 +456,7 @@ def plot_all(s1: List[ConfigResult], s2: List[ConfigResult],
         ax.tick_params(colors="white", labelsize=7)
         for sp in ax.spines.values(): sp.set_edgecolor("#444")
 
-    # ── SWEEP 1: ξ_dual vs sigma ──────────────────────────────────────────
+    #  SWEEP 1: ξ_dual vs sigma 
     if s1:
         sigs    = [m.sigma   for m in s1]
         xp_rats = [m.xi_p_ratio for m in s1]
@@ -499,12 +478,12 @@ def plot_all(s1: List[ConfigResult], s2: List[ConfigResult],
                 mid = 0.5*(sigs[i-1]+sigs[i])
                 ax0.axvline(mid, color="white", lw=2, linestyle="--", alpha=0.7)
                 ax0.text(mid+0.03, ax0.get_ylim()[1]*0.97 if ax0.get_ylim()[1]>0 else 1.,
-                         f"{fams[i-1]}→{fams[i]}", ha="left",
+                         f"{fams[i-1]}>>>>{fams[i]}", ha="left",
                          color="white", fontsize=7)
         ax0.set_xlabel("sigma", color="white", fontsize=8)
         ax0.set_ylabel("ξ_primal ratio", color="#69ff94", fontsize=8)
         ax0_r.set_ylabel("ξ_dual ratio", color="#ffd93d", fontsize=8)
-        ax0.set_title("PART A — ξ_dual coordinate vs sigma (n=64)\n"
+        ax0.set_title("first partt :)  — ξ_dual coordinate vs sigma (n=64)\n"
                       "Does ξ_dual_ratio exceed ξ_primal_ratio at family boundaries?",
                       color="white", fontsize=9, pad=6)
         ax0.tick_params(colors="white"); ax0_r.tick_params(colors="white")
@@ -522,7 +501,7 @@ def plot_all(s1: List[ConfigResult], s2: List[ConfigResult],
         sty(ax1, "Sampler Efficiency vs sigma\n(colored by attack family)",
             "sigma", "ESS / n_steps", "#00d4ff")
 
-    # ── SWEEP 2: efficiency vs BKZ ────────────────────────────────────────
+    #  SWEEP 2: efficiency vs BKZ 
     if s2:
         ns2   = [m.n        for m in s2]
         betas = [m.beta_bkz for m in s2]
@@ -555,7 +534,7 @@ def plot_all(s1: List[ConfigResult], s2: List[ConfigResult],
                 ax2.legend(fontsize=7, labelcolor="white", facecolor=PBG)
         plt.colorbar(sc2, ax=ax2, label="n").ax.yaxis.label.set_color("white")
         sty(ax2, "KEY: Sampling Efficiency vs BKZ β\n"
-                 "(hardness → lower efficiency?)",
+                 "(hardness >>>> lower efficiency?)",
             "BKZ block size β", "ESS / n_steps", "#69ff94")
 
         # Plot 2b: tau_int vs beta
@@ -613,11 +592,11 @@ def plot_all(s1: List[ConfigResult], s2: List[ConfigResult],
         lines = [
             "EXPERIMENT 12 RESULTS",
             "",
-            "PART A — ξ_dual sensitivity:",
+            "first partt :)  — ξ_dual sensitivity:",
             f"  corr(sigma, ξ_d_ratio): {fmt(corr([m.sigma for m in s1],[m.xi_d_ratio for m in s1]),3)}",
             f"  corr(sigma, ξ_p_ratio): {fmt(corr([m.sigma for m in s1],[m.xi_p_ratio for m in s1]),3)}",
             "",
-            "PART B — Efficiency vs hardness:",
+            "second part :)  — Efficiency vs hardness:",
             f"  corr(β, efficiency):  {fmt(r_eff_beta,4)}",
             f"  corr(β, τ_int):       {fmt(r_tau,4)}",
             f"  corr(β, fp_time):     {fmt(r_fp,4)}",
@@ -627,13 +606,13 @@ def plot_all(s1: List[ConfigResult], s2: List[ConfigResult],
             "INTERPRETATION:",
             "",
             "  corr(β, eff) < -0.5:",
-            "  → Sampler tracks BKZ hardness",
+            "  >>>> Sampler tracks BKZ hardness",
             "",
             "  corr(β, fp_time) > +0.5:",
-            "  → Harder = slower first passage",
+            "  >>>> Harder = slower first passage",
             "",
             "  ξ_d_ratio > ξ_p_ratio at boundary",
-            "  → Dual coord more family-sensitive",
+            "  >>>> Dual coord more family-sensitive",
         ]
         ax6.text(0.04, 0.97, "\n".join(lines),
                  transform=ax6.transAxes, va="top", ha="left",
@@ -646,12 +625,10 @@ def plot_all(s1: List[ConfigResult], s2: List[ConfigResult],
                  "Part B: Efficiency vs BKZ hardness",
                  color="white", fontsize=12, fontweight="bold", y=1.005)
     plt.savefig(save, dpi=150, bbox_inches="tight", facecolor=BG)
-    print(f"Plot → {save}")
+    print(f"Plot >>>> {save}")
     plt.close()
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# CONCLUSIONS + SUMMARY
-# ═══════════════════════════════════════════════════════════════════════════════
+# CONCLUSIONS + summmarryyyy
 
 def print_conclusions(s1, s2):
     print("\n" + "="*70)
@@ -659,7 +636,7 @@ def print_conclusions(s1, s2):
     print("="*70)
 
     if s1:
-        print("\nPART A: ξ_dual coordinate")
+        print("\nfirst partt :) : ξ_dual coordinate")
         print(f"  {'sigma':>6}  {'family':>12}  {'ξ_p_ratio':>10}  "
               f"{'ξ_d_ratio':>10}  {'ξ_d more?':>10}")
         print("  " + "-"*55)
@@ -672,7 +649,7 @@ def print_conclusions(s1, s2):
                   f"{more:>10}{bd}")
 
     if s2:
-        print("\nPART B: Sampler Efficiency vs BKZ")
+        print("\nsecond part :) : Sampler Efficiency vs BKZ")
         betas = [m.beta_bkz for m in s2]
         effs  = [m.mean_eff for m in s2]
         taus  = [m.mean_tau for m in s2]
@@ -710,7 +687,7 @@ def print_conclusions(s1, s2):
     print("  1. ξ_dual = |⟨v*, As-b⟩| is a dual-sensitive reaction coord.")
     print("     Paper: propose 2D coordinate (ξ_primal, ξ_dual) for future work.")
     print("  2. ESS/n_steps anti-correlates with BKZ β (quantified).")
-    print("     Paper: umbr. efficiency ∝ 1/hardness → complementary metric.")
+    print("     Paper: umbr. efficiency ∝ 1/hardness >>>> complementary metric.")
     print("  3. First-passage time provides direct BKZ comparison benchmark.")
     print("="*70)
 
@@ -719,7 +696,7 @@ def write_summary(s1, s2, path="exp12_summary.txt"):
         sep = "="*70
         f.write(sep+"\nEXPERIMENT 12 — DUAL COORDINATE + EFFICIENCY ANALYSIS\n"+sep+"\n\n")
 
-        f.write("PART A: ξ_DUAL (n=64, sigma sweep)\n"+"-"*40+"\n")
+        f.write("first partt :) : ξ_DUAL (n=64, sigma sweep)\n"+"-"*40+"\n")
         f.write(f"{'sigma':>6}  {'family':>12}  {'xi_p_ratio':>11}  "
                 f"{'xi_d_ratio':>11}  {'efficiency':>11}\n")
         f.write("-"*56+"\n")
@@ -728,7 +705,7 @@ def write_summary(s1, s2, path="exp12_summary.txt"):
                     f"{m.xi_p_ratio:>11.4f}  {m.xi_d_ratio:>11.4f}  "
                     f"{m.mean_eff:>11.4f}\n")
 
-        f.write("\nPART B: EFFICIENCY VS BKZ (sigma=2.0)\n"+"-"*40+"\n")
+        f.write("\nsecond part :) : EFFICIENCY VS BKZ (sigma=2.0)\n"+"-"*40+"\n")
         f.write(f"{'n':>4}  {'beta':>7}  {'bits':>8}  "
                 f"{'efficiency':>11}  {'tau_int':>8}  {'fp_time':>8}\n")
         f.write("-"*52+"\n")
@@ -745,11 +722,8 @@ def write_summary(s1, s2, path="exp12_summary.txt"):
             f.write(f"corr(β, tau_int):    {fmt(corr(betas,taus),4)}\n")
             f.write(f"corr(β, fp_time):    {fmt(corr(betas,fps),4)}\n")
         f.write("\n"+sep+"\n")
-    print(f"Summary → {path}")
+    print(f"Summary >>>> {path}")
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# MAIN
-# ═══════════════════════════════════════════════════════════════════════════════
 
 if __name__ == "__main__":
     import argparse
@@ -779,7 +753,7 @@ if __name__ == "__main__":
         sweep2_ns   = [32, 48, 64, 96, 128, 192, 256]
         kw = dict(W=14, n_burn=300, n_prod=1000, n_chains=5)
 
-    # ── Sweep 1: ξ_dual vs sigma ──────────────────────────────────────────
+    #  Sweep 1: ξ_dual vs sigma 
     print("\nSWEEP 1: ξ_dual vs sigma (n=64, alpha=12)")
     print(f"{'sigma':>6}  {'q':>5}  {'family':>12}  {'xi_p_ratio':>11}  "
           f"{'xi_d_ratio':>11}  {'eff':>7}")
@@ -797,7 +771,7 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"ERR sigma={sigma}: {e}")
 
-    # ── Sweep 2: efficiency vs BKZ ────────────────────────────────────────
+    #  Sweep 2: efficiency vs BKZ 
     print("\nSWEEP 2: Efficiency vs BKZ (sigma=2.0, alpha=12)")
     print(f"{'n':>4}  {'q':>5}  {'beta':>7}  {'bits':>8}  "
           f"{'eff':>8}  {'tau':>7}  {'fp_time':>8}")

@@ -1,0 +1,2242 @@
+{
+  "meta": {
+    "fixed_n": 48,
+    "fixed_sigma": 1.5,
+    "fixed_q": 101,
+    "seeds": 2,
+    "quick": true,
+    "use_proxy": false,
+    "generated_at_unix": 1780690717.6356964
+  },
+  "sweeps": {
+    "sigma": {
+      "label": "sigma",
+      "values": [
+        0.5,
+        0.75,
+        1.0,
+        1.5,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "fixed_n": 48,
+      "fixed_q": 101,
+      "fixed_sigma": 1.5,
+      "seeds": 2,
+      "quick": true,
+      "use_proxy": false,
+      "elapsed_min": 6.533115847905477,
+      "rows": [
+        {
+          "label": "sigma",
+          "value": 0.5,
+          "rows": [
+            {
+              "n": 48,
+              "q": 101,
+              "sigma": 0.5,
+              "seed": 10000,
+              "alpha_like": 29.156188594076102,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.6,
+                  "usvp": 37.0,
+                  "dual": null,
+                  "dual_hybrid": 37.7
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 40.0,
+                  "dual": null,
+                  "dual_hybrid": 40.0
+                },
+                "best_family": "usvp",
+                "best_bits": 37.0,
+                "best_beta": 40.0,
+                "dominance_gap": 0.6000000000000014
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.9077810967556459,
+                "survey_entropy_norm": 0.41337622490980885,
+                "overlap_proxy": 0.013274245870859994,
+                "warning_density": 0.9695485954874236,
+                "warning_max": 1.0,
+                "complexity_proxy": 20.108970100018137,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 14.999609195927462,
+                "xi_true": 5.0,
+                "xi_map": 214.52971822104274,
+                "xi_ratio": 42.90594363562736,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 48,
+              "q": 101,
+              "sigma": 0.5,
+              "seed": 10001,
+              "alpha_like": 29.156188594076102,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.6,
+                  "usvp": 37.0,
+                  "dual": null,
+                  "dual_hybrid": 37.7
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 40.0,
+                  "dual": null,
+                  "dual_hybrid": 40.0
+                },
+                "best_family": "usvp",
+                "best_bits": 37.0,
+                "best_beta": 40.0,
+                "dominance_gap": 0.6000000000000014
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.8965740471470112,
+                "survey_entropy_norm": 0.41094789187544095,
+                "overlap_proxy": 0.04882435267397983,
+                "warning_density": 0.9688284327882252,
+                "warning_max": 1.0,
+                "complexity_proxy": 20.737997369336338,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 15.324956151104052,
+                "xi_true": 4.795831523312719,
+                "xi_map": 201.78949427559405,
+                "xi_ratio": 42.076018152975486,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 48,
+          "q": 101,
+          "sigma": 0.5,
+          "sec": {
+            "best_family": "usvp",
+            "best_bits": 37.0,
+            "dominance_gap": 0.6000000000000014
+          },
+          "sp": {
+            "warning_density": 0.9691885141378244,
+            "survey_entropy_norm": 0.4121620583926249,
+            "overlap_proxy": 0.031049299272419912,
+            "complexity_proxy": 20.423483734677237,
+            "map_accuracy": 0.0,
+            "xi_ratio": 42.49098089430142
+          }
+        },
+        {
+          "label": "sigma",
+          "value": 0.75,
+          "rows": [
+            {
+              "n": 48,
+              "q": 101,
+              "sigma": 0.75,
+              "seed": 10097,
+              "alpha_like": 19.4374590627174,
+              "sec": {
+                "fam_best": {
+                  "bdd": 38.8,
+                  "usvp": 37.2,
+                  "dual": null,
+                  "dual_hybrid": 37.7
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 40.0,
+                  "dual": null,
+                  "dual_hybrid": 40.0
+                },
+                "best_family": "usvp",
+                "best_bits": 37.2,
+                "best_beta": 40.0,
+                "dominance_gap": 0.5
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.8904984851762014,
+                "survey_entropy_norm": 0.4096314447862178,
+                "overlap_proxy": 0.03252457707240554,
+                "warning_density": 0.9573517283684307,
+                "warning_max": 1.0,
+                "complexity_proxy": 20.323295621241176,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 14.486622884168945,
+                "xi_true": 5.744562646538029,
+                "xi_map": 214.63690269848752,
+                "xi_ratio": 37.363488896839755,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 48,
+              "q": 101,
+              "sigma": 0.75,
+              "seed": 10098,
+              "alpha_like": 19.4374590627174,
+              "sec": {
+                "fam_best": {
+                  "bdd": 38.8,
+                  "usvp": 37.2,
+                  "dual": null,
+                  "dual_hybrid": 37.7
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 40.0,
+                  "dual": null,
+                  "dual_hybrid": 40.0
+                },
+                "best_family": "usvp",
+                "best_bits": 37.2,
+                "best_beta": 40.0,
+                "dominance_gap": 0.5
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.8905370256746767,
+                "survey_entropy_norm": 0.409639795705405,
+                "overlap_proxy": 0.030298082063046006,
+                "warning_density": 0.9559116940881395,
+                "warning_max": 1.0,
+                "complexity_proxy": 20.277045505536805,
+                "map_accuracy": 0.020833333333333332,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 13.22243836937522,
+                "xi_true": 6.164414002968976,
+                "xi_map": 201.81179351068658,
+                "xi_ratio": 32.73819593894074,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 48,
+          "q": 101,
+          "sigma": 0.75,
+          "sec": {
+            "best_family": "usvp",
+            "best_bits": 37.2,
+            "dominance_gap": 0.5
+          },
+          "sp": {
+            "warning_density": 0.9566317112282852,
+            "survey_entropy_norm": 0.4096356202458114,
+            "overlap_proxy": 0.03141132956772577,
+            "complexity_proxy": 20.30017056338899,
+            "map_accuracy": 0.010416666666666666,
+            "xi_ratio": 35.05084241789025
+          }
+        },
+        {
+          "label": "sigma",
+          "value": 1.0,
+          "rows": [
+            {
+              "n": 48,
+              "q": 101,
+              "sigma": 1.0,
+              "seed": 10194,
+              "alpha_like": 14.578094297038051,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.4,
+                  "usvp": 37.5,
+                  "dual": 38.7,
+                  "dual_hybrid": 37.7
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 40.0,
+                  "dual": 42.0,
+                  "dual_hybrid": 40.0
+                },
+                "best_family": "bdd",
+                "best_bits": 37.4,
+                "best_beta": 40.0,
+                "dominance_gap": 0.10000000000000142
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.8896493687095532,
+                "survey_entropy_norm": 0.4094474590238635,
+                "overlap_proxy": 0.030846894901095392,
+                "warning_density": 0.9480305937909422,
+                "warning_max": 1.0,
+                "complexity_proxy": 20.279001997458142,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 13.851289719905884,
+                "xi_true": 7.937253933193772,
+                "xi_map": 212.94835054538459,
+                "xi_ratio": 26.828970360643357,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 48,
+              "q": 101,
+              "sigma": 1.0,
+              "seed": 10195,
+              "alpha_like": 14.578094297038051,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.4,
+                  "usvp": 37.5,
+                  "dual": 38.7,
+                  "dual_hybrid": 37.7
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 40.0,
+                  "dual": 42.0,
+                  "dual_hybrid": 40.0
+                },
+                "best_family": "bdd",
+                "best_bits": 37.4,
+                "best_beta": 40.0,
+                "dominance_gap": 0.10000000000000142
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.897920635313371,
+                "survey_entropy_norm": 0.4112396693407197,
+                "overlap_proxy": 0.012690882291151721,
+                "warning_density": 0.9476743469624255,
+                "warning_max": 1.0,
+                "complexity_proxy": 19.993215681980487,
+                "map_accuracy": 0.020833333333333332,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 14.36340381790889,
+                "xi_true": 6.4031242374328485,
+                "xi_map": 202.6030601940652,
+                "xi_ratio": 31.64128207570932,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 48,
+          "q": 101,
+          "sigma": 1.0,
+          "sec": {
+            "best_family": "bdd",
+            "best_bits": 37.4,
+            "dominance_gap": 0.10000000000000142
+          },
+          "sp": {
+            "warning_density": 0.9478524703766839,
+            "survey_entropy_norm": 0.41034356418229156,
+            "overlap_proxy": 0.021768888596123557,
+            "complexity_proxy": 20.136108839719313,
+            "map_accuracy": 0.010416666666666666,
+            "xi_ratio": 29.23512621817634
+          }
+        },
+        {
+          "label": "sigma",
+          "value": 1.5,
+          "rows": [
+            {
+              "n": 48,
+              "q": 101,
+              "sigma": 1.5,
+              "seed": 10291,
+              "alpha_like": 9.7187295313587,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.7,
+                  "usvp": 38.3,
+                  "dual": 44.3,
+                  "dual_hybrid": 44.5
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 41.0,
+                  "dual": 61.0,
+                  "dual_hybrid": 53.0
+                },
+                "best_family": "bdd",
+                "best_bits": 37.7,
+                "best_beta": 40.0,
+                "dominance_gap": 0.5999999999999943
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.9041680025300822,
+                "survey_entropy_norm": 0.4125933430300445,
+                "overlap_proxy": 0.011952560539906749,
+                "warning_density": 0.9272041689590996,
+                "warning_max": 0.9999999999999656,
+                "complexity_proxy": 20.044037999051998,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 15.002637493560835,
+                "xi_true": 12.449899597988733,
+                "xi_map": 242.51391712641978,
+                "xi_ratio": 19.479186574815305,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 48,
+              "q": 101,
+              "sigma": 1.5,
+              "seed": 10292,
+              "alpha_like": 9.7187295313587,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.7,
+                  "usvp": 38.3,
+                  "dual": 44.3,
+                  "dual_hybrid": 44.5
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 41.0,
+                  "dual": 61.0,
+                  "dual_hybrid": 53.0
+                },
+                "best_family": "bdd",
+                "best_bits": 37.7,
+                "best_beta": 40.0,
+                "dominance_gap": 0.5999999999999943
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.9121412830261184,
+                "survey_entropy_norm": 0.41432098599558365,
+                "overlap_proxy": 0.02098963873712789,
+                "warning_density": 0.9278989381658047,
+                "warning_max": 0.9999999999999656,
+                "complexity_proxy": 20.313765615686346,
+                "map_accuracy": 0.020833333333333332,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 13.464206909961215,
+                "xi_true": 11.74734012447073,
+                "xi_map": 203.19940944796076,
+                "xi_ratio": 17.297482432417297,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 48,
+          "q": 101,
+          "sigma": 1.5,
+          "sec": {
+            "best_family": "bdd",
+            "best_bits": 37.7,
+            "dominance_gap": 0.5999999999999943
+          },
+          "sp": {
+            "warning_density": 0.9275515535624521,
+            "survey_entropy_norm": 0.4134571645128141,
+            "overlap_proxy": 0.01647109963851732,
+            "complexity_proxy": 20.178901807369172,
+            "map_accuracy": 0.010416666666666666,
+            "xi_ratio": 18.3883345036163
+          }
+        },
+        {
+          "label": "sigma",
+          "value": 2.0,
+          "rows": [
+            {
+              "n": 48,
+              "q": 101,
+              "sigma": 2.0,
+              "seed": 10388,
+              "alpha_like": 7.289047148519026,
+              "sec": {
+                "fam_best": {
+                  "bdd": 38.4,
+                  "usvp": 43.7,
+                  "dual": 49.1,
+                  "dual_hybrid": 51.5
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 59.0,
+                  "dual": 77.0,
+                  "dual_hybrid": 84.0
+                },
+                "best_family": "bdd",
+                "best_bits": 38.4,
+                "best_beta": 40.0,
+                "dominance_gap": 5.300000000000004
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.8997669455857755,
+                "survey_entropy_norm": 0.4116397261248637,
+                "overlap_proxy": 0.01572881666113018,
+                "warning_density": 0.9063472446147068,
+                "warning_max": 0.9999999998307678,
+                "complexity_proxy": 20.07443386946844,
+                "map_accuracy": 0.020833333333333332,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 13.340131264930838,
+                "xi_true": 13.076696830622021,
+                "xi_map": 229.1942407653386,
+                "xi_ratio": 17.526921646688475,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 48,
+              "q": 101,
+              "sigma": 2.0,
+              "seed": 10389,
+              "alpha_like": 7.289047148519026,
+              "sec": {
+                "fam_best": {
+                  "bdd": 38.4,
+                  "usvp": 43.7,
+                  "dual": 49.1,
+                  "dual_hybrid": 51.5
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 59.0,
+                  "dual": 77.0,
+                  "dual_hybrid": 84.0
+                },
+                "best_family": "bdd",
+                "best_bits": 38.4,
+                "best_beta": 40.0,
+                "dominance_gap": 5.300000000000004
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.9172570127429476,
+                "survey_entropy_norm": 0.4154294575291354,
+                "overlap_proxy": 0.003667414637978227,
+                "warning_density": 0.9053255375158561,
+                "warning_max": 0.9999999998307996,
+                "complexity_proxy": 20.013993560352578,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 13.647453118722153,
+                "xi_true": 14.212670403551895,
+                "xi_map": 223.065012944657,
+                "xi_ratio": 15.694799541204862,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 48,
+          "q": 101,
+          "sigma": 2.0,
+          "sec": {
+            "best_family": "bdd",
+            "best_bits": 38.4,
+            "dominance_gap": 5.300000000000004
+          },
+          "sp": {
+            "warning_density": 0.9058363910652815,
+            "survey_entropy_norm": 0.4135345918269996,
+            "overlap_proxy": 0.009698115649554204,
+            "complexity_proxy": 20.04421371491051,
+            "map_accuracy": 0.010416666666666666,
+            "xi_ratio": 16.61086059394667
+          }
+        },
+        {
+          "label": "sigma",
+          "value": 3.0,
+          "rows": [
+            {
+              "n": 48,
+              "q": 101,
+              "sigma": 3.0,
+              "seed": 10485,
+              "alpha_like": 4.85936476567935,
+              "sec": {
+                "fam_best": {
+                  "bdd": 44.8,
+                  "usvp": 51.9,
+                  "dual": 59.7,
+                  "dual_hybrid": 71.8
+                },
+                "fam_beta": {
+                  "bdd": 49.0,
+                  "usvp": 87.0,
+                  "dual": 95.0,
+                  "dual_hybrid": 95.0
+                },
+                "best_family": "bdd",
+                "best_bits": 44.8,
+                "best_beta": 49.0,
+                "dominance_gap": 7.100000000000001
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.9136463881805563,
+                "survey_entropy_norm": 0.41464711077367894,
+                "overlap_proxy": 0.021557687875872814,
+                "warning_density": 0.8606561930288983,
+                "warning_max": 0.9999991683780037,
+                "complexity_proxy": 20.341557932394196,
+                "map_accuracy": 0.020833333333333332,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 13.92201729614169,
+                "xi_true": 23.302360395462088,
+                "xi_map": 211.06870919205434,
+                "xi_ratio": 9.057825284690907,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 48,
+              "q": 101,
+              "sigma": 3.0,
+              "seed": 10486,
+              "alpha_like": 4.85936476567935,
+              "sec": {
+                "fam_best": {
+                  "bdd": 44.8,
+                  "usvp": 51.9,
+                  "dual": 59.7,
+                  "dual_hybrid": 71.8
+                },
+                "fam_beta": {
+                  "bdd": 49.0,
+                  "usvp": 87.0,
+                  "dual": 95.0,
+                  "dual_hybrid": 95.0
+                },
+                "best_family": "bdd",
+                "best_bits": 44.8,
+                "best_beta": 49.0,
+                "dominance_gap": 7.100000000000001
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.9059339765702816,
+                "survey_entropy_norm": 0.41297599263448176,
+                "overlap_proxy": 0.021184709220063245,
+                "warning_density": 0.8619481558227482,
+                "warning_max": 0.999999168281085,
+                "complexity_proxy": 20.25185709839377,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 14.0279582263274,
+                "xi_true": 23.323807579381203,
+                "xi_map": 232.74234681295107,
+                "xi_ratio": 9.978745794864217,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 48,
+          "q": 101,
+          "sigma": 3.0,
+          "sec": {
+            "best_family": "bdd",
+            "best_bits": 44.8,
+            "dominance_gap": 7.100000000000001
+          },
+          "sp": {
+            "warning_density": 0.8613021744258232,
+            "survey_entropy_norm": 0.41381155170408035,
+            "overlap_proxy": 0.02137119854796803,
+            "complexity_proxy": 20.296707515393983,
+            "map_accuracy": 0.010416666666666666,
+            "xi_ratio": 9.518285539777562
+          }
+        },
+        {
+          "label": "sigma",
+          "value": 4.0,
+          "rows": [
+            {
+              "n": 48,
+              "q": 101,
+              "sigma": 4.0,
+              "seed": 10582,
+              "alpha_like": 3.644523574259513,
+              "sec": {
+                "fam_best": {
+                  "bdd": 51.1,
+                  "usvp": 59.5,
+                  "dual": 76.8,
+                  "dual_hybrid": 98.7
+                },
+                "fam_beta": {
+                  "bdd": 75.0,
+                  "usvp": 113.0,
+                  "dual": 95.0,
+                  "dual_hybrid": 85.0
+                },
+                "best_family": "bdd",
+                "best_bits": 51.1,
+                "best_beta": 75.0,
+                "dominance_gap": 8.399999999999999
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.9313746232157456,
+                "survey_entropy_norm": 0.4184884481711524,
+                "overlap_proxy": 0.01913033538732571,
+                "warning_density": 0.819220422392226,
+                "warning_max": 0.9999416984079278,
+                "complexity_proxy": 20.479198977927872,
+                "map_accuracy": 0.020833333333333332,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 13.79648927552072,
+                "xi_true": 26.115129714401192,
+                "xi_map": 208.40585404445815,
+                "xi_ratio": 7.980272597365367,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 48,
+              "q": 101,
+              "sigma": 4.0,
+              "seed": 10583,
+              "alpha_like": 3.644523574259513,
+              "sec": {
+                "fam_best": {
+                  "bdd": 51.1,
+                  "usvp": 59.5,
+                  "dual": 76.8,
+                  "dual_hybrid": 98.7
+                },
+                "fam_beta": {
+                  "bdd": 75.0,
+                  "usvp": 113.0,
+                  "dual": 95.0,
+                  "dual_hybrid": 85.0
+                },
+                "best_family": "bdd",
+                "best_bits": 51.1,
+                "best_beta": 75.0,
+                "dominance_gap": 8.399999999999999
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.943050989771912,
+                "survey_entropy_norm": 0.42101847236305756,
+                "overlap_proxy": 0.013869697619196344,
+                "warning_density": 0.8161469875067007,
+                "warning_max": 0.9999417046120855,
+                "complexity_proxy": 20.49309927048935,
+                "map_accuracy": 0.020833333333333332,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 15.426599286042725,
+                "xi_true": 28.460498941515414,
+                "xi_map": 208.3098653448751,
+                "xi_ratio": 7.319262594995958,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 48,
+          "q": 101,
+          "sigma": 4.0,
+          "sec": {
+            "best_family": "bdd",
+            "best_bits": 51.1,
+            "dominance_gap": 8.399999999999999
+          },
+          "sp": {
+            "warning_density": 0.8176837049494634,
+            "survey_entropy_norm": 0.41975346026710497,
+            "overlap_proxy": 0.01650001650326103,
+            "complexity_proxy": 20.48614912420861,
+            "map_accuracy": 0.020833333333333332,
+            "xi_ratio": 7.649767596180663
+          }
+        }
+      ],
+      "correlations": {
+        "warning_density": {
+          "n": 7,
+          "pearson": -0.9517310317963851,
+          "spearman": -1.0,
+          "pvalue": 0.0
+        },
+        "survey_entropy": {
+          "n": 7,
+          "pearson": 0.8849172555888596,
+          "spearman": 0.8928571428571429,
+          "pvalue": 0.006807187408935393
+        },
+        "overlap_proxy": {
+          "n": 7,
+          "pearson": -0.3164226370330109,
+          "spearman": -0.6785714285714287,
+          "pvalue": 0.09375025395983135
+        },
+        "complexity_proxy": {
+          "n": 7,
+          "pearson": 0.56921972152649,
+          "spearman": 0.0,
+          "pvalue": 1.0
+        }
+      }
+    },
+    "n": {
+      "label": "n",
+      "values": [
+        24,
+        32,
+        40,
+        48,
+        56,
+        64
+      ],
+      "fixed_n": 48,
+      "fixed_q": 101,
+      "fixed_sigma": 1.5,
+      "seeds": 2,
+      "quick": true,
+      "use_proxy": false,
+      "elapsed_min": 5.3943035085996,
+      "rows": [
+        {
+          "label": "n",
+          "value": 24.0,
+          "rows": [
+            {
+              "n": 24,
+              "q": 101,
+              "sigma": 1.5,
+              "seed": 10000,
+              "alpha_like": 13.744359112283389,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.2,
+                  "usvp": 36.4,
+                  "dual": 37.2,
+                  "dual_hybrid": 36.5
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 40.0,
+                  "dual": 40.0,
+                  "dual_hybrid": 40.0
+                },
+                "best_family": "usvp",
+                "best_bits": 36.4,
+                "best_beta": 40.0,
+                "dominance_gap": 0.10000000000000142
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.9041343475944281,
+                "survey_entropy_norm": 0.41258605071004306,
+                "overlap_proxy": 0.022649465637187276,
+                "warning_density": 0.9251133826088315,
+                "warning_max": 0.9999999999999656,
+                "complexity_proxy": 10.13152879889498,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 14.243163412326313,
+                "xi_true": 6.782329983125268,
+                "xi_map": 181.8075906006127,
+                "xi_ratio": 26.80606679801069,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 24,
+              "q": 101,
+              "sigma": 1.5,
+              "seed": 10001,
+              "alpha_like": 13.744359112283389,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.2,
+                  "usvp": 36.4,
+                  "dual": 37.2,
+                  "dual_hybrid": 36.5
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 40.0,
+                  "dual": 40.0,
+                  "dual_hybrid": 40.0
+                },
+                "best_family": "usvp",
+                "best_bits": 36.4,
+                "best_beta": 40.0,
+                "dominance_gap": 0.10000000000000142
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.923333499432036,
+                "survey_entropy_norm": 0.4167461049854509,
+                "overlap_proxy": 0.003447502551293236,
+                "warning_density": 0.9251166142236154,
+                "warning_max": 0.9999999999999656,
+                "complexity_proxy": 10.036497333316143,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 14.779436840407419,
+                "xi_true": 9.539392014169456,
+                "xi_map": 160.6455726125062,
+                "xi_ratio": 16.840231783854676,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 24,
+          "q": 101,
+          "sigma": 1.5,
+          "sec": {
+            "best_family": "usvp",
+            "best_bits": 36.4,
+            "dominance_gap": 0.10000000000000142
+          },
+          "sp": {
+            "warning_density": 0.9251149984162235,
+            "survey_entropy_norm": 0.414666077847747,
+            "overlap_proxy": 0.013048484094240255,
+            "complexity_proxy": 10.084013066105562,
+            "map_accuracy": 0.0,
+            "xi_ratio": 21.823149290932683
+          }
+        },
+        {
+          "label": "n",
+          "value": 32.0,
+          "rows": [
+            {
+              "n": 32,
+              "q": 101,
+              "sigma": 1.5,
+              "seed": 10097,
+              "alpha_like": 11.902964149973549,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.1,
+                  "usvp": 36.9,
+                  "dual": 37.7,
+                  "dual_hybrid": 37.1
+                },
+                "fam_beta": {
+                  "bdd": 41.0,
+                  "usvp": 40.0,
+                  "dual": 40.0,
+                  "dual_hybrid": 40.0
+                },
+                "best_family": "usvp",
+                "best_bits": 36.9,
+                "best_beta": 40.0,
+                "dominance_gap": 0.20000000000000284
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.914962627922809,
+                "survey_entropy_norm": 0.41493231237078776,
+                "overlap_proxy": 0.00750750618758827,
+                "warning_density": 0.9268273093829034,
+                "warning_max": 0.9999999999999656,
+                "complexity_proxy": 13.378257972112019,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 15.95456968819961,
+                "xi_true": 10.535653752852738,
+                "xi_map": 176.722947010285,
+                "xi_ratio": 16.773799817183622,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 32,
+              "q": 101,
+              "sigma": 1.5,
+              "seed": 10098,
+              "alpha_like": 11.902964149973549,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.1,
+                  "usvp": 36.9,
+                  "dual": 37.7,
+                  "dual_hybrid": 37.1
+                },
+                "fam_beta": {
+                  "bdd": 41.0,
+                  "usvp": 40.0,
+                  "dual": 40.0,
+                  "dual_hybrid": 40.0
+                },
+                "best_family": "usvp",
+                "best_bits": 36.9,
+                "best_beta": 40.0,
+                "dominance_gap": 0.20000000000000284
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.8814988717027705,
+                "survey_entropy_norm": 0.4076814169504137,
+                "overlap_proxy": 0.04036919683525989,
+                "warning_density": 0.9260865929691751,
+                "warning_max": 0.9999999999999656,
+                "complexity_proxy": 13.594594613673577,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 14.017528384704159,
+                "xi_true": 11.313708498984761,
+                "xi_map": 174.17232845661792,
+                "xi_ratio": 15.39480431697993,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 32,
+          "q": 101,
+          "sigma": 1.5,
+          "sec": {
+            "best_family": "usvp",
+            "best_bits": 36.9,
+            "dominance_gap": 0.20000000000000284
+          },
+          "sp": {
+            "warning_density": 0.9264569511760392,
+            "survey_entropy_norm": 0.41130686466060074,
+            "overlap_proxy": 0.02393835151142408,
+            "complexity_proxy": 13.486426292892798,
+            "map_accuracy": 0.0,
+            "xi_ratio": 16.084302067081776
+          }
+        },
+        {
+          "label": "n",
+          "value": 40.0,
+          "rows": [
+            {
+              "n": 40,
+              "q": 101,
+              "sigma": 1.5,
+              "seed": 10194,
+              "alpha_like": 10.646334789233544,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.3,
+                  "usvp": 37.4,
+                  "dual": 40.0,
+                  "dual_hybrid": 39.6
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 40.0,
+                  "dual": 47.0,
+                  "dual_hybrid": 44.0
+                },
+                "best_family": "bdd",
+                "best_bits": 37.3,
+                "best_beta": 40.0,
+                "dominance_gap": 0.10000000000000142
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.9188541063194946,
+                "survey_entropy_norm": 0.415775514272555,
+                "overlap_proxy": 0.007400484973784626,
+                "warning_density": 0.9221944297294573,
+                "warning_max": 0.9999999999999656,
+                "complexity_proxy": 16.754998933748247,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 14.9107354852321,
+                "xi_true": 11.090536506409418,
+                "xi_map": 190.028945163625,
+                "xi_ratio": 17.134332954647377,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 40,
+              "q": 101,
+              "sigma": 1.5,
+              "seed": 10195,
+              "alpha_like": 10.646334789233544,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.3,
+                  "usvp": 37.4,
+                  "dual": 40.0,
+                  "dual_hybrid": 39.6
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 40.0,
+                  "dual": 47.0,
+                  "dual_hybrid": 44.0
+                },
+                "best_family": "bdd",
+                "best_bits": 37.3,
+                "best_beta": 40.0,
+                "dominance_gap": 0.10000000000000142
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.9130478789601555,
+                "survey_entropy_norm": 0.41451742635520783,
+                "overlap_proxy": 0.011775306237853146,
+                "warning_density": 0.9270670369678791,
+                "warning_max": 0.9999999999999656,
+                "complexity_proxy": 16.778249299596812,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 14.862649971092665,
+                "xi_true": 12.165525060596439,
+                "xi_map": 183.22390673708495,
+                "xi_ratio": 15.060912357616,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 40,
+          "q": 101,
+          "sigma": 1.5,
+          "sec": {
+            "best_family": "bdd",
+            "best_bits": 37.3,
+            "dominance_gap": 0.10000000000000142
+          },
+          "sp": {
+            "warning_density": 0.9246307333486682,
+            "survey_entropy_norm": 0.4151464703138814,
+            "overlap_proxy": 0.009587895605818887,
+            "complexity_proxy": 16.76662411667253,
+            "map_accuracy": 0.0,
+            "xi_ratio": 16.097622656131687
+          }
+        },
+        {
+          "label": "n",
+          "value": 48.0,
+          "rows": [
+            {
+              "n": 48,
+              "q": 101,
+              "sigma": 1.5,
+              "seed": 10291,
+              "alpha_like": 9.7187295313587,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.7,
+                  "usvp": 38.3,
+                  "dual": 44.3,
+                  "dual_hybrid": 44.5
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 41.0,
+                  "dual": 61.0,
+                  "dual_hybrid": 53.0
+                },
+                "best_family": "bdd",
+                "best_bits": 37.7,
+                "best_beta": 40.0,
+                "dominance_gap": 0.5999999999999943
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.9041680025300822,
+                "survey_entropy_norm": 0.4125933430300445,
+                "overlap_proxy": 0.011952560539906749,
+                "warning_density": 0.9272041689590996,
+                "warning_max": 0.9999999999999656,
+                "complexity_proxy": 20.044037999051998,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 15.002637493560835,
+                "xi_true": 12.449899597988733,
+                "xi_map": 242.51391712641978,
+                "xi_ratio": 19.479186574815305,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 48,
+              "q": 101,
+              "sigma": 1.5,
+              "seed": 10292,
+              "alpha_like": 9.7187295313587,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.7,
+                  "usvp": 38.3,
+                  "dual": 44.3,
+                  "dual_hybrid": 44.5
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 41.0,
+                  "dual": 61.0,
+                  "dual_hybrid": 53.0
+                },
+                "best_family": "bdd",
+                "best_bits": 37.7,
+                "best_beta": 40.0,
+                "dominance_gap": 0.5999999999999943
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.9121412830261184,
+                "survey_entropy_norm": 0.41432098599558365,
+                "overlap_proxy": 0.02098963873712789,
+                "warning_density": 0.9278989381658047,
+                "warning_max": 0.9999999999999656,
+                "complexity_proxy": 20.313765615686346,
+                "map_accuracy": 0.020833333333333332,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 13.464206909961215,
+                "xi_true": 11.74734012447073,
+                "xi_map": 203.19940944796076,
+                "xi_ratio": 17.297482432417297,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 48,
+          "q": 101,
+          "sigma": 1.5,
+          "sec": {
+            "best_family": "bdd",
+            "best_bits": 37.7,
+            "dominance_gap": 0.5999999999999943
+          },
+          "sp": {
+            "warning_density": 0.9275515535624521,
+            "survey_entropy_norm": 0.4134571645128141,
+            "overlap_proxy": 0.01647109963851732,
+            "complexity_proxy": 20.178901807369172,
+            "map_accuracy": 0.010416666666666666,
+            "xi_ratio": 18.3883345036163
+          }
+        },
+        {
+          "label": "n",
+          "value": 56.0,
+          "rows": [
+            {
+              "n": 56,
+              "q": 101,
+              "sigma": 1.5,
+              "seed": 10388,
+              "alpha_like": 8.997795144384954,
+              "sec": {
+                "fam_best": {
+                  "bdd": 38.4,
+                  "usvp": 43.2,
+                  "dual": 48.3,
+                  "dual_hybrid": 48.4
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 57.0,
+                  "dual": 74.0,
+                  "dual_hybrid": 76.0
+                },
+                "best_family": "bdd",
+                "best_bits": 38.4,
+                "best_beta": 40.0,
+                "dominance_gap": 4.800000000000004
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.8922224359590305,
+                "survey_entropy_norm": 0.41000498883052566,
+                "overlap_proxy": 0.04086655377230787,
+                "warning_density": 0.9265138144884157,
+                "warning_max": 0.9999999999999656,
+                "complexity_proxy": 23.93854111361862,
+                "map_accuracy": 0.017857142857142856,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 14.62543606639994,
+                "xi_true": 12.328828005937952,
+                "xi_map": 245.63183832720057,
+                "xi_ratio": 19.923372942584095,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 56,
+              "q": 101,
+              "sigma": 1.5,
+              "seed": 10389,
+              "alpha_like": 8.997795144384954,
+              "sec": {
+                "fam_best": {
+                  "bdd": 38.4,
+                  "usvp": 43.2,
+                  "dual": 48.3,
+                  "dual_hybrid": 48.4
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 57.0,
+                  "dual": 74.0,
+                  "dual_hybrid": 76.0
+                },
+                "best_family": "bdd",
+                "best_bits": 38.4,
+                "best_beta": 40.0,
+                "dominance_gap": 4.800000000000004
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.8726397295666932,
+                "survey_entropy_norm": 0.40576182631269386,
+                "overlap_proxy": 0.061480471292598975,
+                "warning_density": 0.9259886054361406,
+                "warning_max": 0.9999999999999656,
+                "complexity_proxy": 24.211151038759017,
+                "map_accuracy": 0.017857142857142856,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 13.159493711107155,
+                "xi_true": 11.489125293076057,
+                "xi_map": 234.91062130095352,
+                "xi_ratio": 20.44634515580368,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 56,
+          "q": 101,
+          "sigma": 1.5,
+          "sec": {
+            "best_family": "bdd",
+            "best_bits": 38.4,
+            "dominance_gap": 4.800000000000004
+          },
+          "sp": {
+            "warning_density": 0.9262512099622782,
+            "survey_entropy_norm": 0.4078834075716098,
+            "overlap_proxy": 0.05117351253245342,
+            "complexity_proxy": 24.07484607618882,
+            "map_accuracy": 0.017857142857142856,
+            "xi_ratio": 20.18485904919389
+          }
+        },
+        {
+          "label": "n",
+          "value": 64.0,
+          "rows": [
+            {
+              "n": 64,
+              "q": 101,
+              "sigma": 1.5,
+              "seed": 10485,
+              "alpha_like": 8.416666666666666,
+              "sec": {
+                "fam_best": {
+                  "bdd": 41.1,
+                  "usvp": 47.4,
+                  "dual": 52.5,
+                  "dual_hybrid": 53.2
+                },
+                "fam_beta": {
+                  "bdd": 43.0,
+                  "usvp": 71.0,
+                  "dual": 88.0,
+                  "dual_hybrid": 83.0
+                },
+                "best_family": "bdd",
+                "best_bits": 41.1,
+                "best_beta": 43.0,
+                "dominance_gap": 6.299999999999997
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.882117289812532,
+                "survey_entropy_norm": 0.4078154152084234,
+                "overlap_proxy": 0.07474381177065434,
+                "warning_density": 0.9232906204229793,
+                "warning_max": 0.9999999999999656,
+                "complexity_proxy": 28.208574767505166,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 13.906819444665175,
+                "xi_true": 13.74772708486752,
+                "xi_map": 249.3010228619209,
+                "xi_ratio": 18.133981079548708,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 64,
+              "q": 101,
+              "sigma": 1.5,
+              "seed": 10486,
+              "alpha_like": 8.416666666666666,
+              "sec": {
+                "fam_best": {
+                  "bdd": 41.1,
+                  "usvp": 47.4,
+                  "dual": 52.5,
+                  "dual_hybrid": 53.2
+                },
+                "fam_beta": {
+                  "bdd": 43.0,
+                  "usvp": 71.0,
+                  "dual": 88.0,
+                  "dual_hybrid": 83.0
+                },
+                "best_family": "bdd",
+                "best_bits": 41.1,
+                "best_beta": 43.0,
+                "dominance_gap": 6.299999999999997
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.8836156097339165,
+                "survey_entropy_norm": 0.4081400697685626,
+                "overlap_proxy": 0.044436837608347116,
+                "warning_density": 0.9253219461830874,
+                "warning_max": 0.9999999999999656,
+                "complexity_proxy": 27.335646828582007,
+                "map_accuracy": 0.015625,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 14.279718054558936,
+                "xi_true": 13.92838827718412,
+                "xi_map": 243.56313349930446,
+                "xi_ratio": 17.486813882177216,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 64,
+          "q": 101,
+          "sigma": 1.5,
+          "sec": {
+            "best_family": "bdd",
+            "best_bits": 41.1,
+            "dominance_gap": 6.299999999999997
+          },
+          "sp": {
+            "warning_density": 0.9243062833030333,
+            "survey_entropy_norm": 0.407977742488493,
+            "overlap_proxy": 0.05959032468950073,
+            "complexity_proxy": 27.772110798043585,
+            "map_accuracy": 0.0078125,
+            "xi_ratio": 17.81039748086296
+          }
+        }
+      ],
+      "correlations": {
+        "warning_density": {
+          "n": 6,
+          "pearson": -0.36378453220370705,
+          "spearman": -0.2571428571428572,
+          "pvalue": 0.6227871720116619
+        },
+        "survey_entropy": {
+          "n": 6,
+          "pearson": -0.7473662705421146,
+          "spearman": -0.6571428571428573,
+          "pvalue": 0.1561749271137024
+        },
+        "overlap_proxy": {
+          "n": 6,
+          "pearson": 0.8553645907438391,
+          "spearman": 0.7142857142857143,
+          "pvalue": 0.11078717201166179
+        },
+        "complexity_proxy": {
+          "n": 6,
+          "pearson": 0.9130956696549698,
+          "spearman": 1.0,
+          "pvalue": 0.0
+        }
+      }
+    },
+    "q": {
+      "label": "q",
+      "values": [
+        59,
+        73,
+        89,
+        101,
+        127,
+        149
+      ],
+      "fixed_n": 48,
+      "fixed_q": 101,
+      "fixed_sigma": 1.5,
+      "seeds": 2,
+      "quick": true,
+      "use_proxy": false,
+      "elapsed_min": 5.477247365315756,
+      "rows": [
+        {
+          "label": "q",
+          "value": 59.0,
+          "rows": [
+            {
+              "n": 48,
+              "q": 59,
+              "sigma": 1.5,
+              "seed": 10000,
+              "alpha_like": 5.67727764703132,
+              "sec": {
+                "fam_best": {
+                  "bdd": 38.7,
+                  "usvp": 44.7,
+                  "dual": 50.2,
+                  "dual_hybrid": 50.9
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 63.0,
+                  "dual": 81.0,
+                  "dual_hybrid": 82.0
+                },
+                "best_family": "bdd",
+                "best_bits": 38.7,
+                "best_beta": 40.0,
+                "dominance_gap": 6.0
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499998698375033,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.8425208465647858,
+                "survey_entropy_norm": 0.45187098142252846,
+                "overlap_proxy": 0.04589729531086888,
+                "warning_density": 0.8742683419047826,
+                "warning_max": 0.999999958594301,
+                "complexity_proxy": 22.733175651328594,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 12.999214241823404,
+                "xi_true": 13.820274961085254,
+                "xi_map": 122.8087944733601,
+                "xi_ratio": 8.886132498106988,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 48,
+              "q": 59,
+              "sigma": 1.5,
+              "seed": 10001,
+              "alpha_like": 5.67727764703132,
+              "sec": {
+                "fam_best": {
+                  "bdd": 38.7,
+                  "usvp": 44.7,
+                  "dual": 50.2,
+                  "dual_hybrid": 50.9
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 63.0,
+                  "dual": 81.0,
+                  "dual_hybrid": 82.0
+                },
+                "best_family": "bdd",
+                "best_bits": 38.7,
+                "best_beta": 40.0,
+                "dominance_gap": 6.0
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499998698375033,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.8546325873495888,
+                "survey_entropy_norm": 0.45484133815166294,
+                "overlap_proxy": 0.04881265755163849,
+                "warning_density": 0.8739404615942291,
+                "warning_max": 0.999999958599792,
+                "complexity_proxy": 22.952745799095055,
+                "map_accuracy": 0.020833333333333332,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 13.138759937934838,
+                "xi_true": 11.575836902790225,
+                "xi_map": 114.70396680150168,
+                "xi_ratio": 9.908913520018986,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 48,
+          "q": 59,
+          "sigma": 1.5,
+          "sec": {
+            "best_family": "bdd",
+            "best_bits": 38.7,
+            "dominance_gap": 6.0
+          },
+          "sp": {
+            "warning_density": 0.8741044017495059,
+            "survey_entropy_norm": 0.4533561597870957,
+            "overlap_proxy": 0.04735497643125368,
+            "complexity_proxy": 22.842960725211825,
+            "map_accuracy": 0.010416666666666666,
+            "xi_ratio": 9.397523009062986
+          }
+        },
+        {
+          "label": "q",
+          "value": 73.0,
+          "rows": [
+            {
+              "n": 48,
+              "q": 73,
+              "sigma": 1.5,
+              "seed": 10097,
+              "alpha_like": 7.024428275140447,
+              "sec": {
+                "fam_best": {
+                  "bdd": 38.1,
+                  "usvp": 42.1,
+                  "dual": 47.8,
+                  "dual_hybrid": 48.4
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 54.0,
+                  "dual": 73.0,
+                  "dual_hybrid": 68.0
+                },
+                "best_family": "bdd",
+                "best_bits": 38.1,
+                "best_beta": 40.0,
+                "dominance_gap": 4.0
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499998948001739,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.8654781315770574,
+                "survey_entropy_norm": 0.43479682238360484,
+                "overlap_proxy": 0.041997271702075845,
+                "warning_density": 0.8942968768088542,
+                "warning_max": 0.9999999996105096,
+                "complexity_proxy": 21.785142226422227,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 13.594264778670675,
+                "xi_true": 10.344080432788601,
+                "xi_map": 149.90997298378784,
+                "xi_ratio": 14.492344094126704,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 48,
+              "q": 73,
+              "sigma": 1.5,
+              "seed": 10098,
+              "alpha_like": 7.024428275140447,
+              "sec": {
+                "fam_best": {
+                  "bdd": 38.1,
+                  "usvp": 42.1,
+                  "dual": 47.8,
+                  "dual_hybrid": 48.4
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 54.0,
+                  "dual": 73.0,
+                  "dual_hybrid": 68.0
+                },
+                "best_family": "bdd",
+                "best_bits": 38.1,
+                "best_beta": 40.0,
+                "dominance_gap": 4.0
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499998948001739,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.8779436487925958,
+                "survey_entropy_norm": 0.43770222619560356,
+                "overlap_proxy": 0.03938871499453334,
+                "warning_density": 0.8956560477072817,
+                "warning_max": 0.9999999996106712,
+                "complexity_proxy": 21.87116195091072,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 12.693567318091219,
+                "xi_true": 10.954451150103322,
+                "xi_map": 163.10732662881824,
+                "xi_ratio": 14.88959368013524,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 48,
+          "q": 73,
+          "sigma": 1.5,
+          "sec": {
+            "best_family": "bdd",
+            "best_bits": 38.1,
+            "dominance_gap": 4.0
+          },
+          "sp": {
+            "warning_density": 0.8949764622580679,
+            "survey_entropy_norm": 0.4362495242896042,
+            "overlap_proxy": 0.04069299334830459,
+            "complexity_proxy": 21.828152088666474,
+            "map_accuracy": 0.0,
+            "xi_ratio": 14.690968887130971
+          }
+        },
+        {
+          "label": "q",
+          "value": 89.0,
+          "rows": [
+            {
+              "n": 48,
+              "q": 89,
+              "sigma": 1.5,
+              "seed": 10194,
+              "alpha_like": 8.564028992979448,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.8,
+                  "usvp": 39.8,
+                  "dual": 45.5,
+                  "dual_hybrid": 45.5
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 46.0,
+                  "dual": 65.0,
+                  "dual_hybrid": 67.0
+                },
+                "best_family": "bdd",
+                "best_bits": 37.8,
+                "best_beta": 40.0,
+                "dominance_gap": 2.0
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999137125021,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.8904423678651916,
+                "survey_entropy_norm": 0.42116184340813606,
+                "overlap_proxy": 0.05066342391607308,
+                "warning_density": 0.9157374132610624,
+                "warning_max": 0.9999999999981204,
+                "complexity_proxy": 21.294604777977668,
+                "map_accuracy": 0.020833333333333332,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 13.546042948681894,
+                "xi_true": 10.908712114635714,
+                "xi_map": 196.4306493396588,
+                "xi_ratio": 18.006768100343407,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 48,
+              "q": 89,
+              "sigma": 1.5,
+              "seed": 10195,
+              "alpha_like": 8.564028992979448,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.8,
+                  "usvp": 39.8,
+                  "dual": 45.5,
+                  "dual_hybrid": 45.5
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 46.0,
+                  "dual": 65.0,
+                  "dual_hybrid": 67.0
+                },
+                "best_family": "bdd",
+                "best_bits": 37.8,
+                "best_beta": 40.0,
+                "dominance_gap": 2.0
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999137125021,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.8991732173328568,
+                "survey_entropy_norm": 0.42310694404639204,
+                "overlap_proxy": 0.050686863144698203,
+                "warning_density": 0.9157363046033195,
+                "warning_max": 0.9999999999981204,
+                "complexity_proxy": 21.393480330444522,
+                "map_accuracy": 0.020833333333333332,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 14.296952110795237,
+                "xi_true": 9.539392014169456,
+                "xi_map": 198.501889159776,
+                "xi_ratio": 20.80865204450347,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 48,
+          "q": 89,
+          "sigma": 1.5,
+          "sec": {
+            "best_family": "bdd",
+            "best_bits": 37.8,
+            "dominance_gap": 2.0
+          },
+          "sp": {
+            "warning_density": 0.9157368589321909,
+            "survey_entropy_norm": 0.422134393727264,
+            "overlap_proxy": 0.050675143530385644,
+            "complexity_proxy": 21.344042554211093,
+            "map_accuracy": 0.020833333333333332,
+            "xi_ratio": 19.40771007242344
+          }
+        },
+        {
+          "label": "q",
+          "value": 101.0,
+          "rows": [
+            {
+              "n": 48,
+              "q": 101,
+              "sigma": 1.5,
+              "seed": 10291,
+              "alpha_like": 9.7187295313587,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.7,
+                  "usvp": 38.3,
+                  "dual": 44.3,
+                  "dual_hybrid": 44.5
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 41.0,
+                  "dual": 61.0,
+                  "dual_hybrid": 53.0
+                },
+                "best_family": "bdd",
+                "best_bits": 37.7,
+                "best_beta": 40.0,
+                "dominance_gap": 0.5999999999999943
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.9041680025300822,
+                "survey_entropy_norm": 0.4125933430300445,
+                "overlap_proxy": 0.011952560539906749,
+                "warning_density": 0.9272041689590996,
+                "warning_max": 0.9999999999999656,
+                "complexity_proxy": 20.044037999051998,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 15.002637493560835,
+                "xi_true": 12.449899597988733,
+                "xi_map": 242.51391712641978,
+                "xi_ratio": 19.479186574815305,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 48,
+              "q": 101,
+              "sigma": 1.5,
+              "seed": 10292,
+              "alpha_like": 9.7187295313587,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.7,
+                  "usvp": 38.3,
+                  "dual": 44.3,
+                  "dual_hybrid": 44.5
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 41.0,
+                  "dual": 61.0,
+                  "dual_hybrid": 53.0
+                },
+                "best_family": "bdd",
+                "best_bits": 37.7,
+                "best_beta": 40.0,
+                "dominance_gap": 0.5999999999999943
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999239644822,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.9121412830261184,
+                "survey_entropy_norm": 0.41432098599558365,
+                "overlap_proxy": 0.02098963873712789,
+                "warning_density": 0.9278989381658047,
+                "warning_max": 0.9999999999999656,
+                "complexity_proxy": 20.313765615686346,
+                "map_accuracy": 0.020833333333333332,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 13.464206909961215,
+                "xi_true": 11.74734012447073,
+                "xi_map": 203.19940944796076,
+                "xi_ratio": 17.297482432417297,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 48,
+          "q": 101,
+          "sigma": 1.5,
+          "sec": {
+            "best_family": "bdd",
+            "best_bits": 37.7,
+            "dominance_gap": 0.5999999999999943
+          },
+          "sp": {
+            "warning_density": 0.9275515535624521,
+            "survey_entropy_norm": 0.4134571645128141,
+            "overlap_proxy": 0.01647109963851732,
+            "complexity_proxy": 20.178901807369172,
+            "map_accuracy": 0.010416666666666666,
+            "xi_ratio": 18.3883345036163
+          }
+        },
+        {
+          "label": "q",
+          "value": 127.0,
+          "rows": [
+            {
+              "n": 48,
+              "q": 127,
+              "sigma": 1.5,
+              "seed": 10388,
+              "alpha_like": 12.220580697847078,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.6,
+                  "usvp": 37.8,
+                  "dual": 42.0,
+                  "dual_hybrid": 41.8
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 40.0,
+                  "dual": 53.0,
+                  "dual_hybrid": 54.0
+                },
+                "best_family": "bdd",
+                "best_bits": 37.6,
+                "best_beta": 40.0,
+                "dominance_gap": 0.19999999999999574
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999395308086,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.9045122956655083,
+                "survey_entropy_norm": 0.39315415810206206,
+                "overlap_proxy": 0.02879002588489237,
+                "warning_density": 0.9425477996208493,
+                "warning_max": 1.0,
+                "complexity_proxy": 19.430793197217668,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 15.524513171903864,
+                "xi_true": 9.695359714832659,
+                "xi_map": 280.82022719170357,
+                "xi_ratio": 28.964394867486988,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 48,
+              "q": 127,
+              "sigma": 1.5,
+              "seed": 10389,
+              "alpha_like": 12.220580697847078,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.6,
+                  "usvp": 37.8,
+                  "dual": 42.0,
+                  "dual_hybrid": 41.8
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 40.0,
+                  "dual": 53.0,
+                  "dual_hybrid": 54.0
+                },
+                "best_family": "bdd",
+                "best_bits": 37.6,
+                "best_beta": 40.0,
+                "dominance_gap": 0.19999999999999574
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999395308087,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.9084736771680164,
+                "survey_entropy_norm": 0.39397191791022096,
+                "overlap_proxy": 0.030926018024984684,
+                "warning_density": 0.9414899949486277,
+                "warning_max": 1.0,
+                "complexity_proxy": 19.514126782171083,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 15.046596437690873,
+                "xi_true": 10.677078252031311,
+                "xi_map": 280.6225222607765,
+                "xi_ratio": 26.282707273509534,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 48,
+          "q": 127,
+          "sigma": 1.5,
+          "sec": {
+            "best_family": "bdd",
+            "best_bits": 37.6,
+            "dominance_gap": 0.19999999999999574
+          },
+          "sp": {
+            "warning_density": 0.9420188972847385,
+            "survey_entropy_norm": 0.3935630380061415,
+            "overlap_proxy": 0.02985802195493853,
+            "complexity_proxy": 19.472459989694375,
+            "map_accuracy": 0.0,
+            "xi_ratio": 27.62355107049826
+          }
+        },
+        {
+          "label": "q",
+          "value": 149.0,
+          "rows": [
+            {
+              "n": 48,
+              "q": 149,
+              "sigma": 1.5,
+              "seed": 10485,
+              "alpha_like": 14.337531684875707,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.6,
+                  "usvp": 37.7,
+                  "dual": 40.7,
+                  "dual_hybrid": 39.8
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 40.0,
+                  "dual": 45.0,
+                  "dual_hybrid": 42.0
+                },
+                "best_family": "bdd",
+                "best_bits": 37.6,
+                "best_beta": 40.0,
+                "dominance_gap": 0.10000000000000142
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999484591456,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.9126768445635625,
+                "survey_entropy_norm": 0.3822336866986378,
+                "overlap_proxy": 0.009912085170557253,
+                "warning_density": 0.947663699999613,
+                "warning_max": 1.0,
+                "complexity_proxy": 18.530878072395335,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 15.45086646610617,
+                "xi_true": 11.61895003862225,
+                "xi_map": 309.99193537897077,
+                "xi_ratio": 26.67985784617842,
+                "n_restarts": 2
+              }
+            },
+            {
+              "n": 48,
+              "q": 149,
+              "sigma": 1.5,
+              "seed": 10486,
+              "alpha_like": 14.337531684875707,
+              "sec": {
+                "fam_best": {
+                  "bdd": 37.6,
+                  "usvp": 37.7,
+                  "dual": 40.7,
+                  "dual_hybrid": 39.8
+                },
+                "fam_beta": {
+                  "bdd": 40.0,
+                  "usvp": 40.0,
+                  "dual": 45.0,
+                  "dual_hybrid": 42.0
+                },
+                "best_family": "bdd",
+                "best_bits": 37.6,
+                "best_beta": 40.0,
+                "dominance_gap": 0.10000000000000142
+              },
+              "sp": {
+                "bp_iters": 15,
+                "bp_delta": 0.5499999484591456,
+                "sp_iters": 0,
+                "sp_delta": 0.0,
+                "survey_entropy": 1.904802960510341,
+                "survey_entropy_norm": 0.38066015181800444,
+                "overlap_proxy": 0.040078210800569246,
+                "warning_density": 0.9487323128345295,
+                "warning_max": 1.0,
+                "complexity_proxy": 19.03453849918771,
+                "map_accuracy": 0.0,
+                "decimation_accuracy": NaN,
+                "kl_to_true": 15.581323446782312,
+                "xi_true": 11.704699910719626,
+                "xi_map": 314.6410653427171,
+                "xi_ratio": 26.881600358474362,
+                "n_restarts": 2
+              }
+            }
+          ],
+          "n": 48,
+          "q": 149,
+          "sigma": 1.5,
+          "sec": {
+            "best_family": "bdd",
+            "best_bits": 37.6,
+            "dominance_gap": 0.10000000000000142
+          },
+          "sp": {
+            "warning_density": 0.9481980064170712,
+            "survey_entropy_norm": 0.3814469192583211,
+            "overlap_proxy": 0.02499514798556325,
+            "complexity_proxy": 18.78270828579152,
+            "map_accuracy": 0.0,
+            "xi_ratio": 26.78072910232639
+          }
+        }
+      ],
+      "correlations": {
+        "warning_density": {
+          "n": 6,
+          "pearson": -0.9508432378216342,
+          "spearman": -0.9856107606091623,
+          "pvalue": 0.00030908566784966984
+        },
+        "survey_entropy": {
+          "n": 6,
+          "pearson": 0.8963542443324577,
+          "spearman": 0.9856107606091623,
+          "pvalue": 0.00030908566784966984
+        },
+        "overlap_proxy": {
+          "n": 6,
+          "pearson": 0.6189847455815982,
+          "spearman": 0.6377481392176932,
+          "pvalue": 0.17307111024125982
+        },
+        "complexity_proxy": {
+          "n": 6,
+          "pearson": 0.894525442099503,
+          "spearman": 0.9856107606091623,
+          "pvalue": 0.00030908566784966984
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 """
 Experiment 10: Attack-Family Transition Sweep
-==============================================
+
 Run with:  sage -python experiment10.py
            sage -python experiment10.py --quick   (fast test)
 
@@ -44,7 +44,7 @@ FAMILY_COLORS = {
     "other":       "#b0b0b0",
 }
 
-# ── PyTorch ────────────────────────────────────────────────────────────────
+#  PyTorch 
 try:
     import torch
     TORCH_AVAILABLE = True
@@ -56,7 +56,7 @@ except Exception:
     TORCH_AVAILABLE = False
     DEVICE = "cpu"; DEVICE_NAME = "CPU"
 
-# ── Lattice estimator ──────────────────────────────────────────────────────
+#  Lattice estimator 
 if os.path.isdir(DEFAULT_REPO_PATH) and DEFAULT_REPO_PATH not in sys.path:
     sys.path.insert(0, DEFAULT_REPO_PATH)
 
@@ -72,9 +72,7 @@ except Exception:
 
 DEFAULT_JOBS = max(1, min(16, os.cpu_count() or 1))
 
-# ═══════════════════════════════════════════════════════════════════════════
 # HELPERS
-# ═══════════════════════════════════════════════════════════════════════════
 
 def parse_rop_bits(text):
     m = re.search(r"rop:\s*≈?\s*2\^([0-9]+(?:\.[0-9]+)?)", text)
@@ -136,9 +134,7 @@ def corrcoef_nan(x, y):
     if m.sum() < 3 or np.std(xa[m])==0 or np.std(ya[m])==0: return None
     return float(np.corrcoef(xa[m], ya[m])[0,1])
 
-# ═══════════════════════════════════════════════════════════════════════════
 # ESTIMATOR
-# ═══════════════════════════════════════════════════════════════════════════
 
 def run_estimator(n, q, sigma, jobs=DEFAULT_JOBS):
     if not ESTIMATOR_AVAILABLE:
@@ -164,9 +160,7 @@ def run_estimator(n, q, sigma, jobs=DEFAULT_JOBS):
             result = LWE.estimate(params)
     return parse_result(result)
 
-# ═══════════════════════════════════════════════════════════════════════════
 # LWE + GPU SAMPLER
-# ═══════════════════════════════════════════════════════════════════════════
 
 @dataclass
 class LWEInstance:
@@ -303,17 +297,12 @@ def run_point(n, q, sigma, seed=0, n_win=14, n_burn=300, n_prod=1000,
                 bc=bc.tolist(), F=F.tolist(),
                 feats=feats, sec=sec, seed=seed)
 
-# ═══════════════════════════════════════════════════════════════════════════
 # SWEEP PARAMETERS
-# ═══════════════════════════════════════════════════════════════════════════
 
 SWEEP_NS     = [32, 48, 64, 96, 128, 192, 256]
 SWEEP_SIGMAS = [0.5, 1.0, 1.5, 2.0, 3.0, 4.0]
 SWEEP_ALPHA  = 12.0   # fixed alpha, q = alpha * sigma * sqrt(n)
 
-# ═══════════════════════════════════════════════════════════════════════════
-# MAIN
-# ═══════════════════════════════════════════════════════════════════════════
 
 def main():
     parser = argparse.ArgumentParser()
@@ -403,7 +392,7 @@ def main():
 
     print(f"\n{len(all_results)} configs in {(time.time()-t0)/60:.1f} min")
 
-    # ── Analysis ──────────────────────────────────────────────────────────
+    #  Analysis 
     families  = [r["sec"]["best_family"] or "other" for r in all_results]
     dom_gaps  = np.array([r["sec"]["dominance_gap"] or np.nan
                            for r in all_results])
@@ -445,7 +434,7 @@ def main():
         else:
             print("  Not significant — try alpha=5 to force more family diversity")
 
-    # ── Plots ─────────────────────────────────────────────────────────────
+    #  Plots ─
     fig = plt.figure(figsize=(22, 16))
     fig.patch.set_facecolor(BG)
     gs  = gridspec.GridSpec(2, 3, figure=fig, hspace=0.45, wspace=0.35)
@@ -505,7 +494,7 @@ def main():
     ax2.axvline(10, color="white", lw=1.5, linestyle="--", alpha=0.6,
                 label="near-boundary (10 bits)")
     styled(ax2, "KEY: Roughness vs Dominance Gap\n"
-           "(gap→0 = BDD and Dual nearly equal)",
+           "(gap>>>>0 = BDD and Dual nearly equal)",
            "dominance gap (bits)", "roughness")
     ax2.legend(fontsize=7, labelcolor="white", facecolor=PBG)
 
@@ -559,10 +548,10 @@ def main():
         "Does free-energy roughness peak at BDD↔Dual phase boundaries?",
         color="white", fontsize=13, fontweight="bold", y=1.005)
     plt.savefig("exp10_results.png", dpi=150, bbox_inches="tight", facecolor=BG)
-    print("\nPlot saved → exp10_results.png")
+    print("\nPlot saved >>>> exp10_results.png")
     plt.close()
 
-    # ── Summary file ──────────────────────────────────────────────────────
+    #  Summary file 
     with open("exp10_summary.txt","w") as f:
         f.write("="*70+"\n")
         f.write("EXPERIMENT 10 — ATTACK-FAMILY TRANSITION SWEEP\n")
@@ -593,14 +582,14 @@ def main():
             f.write(f"  {near_boundary.sum()} near-boundary configs found.\n")
             f.write("  Check roughness vs dominance_gap plot.\n")
         f.write("="*70+"\n")
-    print("Summary saved → exp10_summary.txt")
+    print("Summary saved >>>> exp10_summary.txt")
 
     print(f"\nTotal: {(time.time()-t0)/60:.1f} min")
     print("\nWHAT TO LOOK FOR:")
     print("  1. Does the attack family change across the sweep?")
-    print("     If all BDD: reduce alpha to 5 and rerun.")
+    print("     if all BDD: reduce alpha to 5 and rerun.")
     print("  2. Is roughness higher at near-boundary configs?")
-    print("     If YES (p<0.05): this is your central publishable finding.")
+    print("     if YES (p<0.05): this is your central publishable finding.")
     print("  3. What is corr(dominance_gap, roughness)?")
     print("     Negative = roughness tracks attack competitiveness.")
 

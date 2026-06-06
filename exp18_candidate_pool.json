@@ -1,0 +1,5834 @@
+[
+  {
+    "n": 24,
+    "sigma": 0.5,
+    "alpha": 8.0,
+    "q": 27,
+    "hardness": 28.2,
+    "family": "dual_hybrid",
+    "dominance_gap": 8.2
+  },
+  {
+    "n": 24,
+    "sigma": 0.5,
+    "alpha": 9.0,
+    "q": 27,
+    "hardness": 28.2,
+    "family": "dual_hybrid",
+    "dominance_gap": 8.2
+  },
+  {
+    "n": 24,
+    "sigma": 0.5,
+    "alpha": 10.0,
+    "q": 27,
+    "hardness": 28.2,
+    "family": "dual_hybrid",
+    "dominance_gap": 8.2
+  },
+  {
+    "n": 24,
+    "sigma": 0.5,
+    "alpha": 11.0,
+    "q": 27,
+    "hardness": 28.2,
+    "family": "dual_hybrid",
+    "dominance_gap": 8.2
+  },
+  {
+    "n": 24,
+    "sigma": 0.5,
+    "alpha": 12.0,
+    "q": 29,
+    "hardness": 28.2,
+    "family": "dual_hybrid",
+    "dominance_gap": 8.2
+  },
+  {
+    "n": 24,
+    "sigma": 0.5,
+    "alpha": 13.0,
+    "q": 33,
+    "hardness": 28.2,
+    "family": "dual_hybrid",
+    "dominance_gap": 8.2
+  },
+  {
+    "n": 24,
+    "sigma": 0.5,
+    "alpha": 14.0,
+    "q": 35,
+    "hardness": 28.2,
+    "family": "dual_hybrid",
+    "dominance_gap": 8.2
+  },
+  {
+    "n": 24,
+    "sigma": 0.5,
+    "alpha": 15.0,
+    "q": 37,
+    "hardness": 28.2,
+    "family": "dual_hybrid",
+    "dominance_gap": 8.2
+  },
+  {
+    "n": 24,
+    "sigma": 0.5,
+    "alpha": 16.0,
+    "q": 39,
+    "hardness": 28.2,
+    "family": "dual_hybrid",
+    "dominance_gap": 0.9000000000000021
+  },
+  {
+    "n": 24,
+    "sigma": 0.75,
+    "alpha": 8.0,
+    "q": 29,
+    "hardness": 30.9,
+    "family": "dual_hybrid",
+    "dominance_gap": 5.5
+  },
+  {
+    "n": 24,
+    "sigma": 0.75,
+    "alpha": 9.0,
+    "q": 33,
+    "hardness": 30.7,
+    "family": "dual_hybrid",
+    "dominance_gap": 5.699999999999999
+  },
+  {
+    "n": 24,
+    "sigma": 0.75,
+    "alpha": 10.0,
+    "q": 37,
+    "hardness": 30.4,
+    "family": "dual_hybrid",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 24,
+    "sigma": 0.75,
+    "alpha": 11.0,
+    "q": 41,
+    "hardness": 30.4,
+    "family": "dual_hybrid",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 24,
+    "sigma": 0.75,
+    "alpha": 12.0,
+    "q": 45,
+    "hardness": 30.4,
+    "family": "dual_hybrid",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 24,
+    "sigma": 0.75,
+    "alpha": 13.0,
+    "q": 49,
+    "hardness": 30.4,
+    "family": "dual_hybrid",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 24,
+    "sigma": 0.75,
+    "alpha": 14.0,
+    "q": 51,
+    "hardness": 30.1,
+    "family": "dual_hybrid",
+    "dominance_gap": 6.299999999999997
+  },
+  {
+    "n": 24,
+    "sigma": 0.75,
+    "alpha": 15.0,
+    "q": 55,
+    "hardness": 30.1,
+    "family": "dual_hybrid",
+    "dominance_gap": 6.299999999999997
+  },
+  {
+    "n": 24,
+    "sigma": 0.75,
+    "alpha": 16.0,
+    "q": 59,
+    "hardness": 30.1,
+    "family": "dual_hybrid",
+    "dominance_gap": 6.299999999999997
+  },
+  {
+    "n": 24,
+    "sigma": 1.0,
+    "alpha": 8.0,
+    "q": 39,
+    "hardness": 28.6,
+    "family": "bdd",
+    "dominance_gap": 3.8999999999999986
+  },
+  {
+    "n": 24,
+    "sigma": 1.0,
+    "alpha": 9.0,
+    "q": 45,
+    "hardness": 32.4,
+    "family": "dual_hybrid",
+    "dominance_gap": 4.0
+  },
+  {
+    "n": 24,
+    "sigma": 1.0,
+    "alpha": 10.0,
+    "q": 49,
+    "hardness": 32.4,
+    "family": "dual_hybrid",
+    "dominance_gap": 4.0
+  },
+  {
+    "n": 24,
+    "sigma": 1.0,
+    "alpha": 11.0,
+    "q": 55,
+    "hardness": 32.4,
+    "family": "dual_hybrid",
+    "dominance_gap": 4.0
+  },
+  {
+    "n": 24,
+    "sigma": 1.0,
+    "alpha": 12.0,
+    "q": 59,
+    "hardness": 32.3,
+    "family": "dual_hybrid",
+    "dominance_gap": 4.100000000000001
+  },
+  {
+    "n": 24,
+    "sigma": 1.0,
+    "alpha": 13.0,
+    "q": 65,
+    "hardness": 32.3,
+    "family": "dual_hybrid",
+    "dominance_gap": 4.100000000000001
+  },
+  {
+    "n": 24,
+    "sigma": 1.0,
+    "alpha": 14.0,
+    "q": 69,
+    "hardness": 32.3,
+    "family": "dual_hybrid",
+    "dominance_gap": 4.100000000000001
+  },
+  {
+    "n": 24,
+    "sigma": 1.0,
+    "alpha": 15.0,
+    "q": 73,
+    "hardness": 32.3,
+    "family": "dual_hybrid",
+    "dominance_gap": 4.100000000000001
+  },
+  {
+    "n": 24,
+    "sigma": 1.0,
+    "alpha": 16.0,
+    "q": 79,
+    "hardness": 32.3,
+    "family": "dual_hybrid",
+    "dominance_gap": 4.100000000000001
+  },
+  {
+    "n": 24,
+    "sigma": 1.25,
+    "alpha": 8.0,
+    "q": 49,
+    "hardness": 34.1,
+    "family": "dual_hybrid",
+    "dominance_gap": 2.3999999999999986
+  },
+  {
+    "n": 24,
+    "sigma": 1.25,
+    "alpha": 9.0,
+    "q": 55,
+    "hardness": 34.0,
+    "family": "dual_hybrid",
+    "dominance_gap": 2.3999999999999986
+  },
+  {
+    "n": 24,
+    "sigma": 1.25,
+    "alpha": 10.0,
+    "q": 61,
+    "hardness": 28.9,
+    "family": "bdd",
+    "dominance_gap": 4.899999999999999
+  },
+  {
+    "n": 24,
+    "sigma": 1.25,
+    "alpha": 11.0,
+    "q": 67,
+    "hardness": 28.6,
+    "family": "bdd",
+    "dominance_gap": 5.199999999999996
+  },
+  {
+    "n": 24,
+    "sigma": 1.25,
+    "alpha": 12.0,
+    "q": 73,
+    "hardness": 33.7,
+    "family": "dual_hybrid",
+    "dominance_gap": 2.6999999999999957
+  },
+  {
+    "n": 24,
+    "sigma": 1.25,
+    "alpha": 13.0,
+    "q": 81,
+    "hardness": 33.6,
+    "family": "dual_hybrid",
+    "dominance_gap": 2.799999999999997
+  },
+  {
+    "n": 24,
+    "sigma": 1.25,
+    "alpha": 14.0,
+    "q": 87,
+    "hardness": 33.6,
+    "family": "dual_hybrid",
+    "dominance_gap": 2.799999999999997
+  },
+  {
+    "n": 24,
+    "sigma": 1.25,
+    "alpha": 15.0,
+    "q": 93,
+    "hardness": 33.6,
+    "family": "dual_hybrid",
+    "dominance_gap": 2.799999999999997
+  },
+  {
+    "n": 24,
+    "sigma": 1.25,
+    "alpha": 16.0,
+    "q": 99,
+    "hardness": 33.5,
+    "family": "dual_hybrid",
+    "dominance_gap": 2.8999999999999986
+  },
+  {
+    "n": 24,
+    "sigma": 1.5,
+    "alpha": 8.0,
+    "q": 59,
+    "hardness": 36.5,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 24,
+    "sigma": 1.5,
+    "alpha": 9.0,
+    "q": 67,
+    "hardness": 36.5,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 24,
+    "sigma": 1.5,
+    "alpha": 10.0,
+    "q": 73,
+    "hardness": 36.5,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 24,
+    "sigma": 1.5,
+    "alpha": 11.0,
+    "q": 81,
+    "hardness": 36.4,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 24,
+    "sigma": 1.5,
+    "alpha": 12.0,
+    "q": 89,
+    "hardness": 36.4,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 24,
+    "sigma": 1.5,
+    "alpha": 13.0,
+    "q": 97,
+    "hardness": 36.4,
+    "family": "usvp",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 24,
+    "sigma": 1.5,
+    "alpha": 14.0,
+    "q": 103,
+    "hardness": 36.4,
+    "family": "usvp",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 24,
+    "sigma": 1.5,
+    "alpha": 15.0,
+    "q": 111,
+    "hardness": 36.3,
+    "family": "dual_hybrid",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 24,
+    "sigma": 1.5,
+    "alpha": 16.0,
+    "q": 119,
+    "hardness": 36.3,
+    "family": "dual_hybrid",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 24,
+    "sigma": 2.0,
+    "alpha": 8.0,
+    "q": 79,
+    "hardness": 36.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 24,
+    "sigma": 2.0,
+    "alpha": 9.0,
+    "q": 89,
+    "hardness": 36.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 24,
+    "sigma": 2.0,
+    "alpha": 10.0,
+    "q": 99,
+    "hardness": 36.6,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 24,
+    "sigma": 2.0,
+    "alpha": 11.0,
+    "q": 109,
+    "hardness": 36.5,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 24,
+    "sigma": 2.0,
+    "alpha": 12.0,
+    "q": 119,
+    "hardness": 36.5,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 24,
+    "sigma": 2.0,
+    "alpha": 13.0,
+    "q": 127,
+    "hardness": 36.5,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 24,
+    "sigma": 2.0,
+    "alpha": 14.0,
+    "q": 137,
+    "hardness": 36.5,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 24,
+    "sigma": 2.0,
+    "alpha": 15.0,
+    "q": 147,
+    "hardness": 36.5,
+    "family": "usvp",
+    "dominance_gap": 0.5
+  },
+  {
+    "n": 24,
+    "sigma": 2.0,
+    "alpha": 16.0,
+    "q": 157,
+    "hardness": 36.5,
+    "family": "usvp",
+    "dominance_gap": 0.5
+  },
+  {
+    "n": 24,
+    "sigma": 2.5,
+    "alpha": 8.0,
+    "q": 99,
+    "hardness": 36.7,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 24,
+    "sigma": 2.5,
+    "alpha": 9.0,
+    "q": 111,
+    "hardness": 36.7,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 24,
+    "sigma": 2.5,
+    "alpha": 10.0,
+    "q": 123,
+    "hardness": 36.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 24,
+    "sigma": 2.5,
+    "alpha": 11.0,
+    "q": 135,
+    "hardness": 36.7,
+    "family": "usvp",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 24,
+    "sigma": 2.5,
+    "alpha": 12.0,
+    "q": 147,
+    "hardness": 36.6,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 24,
+    "sigma": 2.5,
+    "alpha": 13.0,
+    "q": 159,
+    "hardness": 36.6,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 24,
+    "sigma": 2.5,
+    "alpha": 14.0,
+    "q": 171,
+    "hardness": 36.5,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 24,
+    "sigma": 2.5,
+    "alpha": 15.0,
+    "q": 185,
+    "hardness": 36.5,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 24,
+    "sigma": 2.5,
+    "alpha": 16.0,
+    "q": 197,
+    "hardness": 36.6,
+    "family": "usvp",
+    "dominance_gap": 0.3999999999999986
+  },
+  {
+    "n": 24,
+    "sigma": 3.0,
+    "alpha": 8.0,
+    "q": 119,
+    "hardness": 36.8,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 24,
+    "sigma": 3.0,
+    "alpha": 9.0,
+    "q": 133,
+    "hardness": 36.7,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 24,
+    "sigma": 3.0,
+    "alpha": 10.0,
+    "q": 147,
+    "hardness": 36.7,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 24,
+    "sigma": 3.0,
+    "alpha": 11.0,
+    "q": 163,
+    "hardness": 36.7,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 24,
+    "sigma": 3.0,
+    "alpha": 12.0,
+    "q": 177,
+    "hardness": 36.7,
+    "family": "usvp",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 24,
+    "sigma": 3.0,
+    "alpha": 13.0,
+    "q": 191,
+    "hardness": 36.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 24,
+    "sigma": 3.0,
+    "alpha": 14.0,
+    "q": 207,
+    "hardness": 36.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 24,
+    "sigma": 3.0,
+    "alpha": 15.0,
+    "q": 221,
+    "hardness": 36.6,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 24,
+    "sigma": 3.0,
+    "alpha": 16.0,
+    "q": 235,
+    "hardness": 36.6,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 24,
+    "sigma": 4.0,
+    "alpha": 8.0,
+    "q": 157,
+    "hardness": 36.9,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 24,
+    "sigma": 4.0,
+    "alpha": 9.0,
+    "q": 177,
+    "hardness": 36.8,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 24,
+    "sigma": 4.0,
+    "alpha": 10.0,
+    "q": 197,
+    "hardness": 36.8,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 24,
+    "sigma": 4.0,
+    "alpha": 11.0,
+    "q": 217,
+    "hardness": 36.8,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 24,
+    "sigma": 4.0,
+    "alpha": 12.0,
+    "q": 235,
+    "hardness": 36.7,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 24,
+    "sigma": 4.0,
+    "alpha": 13.0,
+    "q": 255,
+    "hardness": 36.7,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 24,
+    "sigma": 4.0,
+    "alpha": 14.0,
+    "q": 275,
+    "hardness": 36.8,
+    "family": "usvp",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 24,
+    "sigma": 4.0,
+    "alpha": 15.0,
+    "q": 295,
+    "hardness": 36.7,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 24,
+    "sigma": 4.0,
+    "alpha": 16.0,
+    "q": 315,
+    "hardness": 36.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 0.5,
+    "alpha": 8.0,
+    "q": 35,
+    "hardness": 36.4,
+    "family": "usvp",
+    "dominance_gap": 0.3999999999999986
+  },
+  {
+    "n": 32,
+    "sigma": 0.5,
+    "alpha": 9.0,
+    "q": 35,
+    "hardness": 36.4,
+    "family": "usvp",
+    "dominance_gap": 0.3999999999999986
+  },
+  {
+    "n": 32,
+    "sigma": 0.5,
+    "alpha": 10.0,
+    "q": 35,
+    "hardness": 36.4,
+    "family": "usvp",
+    "dominance_gap": 0.3999999999999986
+  },
+  {
+    "n": 32,
+    "sigma": 0.5,
+    "alpha": 11.0,
+    "q": 35,
+    "hardness": 36.4,
+    "family": "usvp",
+    "dominance_gap": 0.3999999999999986
+  },
+  {
+    "n": 32,
+    "sigma": 0.5,
+    "alpha": 12.0,
+    "q": 35,
+    "hardness": 36.4,
+    "family": "usvp",
+    "dominance_gap": 0.3999999999999986
+  },
+  {
+    "n": 32,
+    "sigma": 0.5,
+    "alpha": 13.0,
+    "q": 37,
+    "hardness": 36.4,
+    "family": "usvp",
+    "dominance_gap": 0.3999999999999986
+  },
+  {
+    "n": 32,
+    "sigma": 0.5,
+    "alpha": 14.0,
+    "q": 41,
+    "hardness": 36.4,
+    "family": "usvp",
+    "dominance_gap": 0.3999999999999986
+  },
+  {
+    "n": 32,
+    "sigma": 0.5,
+    "alpha": 15.0,
+    "q": 43,
+    "hardness": 36.4,
+    "family": "usvp",
+    "dominance_gap": 0.3999999999999986
+  },
+  {
+    "n": 32,
+    "sigma": 0.5,
+    "alpha": 16.0,
+    "q": 45,
+    "hardness": 36.4,
+    "family": "usvp",
+    "dominance_gap": 0.3999999999999986
+  },
+  {
+    "n": 32,
+    "sigma": 0.75,
+    "alpha": 8.0,
+    "q": 35,
+    "hardness": 36.7,
+    "family": "usvp",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 32,
+    "sigma": 0.75,
+    "alpha": 9.0,
+    "q": 39,
+    "hardness": 36.7,
+    "family": "usvp",
+    "dominance_gap": 0.3999999999999986
+  },
+  {
+    "n": 32,
+    "sigma": 0.75,
+    "alpha": 10.0,
+    "q": 43,
+    "hardness": 36.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 0.75,
+    "alpha": 11.0,
+    "q": 47,
+    "hardness": 36.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 0.75,
+    "alpha": 12.0,
+    "q": 51,
+    "hardness": 36.6,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 32,
+    "sigma": 0.75,
+    "alpha": 13.0,
+    "q": 55,
+    "hardness": 36.6,
+    "family": "usvp",
+    "dominance_gap": 0.29999999999999716
+  },
+  {
+    "n": 32,
+    "sigma": 0.75,
+    "alpha": 14.0,
+    "q": 59,
+    "hardness": 36.6,
+    "family": "usvp",
+    "dominance_gap": 0.29999999999999716
+  },
+  {
+    "n": 32,
+    "sigma": 0.75,
+    "alpha": 15.0,
+    "q": 65,
+    "hardness": 36.6,
+    "family": "usvp",
+    "dominance_gap": 0.29999999999999716
+  },
+  {
+    "n": 32,
+    "sigma": 0.75,
+    "alpha": 16.0,
+    "q": 69,
+    "hardness": 36.6,
+    "family": "usvp",
+    "dominance_gap": 0.29999999999999716
+  },
+  {
+    "n": 32,
+    "sigma": 1.0,
+    "alpha": 8.0,
+    "q": 45,
+    "hardness": 36.8,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 1.0,
+    "alpha": 9.0,
+    "q": 51,
+    "hardness": 36.8,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 32,
+    "sigma": 1.0,
+    "alpha": 10.0,
+    "q": 57,
+    "hardness": 36.7,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 32,
+    "sigma": 1.0,
+    "alpha": 11.0,
+    "q": 63,
+    "hardness": 36.7,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 32,
+    "sigma": 1.0,
+    "alpha": 12.0,
+    "q": 69,
+    "hardness": 36.8,
+    "family": "usvp",
+    "dominance_gap": 0.30000000000000426
+  },
+  {
+    "n": 32,
+    "sigma": 1.0,
+    "alpha": 13.0,
+    "q": 75,
+    "hardness": 36.7,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 32,
+    "sigma": 1.0,
+    "alpha": 14.0,
+    "q": 79,
+    "hardness": 36.7,
+    "family": "usvp",
+    "dominance_gap": 0.3999999999999986
+  },
+  {
+    "n": 32,
+    "sigma": 1.0,
+    "alpha": 15.0,
+    "q": 85,
+    "hardness": 36.7,
+    "family": "usvp",
+    "dominance_gap": 0.3999999999999986
+  },
+  {
+    "n": 32,
+    "sigma": 1.0,
+    "alpha": 16.0,
+    "q": 91,
+    "hardness": 36.7,
+    "family": "usvp",
+    "dominance_gap": 0.3999999999999986
+  },
+  {
+    "n": 32,
+    "sigma": 1.25,
+    "alpha": 8.0,
+    "q": 57,
+    "hardness": 36.9,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 1.25,
+    "alpha": 9.0,
+    "q": 65,
+    "hardness": 36.8,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 1.25,
+    "alpha": 10.0,
+    "q": 71,
+    "hardness": 36.8,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 1.25,
+    "alpha": 11.0,
+    "q": 79,
+    "hardness": 36.8,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 1.25,
+    "alpha": 12.0,
+    "q": 85,
+    "hardness": 36.8,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 1.25,
+    "alpha": 13.0,
+    "q": 93,
+    "hardness": 36.8,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 32,
+    "sigma": 1.25,
+    "alpha": 14.0,
+    "q": 99,
+    "hardness": 36.7,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 32,
+    "sigma": 1.25,
+    "alpha": 15.0,
+    "q": 107,
+    "hardness": 36.8,
+    "family": "usvp",
+    "dominance_gap": 0.30000000000000426
+  },
+  {
+    "n": 32,
+    "sigma": 1.25,
+    "alpha": 16.0,
+    "q": 113,
+    "hardness": 36.8,
+    "family": "usvp",
+    "dominance_gap": 0.30000000000000426
+  },
+  {
+    "n": 32,
+    "sigma": 1.5,
+    "alpha": 8.0,
+    "q": 69,
+    "hardness": 37.0,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 1.5,
+    "alpha": 9.0,
+    "q": 77,
+    "hardness": 36.9,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 1.5,
+    "alpha": 10.0,
+    "q": 85,
+    "hardness": 36.9,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 1.5,
+    "alpha": 11.0,
+    "q": 93,
+    "hardness": 36.9,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 1.5,
+    "alpha": 12.0,
+    "q": 103,
+    "hardness": 36.8,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 1.5,
+    "alpha": 13.0,
+    "q": 111,
+    "hardness": 36.8,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 1.5,
+    "alpha": 14.0,
+    "q": 119,
+    "hardness": 36.8,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 1.5,
+    "alpha": 15.0,
+    "q": 127,
+    "hardness": 36.8,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 1.5,
+    "alpha": 16.0,
+    "q": 137,
+    "hardness": 36.8,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 2.0,
+    "alpha": 8.0,
+    "q": 91,
+    "hardness": 37.1,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 2.0,
+    "alpha": 9.0,
+    "q": 103,
+    "hardness": 37.1,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 2.0,
+    "alpha": 10.0,
+    "q": 113,
+    "hardness": 37.0,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 2.0,
+    "alpha": 11.0,
+    "q": 125,
+    "hardness": 37.0,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 2.0,
+    "alpha": 12.0,
+    "q": 137,
+    "hardness": 37.0,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 2.0,
+    "alpha": 13.0,
+    "q": 147,
+    "hardness": 36.9,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 2.0,
+    "alpha": 14.0,
+    "q": 159,
+    "hardness": 36.9,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 2.0,
+    "alpha": 15.0,
+    "q": 171,
+    "hardness": 36.9,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 2.0,
+    "alpha": 16.0,
+    "q": 181,
+    "hardness": 36.9,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 2.5,
+    "alpha": 8.0,
+    "q": 113,
+    "hardness": 37.2,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 32,
+    "sigma": 2.5,
+    "alpha": 9.0,
+    "q": 127,
+    "hardness": 37.2,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 32,
+    "sigma": 2.5,
+    "alpha": 10.0,
+    "q": 141,
+    "hardness": 37.1,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 2.5,
+    "alpha": 11.0,
+    "q": 157,
+    "hardness": 37.1,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 2.5,
+    "alpha": 12.0,
+    "q": 171,
+    "hardness": 37.0,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 2.5,
+    "alpha": 13.0,
+    "q": 185,
+    "hardness": 37.0,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 2.5,
+    "alpha": 14.0,
+    "q": 199,
+    "hardness": 37.0,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 2.5,
+    "alpha": 15.0,
+    "q": 213,
+    "hardness": 37.1,
+    "family": "usvp",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 32,
+    "sigma": 2.5,
+    "alpha": 16.0,
+    "q": 227,
+    "hardness": 37.0,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 32,
+    "sigma": 3.0,
+    "alpha": 8.0,
+    "q": 137,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 32,
+    "sigma": 3.0,
+    "alpha": 9.0,
+    "q": 153,
+    "hardness": 37.2,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 32,
+    "sigma": 3.0,
+    "alpha": 10.0,
+    "q": 171,
+    "hardness": 37.2,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 32,
+    "sigma": 3.0,
+    "alpha": 11.0,
+    "q": 187,
+    "hardness": 37.1,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 32,
+    "sigma": 3.0,
+    "alpha": 12.0,
+    "q": 205,
+    "hardness": 37.1,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 3.0,
+    "alpha": 13.0,
+    "q": 221,
+    "hardness": 37.1,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 3.0,
+    "alpha": 14.0,
+    "q": 239,
+    "hardness": 37.1,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 32,
+    "sigma": 3.0,
+    "alpha": 15.0,
+    "q": 255,
+    "hardness": 37.0,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 3.0,
+    "alpha": 16.0,
+    "q": 273,
+    "hardness": 37.0,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 4.0,
+    "alpha": 8.0,
+    "q": 181,
+    "hardness": 37.4,
+    "family": "bdd",
+    "dominance_gap": 0.8000000000000043
+  },
+  {
+    "n": 32,
+    "sigma": 4.0,
+    "alpha": 9.0,
+    "q": 205,
+    "hardness": 37.4,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 32,
+    "sigma": 4.0,
+    "alpha": 10.0,
+    "q": 227,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 32,
+    "sigma": 4.0,
+    "alpha": 11.0,
+    "q": 249,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 4.0,
+    "alpha": 12.0,
+    "q": 273,
+    "hardness": 37.2,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 32,
+    "sigma": 4.0,
+    "alpha": 13.0,
+    "q": 295,
+    "hardness": 37.2,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 32,
+    "sigma": 4.0,
+    "alpha": 14.0,
+    "q": 317,
+    "hardness": 37.2,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 32,
+    "sigma": 4.0,
+    "alpha": 15.0,
+    "q": 339,
+    "hardness": 37.1,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 32,
+    "sigma": 4.0,
+    "alpha": 16.0,
+    "q": 363,
+    "hardness": 37.1,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 0.5,
+    "alpha": 8.0,
+    "q": 43,
+    "hardness": 36.8,
+    "family": "usvp",
+    "dominance_gap": 0.4000000000000057
+  },
+  {
+    "n": 40,
+    "sigma": 0.5,
+    "alpha": 9.0,
+    "q": 43,
+    "hardness": 36.8,
+    "family": "usvp",
+    "dominance_gap": 0.4000000000000057
+  },
+  {
+    "n": 40,
+    "sigma": 0.5,
+    "alpha": 10.0,
+    "q": 43,
+    "hardness": 36.8,
+    "family": "usvp",
+    "dominance_gap": 0.4000000000000057
+  },
+  {
+    "n": 40,
+    "sigma": 0.5,
+    "alpha": 11.0,
+    "q": 43,
+    "hardness": 36.8,
+    "family": "usvp",
+    "dominance_gap": 0.4000000000000057
+  },
+  {
+    "n": 40,
+    "sigma": 0.5,
+    "alpha": 12.0,
+    "q": 43,
+    "hardness": 36.8,
+    "family": "usvp",
+    "dominance_gap": 0.4000000000000057
+  },
+  {
+    "n": 40,
+    "sigma": 0.5,
+    "alpha": 13.0,
+    "q": 43,
+    "hardness": 36.8,
+    "family": "usvp",
+    "dominance_gap": 0.4000000000000057
+  },
+  {
+    "n": 40,
+    "sigma": 0.5,
+    "alpha": 14.0,
+    "q": 45,
+    "hardness": 36.8,
+    "family": "usvp",
+    "dominance_gap": 0.4000000000000057
+  },
+  {
+    "n": 40,
+    "sigma": 0.5,
+    "alpha": 15.0,
+    "q": 47,
+    "hardness": 36.8,
+    "family": "usvp",
+    "dominance_gap": 0.4000000000000057
+  },
+  {
+    "n": 40,
+    "sigma": 0.5,
+    "alpha": 16.0,
+    "q": 51,
+    "hardness": 36.8,
+    "family": "usvp",
+    "dominance_gap": 0.4000000000000057
+  },
+  {
+    "n": 40,
+    "sigma": 0.75,
+    "alpha": 8.0,
+    "q": 43,
+    "hardness": 37.0,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 0.75,
+    "alpha": 9.0,
+    "q": 43,
+    "hardness": 37.0,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 0.75,
+    "alpha": 10.0,
+    "q": 47,
+    "hardness": 37.0,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 0.75,
+    "alpha": 11.0,
+    "q": 53,
+    "hardness": 37.0,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 40,
+    "sigma": 0.75,
+    "alpha": 12.0,
+    "q": 57,
+    "hardness": 37.0,
+    "family": "usvp",
+    "dominance_gap": 0.6000000000000014
+  },
+  {
+    "n": 40,
+    "sigma": 0.75,
+    "alpha": 13.0,
+    "q": 63,
+    "hardness": 37.0,
+    "family": "usvp",
+    "dominance_gap": 0.5
+  },
+  {
+    "n": 40,
+    "sigma": 0.75,
+    "alpha": 14.0,
+    "q": 67,
+    "hardness": 37.0,
+    "family": "usvp",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 40,
+    "sigma": 0.75,
+    "alpha": 15.0,
+    "q": 71,
+    "hardness": 37.0,
+    "family": "usvp",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 40,
+    "sigma": 0.75,
+    "alpha": 16.0,
+    "q": 77,
+    "hardness": 37.0,
+    "family": "usvp",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 40,
+    "sigma": 1.0,
+    "alpha": 8.0,
+    "q": 51,
+    "hardness": 37.2,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 40,
+    "sigma": 1.0,
+    "alpha": 9.0,
+    "q": 57,
+    "hardness": 37.1,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 40,
+    "sigma": 1.0,
+    "alpha": 10.0,
+    "q": 63,
+    "hardness": 37.1,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 1.0,
+    "alpha": 11.0,
+    "q": 71,
+    "hardness": 37.1,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 1.0,
+    "alpha": 12.0,
+    "q": 77,
+    "hardness": 37.1,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 1.0,
+    "alpha": 13.0,
+    "q": 83,
+    "hardness": 37.1,
+    "family": "usvp",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 40,
+    "sigma": 1.0,
+    "alpha": 14.0,
+    "q": 89,
+    "hardness": 37.0,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 1.0,
+    "alpha": 15.0,
+    "q": 95,
+    "hardness": 37.0,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 1.0,
+    "alpha": 16.0,
+    "q": 101,
+    "hardness": 37.0,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 1.25,
+    "alpha": 8.0,
+    "q": 63,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 40,
+    "sigma": 1.25,
+    "alpha": 9.0,
+    "q": 71,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 1.25,
+    "alpha": 10.0,
+    "q": 79,
+    "hardness": 37.2,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 40,
+    "sigma": 1.25,
+    "alpha": 11.0,
+    "q": 87,
+    "hardness": 37.2,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 40,
+    "sigma": 1.25,
+    "alpha": 12.0,
+    "q": 95,
+    "hardness": 37.2,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 40,
+    "sigma": 1.25,
+    "alpha": 13.0,
+    "q": 103,
+    "hardness": 37.1,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 1.25,
+    "alpha": 14.0,
+    "q": 111,
+    "hardness": 37.1,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 1.25,
+    "alpha": 15.0,
+    "q": 119,
+    "hardness": 37.2,
+    "family": "usvp",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 40,
+    "sigma": 1.25,
+    "alpha": 16.0,
+    "q": 127,
+    "hardness": 37.1,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 1.5,
+    "alpha": 8.0,
+    "q": 77,
+    "hardness": 37.4,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 40,
+    "sigma": 1.5,
+    "alpha": 9.0,
+    "q": 85,
+    "hardness": 37.4,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 1.5,
+    "alpha": 10.0,
+    "q": 95,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 40,
+    "sigma": 1.5,
+    "alpha": 11.0,
+    "q": 105,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 1.5,
+    "alpha": 12.0,
+    "q": 115,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 1.5,
+    "alpha": 13.0,
+    "q": 123,
+    "hardness": 37.2,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 40,
+    "sigma": 1.5,
+    "alpha": 14.0,
+    "q": 133,
+    "hardness": 37.2,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 40,
+    "sigma": 1.5,
+    "alpha": 15.0,
+    "q": 143,
+    "hardness": 37.2,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 40,
+    "sigma": 1.5,
+    "alpha": 16.0,
+    "q": 153,
+    "hardness": 37.2,
+    "family": "usvp",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 40,
+    "sigma": 2.0,
+    "alpha": 8.0,
+    "q": 101,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.6000000000000014
+  },
+  {
+    "n": 40,
+    "sigma": 2.0,
+    "alpha": 9.0,
+    "q": 115,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 40,
+    "sigma": 2.0,
+    "alpha": 10.0,
+    "q": 127,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 2.0,
+    "alpha": 11.0,
+    "q": 139,
+    "hardness": 37.4,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 40,
+    "sigma": 2.0,
+    "alpha": 12.0,
+    "q": 153,
+    "hardness": 37.4,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 2.0,
+    "alpha": 13.0,
+    "q": 165,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 40,
+    "sigma": 2.0,
+    "alpha": 14.0,
+    "q": 177,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 2.0,
+    "alpha": 15.0,
+    "q": 191,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 2.0,
+    "alpha": 16.0,
+    "q": 203,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 2.5,
+    "alpha": 8.0,
+    "q": 127,
+    "hardness": 37.7,
+    "family": "bdd",
+    "dominance_gap": 2.0
+  },
+  {
+    "n": 40,
+    "sigma": 2.5,
+    "alpha": 9.0,
+    "q": 143,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.6000000000000014
+  },
+  {
+    "n": 40,
+    "sigma": 2.5,
+    "alpha": 10.0,
+    "q": 159,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 40,
+    "sigma": 2.5,
+    "alpha": 11.0,
+    "q": 175,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 40,
+    "sigma": 2.5,
+    "alpha": 12.0,
+    "q": 191,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 2.5,
+    "alpha": 13.0,
+    "q": 207,
+    "hardness": 37.4,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 40,
+    "sigma": 2.5,
+    "alpha": 14.0,
+    "q": 221,
+    "hardness": 37.4,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 2.5,
+    "alpha": 15.0,
+    "q": 237,
+    "hardness": 37.4,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 2.5,
+    "alpha": 16.0,
+    "q": 253,
+    "hardness": 37.4,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 3.0,
+    "alpha": 8.0,
+    "q": 153,
+    "hardness": 37.8,
+    "family": "bdd",
+    "dominance_gap": 3.0
+  },
+  {
+    "n": 40,
+    "sigma": 3.0,
+    "alpha": 9.0,
+    "q": 171,
+    "hardness": 37.7,
+    "family": "bdd",
+    "dominance_gap": 1.6999999999999957
+  },
+  {
+    "n": 40,
+    "sigma": 3.0,
+    "alpha": 10.0,
+    "q": 191,
+    "hardness": 37.7,
+    "family": "bdd",
+    "dominance_gap": 0.5
+  },
+  {
+    "n": 40,
+    "sigma": 3.0,
+    "alpha": 11.0,
+    "q": 209,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 40,
+    "sigma": 3.0,
+    "alpha": 12.0,
+    "q": 229,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 3.0,
+    "alpha": 13.0,
+    "q": 247,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 40,
+    "sigma": 3.0,
+    "alpha": 14.0,
+    "q": 267,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 3.0,
+    "alpha": 15.0,
+    "q": 285,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 3.0,
+    "alpha": 16.0,
+    "q": 305,
+    "hardness": 37.4,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 4.0,
+    "alpha": 8.0,
+    "q": 203,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 4.5
+  },
+  {
+    "n": 40,
+    "sigma": 4.0,
+    "alpha": 9.0,
+    "q": 229,
+    "hardness": 38.0,
+    "family": "bdd",
+    "dominance_gap": 3.200000000000003
+  },
+  {
+    "n": 40,
+    "sigma": 4.0,
+    "alpha": 10.0,
+    "q": 253,
+    "hardness": 37.8,
+    "family": "bdd",
+    "dominance_gap": 2.200000000000003
+  },
+  {
+    "n": 40,
+    "sigma": 4.0,
+    "alpha": 11.0,
+    "q": 279,
+    "hardness": 37.7,
+    "family": "bdd",
+    "dominance_gap": 0.8999999999999986
+  },
+  {
+    "n": 40,
+    "sigma": 4.0,
+    "alpha": 12.0,
+    "q": 305,
+    "hardness": 37.7,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 40,
+    "sigma": 4.0,
+    "alpha": 13.0,
+    "q": 329,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 40,
+    "sigma": 4.0,
+    "alpha": 14.0,
+    "q": 355,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 40,
+    "sigma": 4.0,
+    "alpha": 15.0,
+    "q": 379,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 40,
+    "sigma": 4.0,
+    "alpha": 16.0,
+    "q": 405,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 48,
+    "sigma": 0.5,
+    "alpha": 8.0,
+    "q": 51,
+    "hardness": 37.1,
+    "family": "usvp",
+    "dominance_gap": 0.6000000000000014
+  },
+  {
+    "n": 48,
+    "sigma": 0.5,
+    "alpha": 9.0,
+    "q": 51,
+    "hardness": 37.1,
+    "family": "usvp",
+    "dominance_gap": 0.6000000000000014
+  },
+  {
+    "n": 48,
+    "sigma": 0.5,
+    "alpha": 10.0,
+    "q": 51,
+    "hardness": 37.1,
+    "family": "usvp",
+    "dominance_gap": 0.6000000000000014
+  },
+  {
+    "n": 48,
+    "sigma": 0.5,
+    "alpha": 11.0,
+    "q": 51,
+    "hardness": 37.1,
+    "family": "usvp",
+    "dominance_gap": 0.6000000000000014
+  },
+  {
+    "n": 48,
+    "sigma": 0.5,
+    "alpha": 12.0,
+    "q": 51,
+    "hardness": 37.1,
+    "family": "usvp",
+    "dominance_gap": 0.6000000000000014
+  },
+  {
+    "n": 48,
+    "sigma": 0.5,
+    "alpha": 13.0,
+    "q": 51,
+    "hardness": 37.1,
+    "family": "usvp",
+    "dominance_gap": 0.6000000000000014
+  },
+  {
+    "n": 48,
+    "sigma": 0.5,
+    "alpha": 14.0,
+    "q": 51,
+    "hardness": 37.1,
+    "family": "usvp",
+    "dominance_gap": 0.6000000000000014
+  },
+  {
+    "n": 48,
+    "sigma": 0.5,
+    "alpha": 15.0,
+    "q": 53,
+    "hardness": 37.1,
+    "family": "usvp",
+    "dominance_gap": 0.6000000000000014
+  },
+  {
+    "n": 48,
+    "sigma": 0.5,
+    "alpha": 16.0,
+    "q": 55,
+    "hardness": 37.1,
+    "family": "usvp",
+    "dominance_gap": 0.6000000000000014
+  },
+  {
+    "n": 48,
+    "sigma": 0.75,
+    "alpha": 8.0,
+    "q": 51,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 48,
+    "sigma": 0.75,
+    "alpha": 9.0,
+    "q": 51,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 48,
+    "sigma": 0.75,
+    "alpha": 10.0,
+    "q": 53,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 48,
+    "sigma": 0.75,
+    "alpha": 11.0,
+    "q": 57,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 48,
+    "sigma": 0.75,
+    "alpha": 12.0,
+    "q": 63,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 48,
+    "sigma": 0.75,
+    "alpha": 13.0,
+    "q": 69,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.0
+  },
+  {
+    "n": 48,
+    "sigma": 0.75,
+    "alpha": 14.0,
+    "q": 73,
+    "hardness": 37.2,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 48,
+    "sigma": 0.75,
+    "alpha": 15.0,
+    "q": 79,
+    "hardness": 37.2,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 48,
+    "sigma": 0.75,
+    "alpha": 16.0,
+    "q": 83,
+    "hardness": 37.3,
+    "family": "usvp",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 48,
+    "sigma": 1.0,
+    "alpha": 8.0,
+    "q": 55,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.3999999999999986
+  },
+  {
+    "n": 48,
+    "sigma": 1.0,
+    "alpha": 9.0,
+    "q": 63,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 48,
+    "sigma": 1.0,
+    "alpha": 10.0,
+    "q": 69,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 48,
+    "sigma": 1.0,
+    "alpha": 11.0,
+    "q": 77,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 48,
+    "sigma": 1.0,
+    "alpha": 12.0,
+    "q": 83,
+    "hardness": 37.4,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 48,
+    "sigma": 1.0,
+    "alpha": 13.0,
+    "q": 91,
+    "hardness": 37.4,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 48,
+    "sigma": 1.0,
+    "alpha": 14.0,
+    "q": 97,
+    "hardness": 37.4,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 48,
+    "sigma": 1.0,
+    "alpha": 15.0,
+    "q": 105,
+    "hardness": 37.4,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 48,
+    "sigma": 1.0,
+    "alpha": 16.0,
+    "q": 111,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 48,
+    "sigma": 1.25,
+    "alpha": 8.0,
+    "q": 69,
+    "hardness": 37.7,
+    "family": "bdd",
+    "dominance_gap": 1.6999999999999957
+  },
+  {
+    "n": 48,
+    "sigma": 1.25,
+    "alpha": 9.0,
+    "q": 79,
+    "hardness": 37.7,
+    "family": "bdd",
+    "dominance_gap": 0.3999999999999986
+  },
+  {
+    "n": 48,
+    "sigma": 1.25,
+    "alpha": 10.0,
+    "q": 87,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 48,
+    "sigma": 1.25,
+    "alpha": 11.0,
+    "q": 95,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 48,
+    "sigma": 1.25,
+    "alpha": 12.0,
+    "q": 105,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 48,
+    "sigma": 1.25,
+    "alpha": 13.0,
+    "q": 113,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 48,
+    "sigma": 1.25,
+    "alpha": 14.0,
+    "q": 121,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 48,
+    "sigma": 1.25,
+    "alpha": 15.0,
+    "q": 131,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 48,
+    "sigma": 1.25,
+    "alpha": 16.0,
+    "q": 139,
+    "hardness": 37.4,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 48,
+    "sigma": 1.5,
+    "alpha": 8.0,
+    "q": 83,
+    "hardness": 37.9,
+    "family": "bdd",
+    "dominance_gap": 2.8000000000000043
+  },
+  {
+    "n": 48,
+    "sigma": 1.5,
+    "alpha": 9.0,
+    "q": 95,
+    "hardness": 37.8,
+    "family": "bdd",
+    "dominance_gap": 1.2000000000000028
+  },
+  {
+    "n": 48,
+    "sigma": 1.5,
+    "alpha": 10.0,
+    "q": 105,
+    "hardness": 37.7,
+    "family": "bdd",
+    "dominance_gap": 0.5999999999999943
+  },
+  {
+    "n": 48,
+    "sigma": 1.5,
+    "alpha": 11.0,
+    "q": 115,
+    "hardness": 37.7,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 48,
+    "sigma": 1.5,
+    "alpha": 12.0,
+    "q": 125,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 48,
+    "sigma": 1.5,
+    "alpha": 13.0,
+    "q": 135,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 48,
+    "sigma": 1.5,
+    "alpha": 14.0,
+    "q": 145,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 48,
+    "sigma": 1.5,
+    "alpha": 15.0,
+    "q": 157,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 48,
+    "sigma": 1.5,
+    "alpha": 16.0,
+    "q": 167,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 48,
+    "sigma": 2.0,
+    "alpha": 8.0,
+    "q": 111,
+    "hardness": 38.2,
+    "family": "bdd",
+    "dominance_gap": 4.299999999999997
+  },
+  {
+    "n": 48,
+    "sigma": 2.0,
+    "alpha": 9.0,
+    "q": 125,
+    "hardness": 38.0,
+    "family": "bdd",
+    "dominance_gap": 3.1000000000000014
+  },
+  {
+    "n": 48,
+    "sigma": 2.0,
+    "alpha": 10.0,
+    "q": 139,
+    "hardness": 37.9,
+    "family": "bdd",
+    "dominance_gap": 2.0
+  },
+  {
+    "n": 48,
+    "sigma": 2.0,
+    "alpha": 11.0,
+    "q": 153,
+    "hardness": 37.8,
+    "family": "bdd",
+    "dominance_gap": 0.9000000000000057
+  },
+  {
+    "n": 48,
+    "sigma": 2.0,
+    "alpha": 12.0,
+    "q": 167,
+    "hardness": 37.8,
+    "family": "bdd",
+    "dominance_gap": 0.30000000000000426
+  },
+  {
+    "n": 48,
+    "sigma": 2.0,
+    "alpha": 13.0,
+    "q": 181,
+    "hardness": 37.7,
+    "family": "bdd",
+    "dominance_gap": 0.29999999999999716
+  },
+  {
+    "n": 48,
+    "sigma": 2.0,
+    "alpha": 14.0,
+    "q": 195,
+    "hardness": 37.7,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 48,
+    "sigma": 2.0,
+    "alpha": 15.0,
+    "q": 209,
+    "hardness": 37.7,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 48,
+    "sigma": 2.0,
+    "alpha": 16.0,
+    "q": 223,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 48,
+    "sigma": 2.5,
+    "alpha": 8.0,
+    "q": 139,
+    "hardness": 38.6,
+    "family": "bdd",
+    "dominance_gap": 5.399999999999999
+  },
+  {
+    "n": 48,
+    "sigma": 2.5,
+    "alpha": 9.0,
+    "q": 157,
+    "hardness": 38.3,
+    "family": "bdd",
+    "dominance_gap": 4.200000000000003
+  },
+  {
+    "n": 48,
+    "sigma": 2.5,
+    "alpha": 10.0,
+    "q": 173,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 3.299999999999997
+  },
+  {
+    "n": 48,
+    "sigma": 2.5,
+    "alpha": 11.0,
+    "q": 191,
+    "hardness": 38.0,
+    "family": "bdd",
+    "dominance_gap": 2.200000000000003
+  },
+  {
+    "n": 48,
+    "sigma": 2.5,
+    "alpha": 12.0,
+    "q": 209,
+    "hardness": 37.9,
+    "family": "bdd",
+    "dominance_gap": 1.2000000000000028
+  },
+  {
+    "n": 48,
+    "sigma": 2.5,
+    "alpha": 13.0,
+    "q": 225,
+    "hardness": 37.9,
+    "family": "bdd",
+    "dominance_gap": 0.5
+  },
+  {
+    "n": 48,
+    "sigma": 2.5,
+    "alpha": 14.0,
+    "q": 243,
+    "hardness": 37.8,
+    "family": "bdd",
+    "dominance_gap": 0.30000000000000426
+  },
+  {
+    "n": 48,
+    "sigma": 2.5,
+    "alpha": 15.0,
+    "q": 261,
+    "hardness": 37.8,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 48,
+    "sigma": 2.5,
+    "alpha": 16.0,
+    "q": 277,
+    "hardness": 37.7,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 48,
+    "sigma": 3.0,
+    "alpha": 8.0,
+    "q": 167,
+    "hardness": 39.0,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 48,
+    "sigma": 3.0,
+    "alpha": 9.0,
+    "q": 187,
+    "hardness": 38.5,
+    "family": "bdd",
+    "dominance_gap": 5.200000000000003
+  },
+  {
+    "n": 48,
+    "sigma": 3.0,
+    "alpha": 10.0,
+    "q": 209,
+    "hardness": 38.3,
+    "family": "bdd",
+    "dominance_gap": 4.0
+  },
+  {
+    "n": 48,
+    "sigma": 3.0,
+    "alpha": 11.0,
+    "q": 229,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 3.299999999999997
+  },
+  {
+    "n": 48,
+    "sigma": 3.0,
+    "alpha": 12.0,
+    "q": 249,
+    "hardness": 38.0,
+    "family": "bdd",
+    "dominance_gap": 2.299999999999997
+  },
+  {
+    "n": 48,
+    "sigma": 3.0,
+    "alpha": 13.0,
+    "q": 271,
+    "hardness": 37.9,
+    "family": "bdd",
+    "dominance_gap": 1.3999999999999986
+  },
+  {
+    "n": 48,
+    "sigma": 3.0,
+    "alpha": 14.0,
+    "q": 291,
+    "hardness": 37.9,
+    "family": "bdd",
+    "dominance_gap": 0.6000000000000014
+  },
+  {
+    "n": 48,
+    "sigma": 3.0,
+    "alpha": 15.0,
+    "q": 313,
+    "hardness": 37.9,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 48,
+    "sigma": 3.0,
+    "alpha": 16.0,
+    "q": 333,
+    "hardness": 37.8,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 48,
+    "sigma": 4.0,
+    "alpha": 8.0,
+    "q": 223,
+    "hardness": 40.2,
+    "family": "bdd",
+    "dominance_gap": 6.799999999999997
+  },
+  {
+    "n": 48,
+    "sigma": 4.0,
+    "alpha": 9.0,
+    "q": 249,
+    "hardness": 39.3,
+    "family": "bdd",
+    "dominance_gap": 6.200000000000003
+  },
+  {
+    "n": 48,
+    "sigma": 4.0,
+    "alpha": 10.0,
+    "q": 277,
+    "hardness": 38.7,
+    "family": "bdd",
+    "dominance_gap": 5.399999999999999
+  },
+  {
+    "n": 48,
+    "sigma": 4.0,
+    "alpha": 11.0,
+    "q": 305,
+    "hardness": 38.4,
+    "family": "bdd",
+    "dominance_gap": 4.5
+  },
+  {
+    "n": 48,
+    "sigma": 4.0,
+    "alpha": 12.0,
+    "q": 333,
+    "hardness": 38.3,
+    "family": "bdd",
+    "dominance_gap": 3.700000000000003
+  },
+  {
+    "n": 48,
+    "sigma": 4.0,
+    "alpha": 13.0,
+    "q": 361,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 3.0
+  },
+  {
+    "n": 48,
+    "sigma": 4.0,
+    "alpha": 14.0,
+    "q": 389,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 2.1000000000000014
+  },
+  {
+    "n": 48,
+    "sigma": 4.0,
+    "alpha": 15.0,
+    "q": 417,
+    "hardness": 38.0,
+    "family": "bdd",
+    "dominance_gap": 1.3999999999999986
+  },
+  {
+    "n": 48,
+    "sigma": 4.0,
+    "alpha": 16.0,
+    "q": 443,
+    "hardness": 38.0,
+    "family": "bdd",
+    "dominance_gap": 0.5
+  },
+  {
+    "n": 56,
+    "sigma": 0.5,
+    "alpha": 8.0,
+    "q": 59,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 56,
+    "sigma": 0.5,
+    "alpha": 9.0,
+    "q": 59,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 56,
+    "sigma": 0.5,
+    "alpha": 10.0,
+    "q": 59,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 56,
+    "sigma": 0.5,
+    "alpha": 11.0,
+    "q": 59,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 56,
+    "sigma": 0.5,
+    "alpha": 12.0,
+    "q": 59,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 56,
+    "sigma": 0.5,
+    "alpha": 13.0,
+    "q": 59,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 56,
+    "sigma": 0.5,
+    "alpha": 14.0,
+    "q": 59,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 56,
+    "sigma": 0.5,
+    "alpha": 15.0,
+    "q": 59,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 56,
+    "sigma": 0.5,
+    "alpha": 16.0,
+    "q": 61,
+    "hardness": 37.3,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 56,
+    "sigma": 0.75,
+    "alpha": 8.0,
+    "q": 59,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.29999999999999716
+  },
+  {
+    "n": 56,
+    "sigma": 0.75,
+    "alpha": 9.0,
+    "q": 59,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.29999999999999716
+  },
+  {
+    "n": 56,
+    "sigma": 0.75,
+    "alpha": 10.0,
+    "q": 59,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.29999999999999716
+  },
+  {
+    "n": 56,
+    "sigma": 0.75,
+    "alpha": 11.0,
+    "q": 63,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 56,
+    "sigma": 0.75,
+    "alpha": 12.0,
+    "q": 67,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 56,
+    "sigma": 0.75,
+    "alpha": 13.0,
+    "q": 73,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 56,
+    "sigma": 0.75,
+    "alpha": 14.0,
+    "q": 79,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 56,
+    "sigma": 0.75,
+    "alpha": 15.0,
+    "q": 85,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 56,
+    "sigma": 0.75,
+    "alpha": 16.0,
+    "q": 91,
+    "hardness": 37.5,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 56,
+    "sigma": 1.0,
+    "alpha": 8.0,
+    "q": 61,
+    "hardness": 38.0,
+    "family": "bdd",
+    "dominance_gap": 3.299999999999997
+  },
+  {
+    "n": 56,
+    "sigma": 1.0,
+    "alpha": 9.0,
+    "q": 67,
+    "hardness": 37.9,
+    "family": "bdd",
+    "dominance_gap": 2.5
+  },
+  {
+    "n": 56,
+    "sigma": 1.0,
+    "alpha": 10.0,
+    "q": 75,
+    "hardness": 37.9,
+    "family": "bdd",
+    "dominance_gap": 1.3999999999999986
+  },
+  {
+    "n": 56,
+    "sigma": 1.0,
+    "alpha": 11.0,
+    "q": 83,
+    "hardness": 37.8,
+    "family": "bdd",
+    "dominance_gap": 0.5
+  },
+  {
+    "n": 56,
+    "sigma": 1.0,
+    "alpha": 12.0,
+    "q": 91,
+    "hardness": 37.8,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 56,
+    "sigma": 1.0,
+    "alpha": 13.0,
+    "q": 97,
+    "hardness": 37.7,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 56,
+    "sigma": 1.0,
+    "alpha": 14.0,
+    "q": 105,
+    "hardness": 37.7,
+    "family": "bdd",
+    "dominance_gap": 0.19999999999999574
+  },
+  {
+    "n": 56,
+    "sigma": 1.0,
+    "alpha": 15.0,
+    "q": 113,
+    "hardness": 37.7,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 56,
+    "sigma": 1.0,
+    "alpha": 16.0,
+    "q": 121,
+    "hardness": 37.7,
+    "family": "bdd",
+    "dominance_gap": 0.09999999999999432
+  },
+  {
+    "n": 56,
+    "sigma": 1.25,
+    "alpha": 8.0,
+    "q": 75,
+    "hardness": 38.4,
+    "family": "bdd",
+    "dominance_gap": 4.700000000000003
+  },
+  {
+    "n": 56,
+    "sigma": 1.25,
+    "alpha": 9.0,
+    "q": 85,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 3.6999999999999957
+  },
+  {
+    "n": 56,
+    "sigma": 1.25,
+    "alpha": 10.0,
+    "q": 95,
+    "hardness": 38.0,
+    "family": "bdd",
+    "dominance_gap": 2.6000000000000014
+  },
+  {
+    "n": 56,
+    "sigma": 1.25,
+    "alpha": 11.0,
+    "q": 103,
+    "hardness": 38.0,
+    "family": "bdd",
+    "dominance_gap": 1.7000000000000028
+  },
+  {
+    "n": 56,
+    "sigma": 1.25,
+    "alpha": 12.0,
+    "q": 113,
+    "hardness": 37.9,
+    "family": "bdd",
+    "dominance_gap": 0.8999999999999986
+  },
+  {
+    "n": 56,
+    "sigma": 1.25,
+    "alpha": 13.0,
+    "q": 123,
+    "hardness": 37.9,
+    "family": "bdd",
+    "dominance_gap": 0.30000000000000426
+  },
+  {
+    "n": 56,
+    "sigma": 1.25,
+    "alpha": 14.0,
+    "q": 131,
+    "hardness": 37.8,
+    "family": "bdd",
+    "dominance_gap": 0.30000000000000426
+  },
+  {
+    "n": 56,
+    "sigma": 1.25,
+    "alpha": 15.0,
+    "q": 141,
+    "hardness": 37.8,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 56,
+    "sigma": 1.25,
+    "alpha": 16.0,
+    "q": 151,
+    "hardness": 37.8,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 56,
+    "sigma": 1.5,
+    "alpha": 8.0,
+    "q": 91,
+    "hardness": 38.8,
+    "family": "bdd",
+    "dominance_gap": 5.5
+  },
+  {
+    "n": 56,
+    "sigma": 1.5,
+    "alpha": 9.0,
+    "q": 101,
+    "hardness": 38.4,
+    "family": "bdd",
+    "dominance_gap": 4.800000000000004
+  },
+  {
+    "n": 56,
+    "sigma": 1.5,
+    "alpha": 10.0,
+    "q": 113,
+    "hardness": 38.2,
+    "family": "bdd",
+    "dominance_gap": 3.799999999999997
+  },
+  {
+    "n": 56,
+    "sigma": 1.5,
+    "alpha": 11.0,
+    "q": 123,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 3.0
+  },
+  {
+    "n": 56,
+    "sigma": 1.5,
+    "alpha": 12.0,
+    "q": 135,
+    "hardness": 38.0,
+    "family": "bdd",
+    "dominance_gap": 2.0
+  },
+  {
+    "n": 56,
+    "sigma": 1.5,
+    "alpha": 13.0,
+    "q": 147,
+    "hardness": 38.0,
+    "family": "bdd",
+    "dominance_gap": 1.1000000000000014
+  },
+  {
+    "n": 56,
+    "sigma": 1.5,
+    "alpha": 14.0,
+    "q": 157,
+    "hardness": 37.9,
+    "family": "bdd",
+    "dominance_gap": 0.6000000000000014
+  },
+  {
+    "n": 56,
+    "sigma": 1.5,
+    "alpha": 15.0,
+    "q": 169,
+    "hardness": 37.9,
+    "family": "bdd",
+    "dominance_gap": 0.30000000000000426
+  },
+  {
+    "n": 56,
+    "sigma": 1.5,
+    "alpha": 16.0,
+    "q": 181,
+    "hardness": 37.9,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 56,
+    "sigma": 2.0,
+    "alpha": 8.0,
+    "q": 121,
+    "hardness": 39.9,
+    "family": "bdd",
+    "dominance_gap": 6.300000000000004
+  },
+  {
+    "n": 56,
+    "sigma": 2.0,
+    "alpha": 9.0,
+    "q": 135,
+    "hardness": 39.1,
+    "family": "bdd",
+    "dominance_gap": 5.899999999999999
+  },
+  {
+    "n": 56,
+    "sigma": 2.0,
+    "alpha": 10.0,
+    "q": 151,
+    "hardness": 38.7,
+    "family": "bdd",
+    "dominance_gap": 5.099999999999994
+  },
+  {
+    "n": 56,
+    "sigma": 2.0,
+    "alpha": 11.0,
+    "q": 165,
+    "hardness": 38.4,
+    "family": "bdd",
+    "dominance_gap": 4.5
+  },
+  {
+    "n": 56,
+    "sigma": 2.0,
+    "alpha": 12.0,
+    "q": 181,
+    "hardness": 38.3,
+    "family": "bdd",
+    "dominance_gap": 3.5
+  },
+  {
+    "n": 56,
+    "sigma": 2.0,
+    "alpha": 13.0,
+    "q": 195,
+    "hardness": 38.2,
+    "family": "bdd",
+    "dominance_gap": 2.799999999999997
+  },
+  {
+    "n": 56,
+    "sigma": 2.0,
+    "alpha": 14.0,
+    "q": 211,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 2.1999999999999957
+  },
+  {
+    "n": 56,
+    "sigma": 2.0,
+    "alpha": 15.0,
+    "q": 225,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 1.3999999999999986
+  },
+  {
+    "n": 56,
+    "sigma": 2.0,
+    "alpha": 16.0,
+    "q": 239,
+    "hardness": 38.0,
+    "family": "bdd",
+    "dominance_gap": 0.8999999999999986
+  },
+  {
+    "n": 56,
+    "sigma": 2.5,
+    "alpha": 8.0,
+    "q": 151,
+    "hardness": 41.4,
+    "family": "bdd",
+    "dominance_gap": 6.399999999999999
+  },
+  {
+    "n": 56,
+    "sigma": 2.5,
+    "alpha": 9.0,
+    "q": 169,
+    "hardness": 40.1,
+    "family": "bdd",
+    "dominance_gap": 6.399999999999999
+  },
+  {
+    "n": 56,
+    "sigma": 2.5,
+    "alpha": 10.0,
+    "q": 187,
+    "hardness": 39.3,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 56,
+    "sigma": 2.5,
+    "alpha": 11.0,
+    "q": 207,
+    "hardness": 38.9,
+    "family": "bdd",
+    "dominance_gap": 5.300000000000004
+  },
+  {
+    "n": 56,
+    "sigma": 2.5,
+    "alpha": 12.0,
+    "q": 225,
+    "hardness": 38.6,
+    "family": "bdd",
+    "dominance_gap": 4.699999999999996
+  },
+  {
+    "n": 56,
+    "sigma": 2.5,
+    "alpha": 13.0,
+    "q": 243,
+    "hardness": 38.5,
+    "family": "bdd",
+    "dominance_gap": 3.8999999999999986
+  },
+  {
+    "n": 56,
+    "sigma": 2.5,
+    "alpha": 14.0,
+    "q": 263,
+    "hardness": 38.3,
+    "family": "bdd",
+    "dominance_gap": 3.3000000000000043
+  },
+  {
+    "n": 56,
+    "sigma": 2.5,
+    "alpha": 15.0,
+    "q": 281,
+    "hardness": 38.2,
+    "family": "bdd",
+    "dominance_gap": 2.6999999999999957
+  },
+  {
+    "n": 56,
+    "sigma": 2.5,
+    "alpha": 16.0,
+    "q": 299,
+    "hardness": 38.2,
+    "family": "bdd",
+    "dominance_gap": 1.8999999999999986
+  },
+  {
+    "n": 56,
+    "sigma": 3.0,
+    "alpha": 8.0,
+    "q": 181,
+    "hardness": 42.7,
+    "family": "bdd",
+    "dominance_gap": 6.5
+  },
+  {
+    "n": 56,
+    "sigma": 3.0,
+    "alpha": 9.0,
+    "q": 203,
+    "hardness": 41.2,
+    "family": "bdd",
+    "dominance_gap": 6.5
+  },
+  {
+    "n": 56,
+    "sigma": 3.0,
+    "alpha": 10.0,
+    "q": 225,
+    "hardness": 40.1,
+    "family": "bdd",
+    "dominance_gap": 6.199999999999996
+  },
+  {
+    "n": 56,
+    "sigma": 3.0,
+    "alpha": 11.0,
+    "q": 247,
+    "hardness": 39.4,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 56,
+    "sigma": 3.0,
+    "alpha": 12.0,
+    "q": 269,
+    "hardness": 39.0,
+    "family": "bdd",
+    "dominance_gap": 5.5
+  },
+  {
+    "n": 56,
+    "sigma": 3.0,
+    "alpha": 13.0,
+    "q": 293,
+    "hardness": 38.7,
+    "family": "bdd",
+    "dominance_gap": 4.699999999999996
+  },
+  {
+    "n": 56,
+    "sigma": 3.0,
+    "alpha": 14.0,
+    "q": 315,
+    "hardness": 38.6,
+    "family": "bdd",
+    "dominance_gap": 4.100000000000001
+  },
+  {
+    "n": 56,
+    "sigma": 3.0,
+    "alpha": 15.0,
+    "q": 337,
+    "hardness": 38.4,
+    "family": "bdd",
+    "dominance_gap": 3.5
+  },
+  {
+    "n": 56,
+    "sigma": 3.0,
+    "alpha": 16.0,
+    "q": 359,
+    "hardness": 38.3,
+    "family": "bdd",
+    "dominance_gap": 3.0
+  },
+  {
+    "n": 56,
+    "sigma": 4.0,
+    "alpha": 8.0,
+    "q": 239,
+    "hardness": 44.9,
+    "family": "bdd",
+    "dominance_gap": 6.100000000000001
+  },
+  {
+    "n": 56,
+    "sigma": 4.0,
+    "alpha": 9.0,
+    "q": 269,
+    "hardness": 43.3,
+    "family": "bdd",
+    "dominance_gap": 6.200000000000003
+  },
+  {
+    "n": 56,
+    "sigma": 4.0,
+    "alpha": 10.0,
+    "q": 299,
+    "hardness": 42.0,
+    "family": "bdd",
+    "dominance_gap": 6.299999999999997
+  },
+  {
+    "n": 56,
+    "sigma": 4.0,
+    "alpha": 11.0,
+    "q": 329,
+    "hardness": 40.8,
+    "family": "bdd",
+    "dominance_gap": 6.400000000000006
+  },
+  {
+    "n": 56,
+    "sigma": 4.0,
+    "alpha": 12.0,
+    "q": 359,
+    "hardness": 39.9,
+    "family": "bdd",
+    "dominance_gap": 6.100000000000001
+  },
+  {
+    "n": 56,
+    "sigma": 4.0,
+    "alpha": 13.0,
+    "q": 389,
+    "hardness": 39.4,
+    "family": "bdd",
+    "dominance_gap": 5.700000000000003
+  },
+  {
+    "n": 56,
+    "sigma": 4.0,
+    "alpha": 14.0,
+    "q": 419,
+    "hardness": 39.0,
+    "family": "bdd",
+    "dominance_gap": 5.299999999999997
+  },
+  {
+    "n": 56,
+    "sigma": 4.0,
+    "alpha": 15.0,
+    "q": 449,
+    "hardness": 38.8,
+    "family": "bdd",
+    "dominance_gap": 4.800000000000004
+  },
+  {
+    "n": 56,
+    "sigma": 4.0,
+    "alpha": 16.0,
+    "q": 479,
+    "hardness": 38.6,
+    "family": "bdd",
+    "dominance_gap": 4.199999999999996
+  },
+  {
+    "n": 64,
+    "sigma": 0.5,
+    "alpha": 8.0,
+    "q": 67,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 64,
+    "sigma": 0.5,
+    "alpha": 9.0,
+    "q": 67,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 64,
+    "sigma": 0.5,
+    "alpha": 10.0,
+    "q": 67,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 64,
+    "sigma": 0.5,
+    "alpha": 11.0,
+    "q": 67,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 64,
+    "sigma": 0.5,
+    "alpha": 12.0,
+    "q": 67,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 64,
+    "sigma": 0.5,
+    "alpha": 13.0,
+    "q": 67,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 64,
+    "sigma": 0.5,
+    "alpha": 14.0,
+    "q": 67,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 64,
+    "sigma": 0.5,
+    "alpha": 15.0,
+    "q": 67,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 64,
+    "sigma": 0.5,
+    "alpha": 16.0,
+    "q": 67,
+    "hardness": 37.6,
+    "family": "bdd",
+    "dominance_gap": 0.10000000000000142
+  },
+  {
+    "n": 64,
+    "sigma": 0.75,
+    "alpha": 8.0,
+    "q": 67,
+    "hardness": 38.0,
+    "family": "bdd",
+    "dominance_gap": 1.3999999999999986
+  },
+  {
+    "n": 64,
+    "sigma": 0.75,
+    "alpha": 9.0,
+    "q": 67,
+    "hardness": 38.0,
+    "family": "bdd",
+    "dominance_gap": 1.3999999999999986
+  },
+  {
+    "n": 64,
+    "sigma": 0.75,
+    "alpha": 10.0,
+    "q": 67,
+    "hardness": 38.0,
+    "family": "bdd",
+    "dominance_gap": 1.3999999999999986
+  },
+  {
+    "n": 64,
+    "sigma": 0.75,
+    "alpha": 11.0,
+    "q": 67,
+    "hardness": 38.0,
+    "family": "bdd",
+    "dominance_gap": 1.3999999999999986
+  },
+  {
+    "n": 64,
+    "sigma": 0.75,
+    "alpha": 12.0,
+    "q": 73,
+    "hardness": 37.9,
+    "family": "bdd",
+    "dominance_gap": 0.7000000000000028
+  },
+  {
+    "n": 64,
+    "sigma": 0.75,
+    "alpha": 13.0,
+    "q": 79,
+    "hardness": 37.9,
+    "family": "bdd",
+    "dominance_gap": 0.30000000000000426
+  },
+  {
+    "n": 64,
+    "sigma": 0.75,
+    "alpha": 14.0,
+    "q": 85,
+    "hardness": 37.9,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 64,
+    "sigma": 0.75,
+    "alpha": 15.0,
+    "q": 91,
+    "hardness": 37.8,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 64,
+    "sigma": 0.75,
+    "alpha": 16.0,
+    "q": 97,
+    "hardness": 37.8,
+    "family": "bdd",
+    "dominance_gap": 0.20000000000000284
+  },
+  {
+    "n": 64,
+    "sigma": 1.0,
+    "alpha": 8.0,
+    "q": 67,
+    "hardness": 38.9,
+    "family": "bdd",
+    "dominance_gap": 5.600000000000001
+  },
+  {
+    "n": 64,
+    "sigma": 1.0,
+    "alpha": 9.0,
+    "q": 73,
+    "hardness": 38.6,
+    "family": "bdd",
+    "dominance_gap": 5.0
+  },
+  {
+    "n": 64,
+    "sigma": 1.0,
+    "alpha": 10.0,
+    "q": 81,
+    "hardness": 38.4,
+    "family": "bdd",
+    "dominance_gap": 4.200000000000003
+  },
+  {
+    "n": 64,
+    "sigma": 1.0,
+    "alpha": 11.0,
+    "q": 89,
+    "hardness": 38.2,
+    "family": "bdd",
+    "dominance_gap": 3.5999999999999943
+  },
+  {
+    "n": 64,
+    "sigma": 1.0,
+    "alpha": 12.0,
+    "q": 97,
+    "hardness": 38.2,
+    "family": "bdd",
+    "dominance_gap": 2.6999999999999957
+  },
+  {
+    "n": 64,
+    "sigma": 1.0,
+    "alpha": 13.0,
+    "q": 105,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 2.0
+  },
+  {
+    "n": 64,
+    "sigma": 1.0,
+    "alpha": 14.0,
+    "q": 113,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 1.1000000000000014
+  },
+  {
+    "n": 64,
+    "sigma": 1.0,
+    "alpha": 15.0,
+    "q": 121,
+    "hardness": 38.0,
+    "family": "bdd",
+    "dominance_gap": 0.6000000000000014
+  },
+  {
+    "n": 64,
+    "sigma": 1.0,
+    "alpha": 16.0,
+    "q": 129,
+    "hardness": 38.0,
+    "family": "bdd",
+    "dominance_gap": 0.5
+  },
+  {
+    "n": 64,
+    "sigma": 1.25,
+    "alpha": 8.0,
+    "q": 81,
+    "hardness": 40.2,
+    "family": "bdd",
+    "dominance_gap": 6.299999999999997
+  },
+  {
+    "n": 64,
+    "sigma": 1.25,
+    "alpha": 9.0,
+    "q": 91,
+    "hardness": 39.3,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 64,
+    "sigma": 1.25,
+    "alpha": 10.0,
+    "q": 101,
+    "hardness": 38.9,
+    "family": "bdd",
+    "dominance_gap": 5.300000000000004
+  },
+  {
+    "n": 64,
+    "sigma": 1.25,
+    "alpha": 11.0,
+    "q": 111,
+    "hardness": 38.6,
+    "family": "bdd",
+    "dominance_gap": 4.699999999999996
+  },
+  {
+    "n": 64,
+    "sigma": 1.25,
+    "alpha": 12.0,
+    "q": 121,
+    "hardness": 38.4,
+    "family": "bdd",
+    "dominance_gap": 4.0
+  },
+  {
+    "n": 64,
+    "sigma": 1.25,
+    "alpha": 13.0,
+    "q": 131,
+    "hardness": 38.3,
+    "family": "bdd",
+    "dominance_gap": 3.3000000000000043
+  },
+  {
+    "n": 64,
+    "sigma": 1.25,
+    "alpha": 14.0,
+    "q": 141,
+    "hardness": 38.2,
+    "family": "bdd",
+    "dominance_gap": 2.6999999999999957
+  },
+  {
+    "n": 64,
+    "sigma": 1.25,
+    "alpha": 15.0,
+    "q": 151,
+    "hardness": 38.2,
+    "family": "bdd",
+    "dominance_gap": 2.0
+  },
+  {
+    "n": 64,
+    "sigma": 1.25,
+    "alpha": 16.0,
+    "q": 161,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 1.3999999999999986
+  },
+  {
+    "n": 64,
+    "sigma": 1.5,
+    "alpha": 8.0,
+    "q": 97,
+    "hardness": 41.5,
+    "family": "bdd",
+    "dominance_gap": 6.5
+  },
+  {
+    "n": 64,
+    "sigma": 1.5,
+    "alpha": 9.0,
+    "q": 109,
+    "hardness": 40.3,
+    "family": "bdd",
+    "dominance_gap": 6.300000000000004
+  },
+  {
+    "n": 64,
+    "sigma": 1.5,
+    "alpha": 10.0,
+    "q": 121,
+    "hardness": 39.5,
+    "family": "bdd",
+    "dominance_gap": 5.899999999999999
+  },
+  {
+    "n": 64,
+    "sigma": 1.5,
+    "alpha": 11.0,
+    "q": 133,
+    "hardness": 39.0,
+    "family": "bdd",
+    "dominance_gap": 5.5
+  },
+  {
+    "n": 64,
+    "sigma": 1.5,
+    "alpha": 12.0,
+    "q": 145,
+    "hardness": 38.7,
+    "family": "bdd",
+    "dominance_gap": 4.899999999999999
+  },
+  {
+    "n": 64,
+    "sigma": 1.5,
+    "alpha": 13.0,
+    "q": 157,
+    "hardness": 38.5,
+    "family": "bdd",
+    "dominance_gap": 4.299999999999997
+  },
+  {
+    "n": 64,
+    "sigma": 1.5,
+    "alpha": 14.0,
+    "q": 169,
+    "hardness": 38.4,
+    "family": "bdd",
+    "dominance_gap": 3.8000000000000043
+  },
+  {
+    "n": 64,
+    "sigma": 1.5,
+    "alpha": 15.0,
+    "q": 181,
+    "hardness": 38.3,
+    "family": "bdd",
+    "dominance_gap": 3.1000000000000014
+  },
+  {
+    "n": 64,
+    "sigma": 1.5,
+    "alpha": 16.0,
+    "q": 193,
+    "hardness": 38.3,
+    "family": "bdd",
+    "dominance_gap": 2.4000000000000057
+  },
+  {
+    "n": 64,
+    "sigma": 2.0,
+    "alpha": 8.0,
+    "q": 129,
+    "hardness": 43.7,
+    "family": "bdd",
+    "dominance_gap": 6.399999999999999
+  },
+  {
+    "n": 64,
+    "sigma": 2.0,
+    "alpha": 9.0,
+    "q": 145,
+    "hardness": 42.5,
+    "family": "bdd",
+    "dominance_gap": 6.200000000000003
+  },
+  {
+    "n": 64,
+    "sigma": 2.0,
+    "alpha": 10.0,
+    "q": 161,
+    "hardness": 41.3,
+    "family": "bdd",
+    "dominance_gap": 6.200000000000003
+  },
+  {
+    "n": 64,
+    "sigma": 2.0,
+    "alpha": 11.0,
+    "q": 177,
+    "hardness": 40.3,
+    "family": "bdd",
+    "dominance_gap": 6.100000000000001
+  },
+  {
+    "n": 64,
+    "sigma": 2.0,
+    "alpha": 12.0,
+    "q": 193,
+    "hardness": 39.6,
+    "family": "bdd",
+    "dominance_gap": 5.899999999999999
+  },
+  {
+    "n": 64,
+    "sigma": 2.0,
+    "alpha": 13.0,
+    "q": 209,
+    "hardness": 39.2,
+    "family": "bdd",
+    "dominance_gap": 5.399999999999999
+  },
+  {
+    "n": 64,
+    "sigma": 2.0,
+    "alpha": 14.0,
+    "q": 225,
+    "hardness": 38.9,
+    "family": "bdd",
+    "dominance_gap": 5.100000000000001
+  },
+  {
+    "n": 64,
+    "sigma": 2.0,
+    "alpha": 15.0,
+    "q": 241,
+    "hardness": 38.7,
+    "family": "bdd",
+    "dominance_gap": 4.5
+  },
+  {
+    "n": 64,
+    "sigma": 2.0,
+    "alpha": 16.0,
+    "q": 257,
+    "hardness": 38.6,
+    "family": "bdd",
+    "dominance_gap": 4.0
+  },
+  {
+    "n": 64,
+    "sigma": 2.5,
+    "alpha": 8.0,
+    "q": 161,
+    "hardness": 45.4,
+    "family": "bdd",
+    "dominance_gap": 6.300000000000004
+  },
+  {
+    "n": 64,
+    "sigma": 2.5,
+    "alpha": 9.0,
+    "q": 181,
+    "hardness": 44.3,
+    "family": "bdd",
+    "dominance_gap": 5.900000000000006
+  },
+  {
+    "n": 64,
+    "sigma": 2.5,
+    "alpha": 10.0,
+    "q": 201,
+    "hardness": 43.0,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 64,
+    "sigma": 2.5,
+    "alpha": 11.0,
+    "q": 221,
+    "hardness": 41.9,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 64,
+    "sigma": 2.5,
+    "alpha": 12.0,
+    "q": 241,
+    "hardness": 40.9,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 64,
+    "sigma": 2.5,
+    "alpha": 13.0,
+    "q": 261,
+    "hardness": 40.1,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 64,
+    "sigma": 2.5,
+    "alpha": 14.0,
+    "q": 281,
+    "hardness": 39.5,
+    "family": "bdd",
+    "dominance_gap": 5.700000000000003
+  },
+  {
+    "n": 64,
+    "sigma": 2.5,
+    "alpha": 15.0,
+    "q": 301,
+    "hardness": 39.2,
+    "family": "bdd",
+    "dominance_gap": 5.399999999999999
+  },
+  {
+    "n": 64,
+    "sigma": 2.5,
+    "alpha": 16.0,
+    "q": 321,
+    "hardness": 39.0,
+    "family": "bdd",
+    "dominance_gap": 5.0
+  },
+  {
+    "n": 64,
+    "sigma": 3.0,
+    "alpha": 8.0,
+    "q": 193,
+    "hardness": 46.7,
+    "family": "bdd",
+    "dominance_gap": 6.399999999999999
+  },
+  {
+    "n": 64,
+    "sigma": 3.0,
+    "alpha": 9.0,
+    "q": 217,
+    "hardness": 45.3,
+    "family": "bdd",
+    "dominance_gap": 6.100000000000001
+  },
+  {
+    "n": 64,
+    "sigma": 3.0,
+    "alpha": 10.0,
+    "q": 241,
+    "hardness": 44.1,
+    "family": "bdd",
+    "dominance_gap": 6.100000000000001
+  },
+  {
+    "n": 64,
+    "sigma": 3.0,
+    "alpha": 11.0,
+    "q": 265,
+    "hardness": 43.2,
+    "family": "bdd",
+    "dominance_gap": 5.899999999999999
+  },
+  {
+    "n": 64,
+    "sigma": 3.0,
+    "alpha": 12.0,
+    "q": 289,
+    "hardness": 42.2,
+    "family": "bdd",
+    "dominance_gap": 5.899999999999999
+  },
+  {
+    "n": 64,
+    "sigma": 3.0,
+    "alpha": 13.0,
+    "q": 313,
+    "hardness": 41.2,
+    "family": "bdd",
+    "dominance_gap": 6.099999999999994
+  },
+  {
+    "n": 64,
+    "sigma": 3.0,
+    "alpha": 14.0,
+    "q": 337,
+    "hardness": 40.5,
+    "family": "bdd",
+    "dominance_gap": 5.899999999999999
+  },
+  {
+    "n": 64,
+    "sigma": 3.0,
+    "alpha": 15.0,
+    "q": 361,
+    "hardness": 39.8,
+    "family": "bdd",
+    "dominance_gap": 5.800000000000004
+  },
+  {
+    "n": 64,
+    "sigma": 3.0,
+    "alpha": 16.0,
+    "q": 385,
+    "hardness": 39.4,
+    "family": "bdd",
+    "dominance_gap": 5.600000000000001
+  },
+  {
+    "n": 64,
+    "sigma": 4.0,
+    "alpha": 8.0,
+    "q": 257,
+    "hardness": 48.8,
+    "family": "bdd",
+    "dominance_gap": 6.400000000000006
+  },
+  {
+    "n": 64,
+    "sigma": 4.0,
+    "alpha": 9.0,
+    "q": 289,
+    "hardness": 47.3,
+    "family": "bdd",
+    "dominance_gap": 6.200000000000003
+  },
+  {
+    "n": 64,
+    "sigma": 4.0,
+    "alpha": 10.0,
+    "q": 321,
+    "hardness": 46.0,
+    "family": "bdd",
+    "dominance_gap": 6.100000000000001
+  },
+  {
+    "n": 64,
+    "sigma": 4.0,
+    "alpha": 11.0,
+    "q": 353,
+    "hardness": 44.9,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 64,
+    "sigma": 4.0,
+    "alpha": 12.0,
+    "q": 385,
+    "hardness": 44.0,
+    "family": "bdd",
+    "dominance_gap": 5.899999999999999
+  },
+  {
+    "n": 64,
+    "sigma": 4.0,
+    "alpha": 13.0,
+    "q": 417,
+    "hardness": 43.1,
+    "family": "bdd",
+    "dominance_gap": 5.799999999999997
+  },
+  {
+    "n": 64,
+    "sigma": 4.0,
+    "alpha": 14.0,
+    "q": 449,
+    "hardness": 42.3,
+    "family": "bdd",
+    "dominance_gap": 5.900000000000006
+  },
+  {
+    "n": 64,
+    "sigma": 4.0,
+    "alpha": 15.0,
+    "q": 481,
+    "hardness": 41.5,
+    "family": "bdd",
+    "dominance_gap": 5.799999999999997
+  },
+  {
+    "n": 64,
+    "sigma": 4.0,
+    "alpha": 16.0,
+    "q": 513,
+    "hardness": 40.8,
+    "family": "bdd",
+    "dominance_gap": 5.900000000000006
+  },
+  {
+    "n": 80,
+    "sigma": 0.5,
+    "alpha": 8.0,
+    "q": 83,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 0.5
+  },
+  {
+    "n": 80,
+    "sigma": 0.5,
+    "alpha": 9.0,
+    "q": 83,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 0.5
+  },
+  {
+    "n": 80,
+    "sigma": 0.5,
+    "alpha": 10.0,
+    "q": 83,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 0.5
+  },
+  {
+    "n": 80,
+    "sigma": 0.5,
+    "alpha": 11.0,
+    "q": 83,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 0.5
+  },
+  {
+    "n": 80,
+    "sigma": 0.5,
+    "alpha": 12.0,
+    "q": 83,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 0.5
+  },
+  {
+    "n": 80,
+    "sigma": 0.5,
+    "alpha": 13.0,
+    "q": 83,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 0.5
+  },
+  {
+    "n": 80,
+    "sigma": 0.5,
+    "alpha": 14.0,
+    "q": 83,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 0.5
+  },
+  {
+    "n": 80,
+    "sigma": 0.5,
+    "alpha": 15.0,
+    "q": 83,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 0.5
+  },
+  {
+    "n": 80,
+    "sigma": 0.5,
+    "alpha": 16.0,
+    "q": 83,
+    "hardness": 38.1,
+    "family": "bdd",
+    "dominance_gap": 0.5
+  },
+  {
+    "n": 80,
+    "sigma": 0.75,
+    "alpha": 8.0,
+    "q": 83,
+    "hardness": 39.3,
+    "family": "bdd",
+    "dominance_gap": 5.600000000000001
+  },
+  {
+    "n": 80,
+    "sigma": 0.75,
+    "alpha": 9.0,
+    "q": 83,
+    "hardness": 39.3,
+    "family": "bdd",
+    "dominance_gap": 5.600000000000001
+  },
+  {
+    "n": 80,
+    "sigma": 0.75,
+    "alpha": 10.0,
+    "q": 83,
+    "hardness": 39.3,
+    "family": "bdd",
+    "dominance_gap": 5.600000000000001
+  },
+  {
+    "n": 80,
+    "sigma": 0.75,
+    "alpha": 11.0,
+    "q": 83,
+    "hardness": 39.3,
+    "family": "bdd",
+    "dominance_gap": 5.600000000000001
+  },
+  {
+    "n": 80,
+    "sigma": 0.75,
+    "alpha": 12.0,
+    "q": 83,
+    "hardness": 39.3,
+    "family": "bdd",
+    "dominance_gap": 5.600000000000001
+  },
+  {
+    "n": 80,
+    "sigma": 0.75,
+    "alpha": 13.0,
+    "q": 87,
+    "hardness": 39.1,
+    "family": "bdd",
+    "dominance_gap": 5.299999999999997
+  },
+  {
+    "n": 80,
+    "sigma": 0.75,
+    "alpha": 14.0,
+    "q": 95,
+    "hardness": 38.9,
+    "family": "bdd",
+    "dominance_gap": 4.800000000000004
+  },
+  {
+    "n": 80,
+    "sigma": 0.75,
+    "alpha": 15.0,
+    "q": 101,
+    "hardness": 38.7,
+    "family": "bdd",
+    "dominance_gap": 4.399999999999999
+  },
+  {
+    "n": 80,
+    "sigma": 0.75,
+    "alpha": 16.0,
+    "q": 107,
+    "hardness": 38.7,
+    "family": "bdd",
+    "dominance_gap": 3.8999999999999986
+  },
+  {
+    "n": 80,
+    "sigma": 1.0,
+    "alpha": 8.0,
+    "q": 83,
+    "hardness": 43.8,
+    "family": "bdd",
+    "dominance_gap": 6.100000000000001
+  },
+  {
+    "n": 80,
+    "sigma": 1.0,
+    "alpha": 9.0,
+    "q": 83,
+    "hardness": 43.8,
+    "family": "bdd",
+    "dominance_gap": 6.100000000000001
+  },
+  {
+    "n": 80,
+    "sigma": 1.0,
+    "alpha": 10.0,
+    "q": 89,
+    "hardness": 43.2,
+    "family": "bdd",
+    "dominance_gap": 5.899999999999999
+  },
+  {
+    "n": 80,
+    "sigma": 1.0,
+    "alpha": 11.0,
+    "q": 99,
+    "hardness": 42.2,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 80,
+    "sigma": 1.0,
+    "alpha": 12.0,
+    "q": 107,
+    "hardness": 41.4,
+    "family": "bdd",
+    "dominance_gap": 5.899999999999999
+  },
+  {
+    "n": 80,
+    "sigma": 1.0,
+    "alpha": 13.0,
+    "q": 117,
+    "hardness": 40.6,
+    "family": "bdd",
+    "dominance_gap": 5.799999999999997
+  },
+  {
+    "n": 80,
+    "sigma": 1.0,
+    "alpha": 14.0,
+    "q": 125,
+    "hardness": 40.0,
+    "family": "bdd",
+    "dominance_gap": 5.899999999999999
+  },
+  {
+    "n": 80,
+    "sigma": 1.0,
+    "alpha": 15.0,
+    "q": 135,
+    "hardness": 39.6,
+    "family": "bdd",
+    "dominance_gap": 5.600000000000001
+  },
+  {
+    "n": 80,
+    "sigma": 1.0,
+    "alpha": 16.0,
+    "q": 143,
+    "hardness": 39.3,
+    "family": "bdd",
+    "dominance_gap": 5.400000000000006
+  },
+  {
+    "n": 80,
+    "sigma": 1.25,
+    "alpha": 8.0,
+    "q": 89,
+    "hardness": 47.2,
+    "family": "bdd",
+    "dominance_gap": 6.299999999999997
+  },
+  {
+    "n": 80,
+    "sigma": 1.25,
+    "alpha": 9.0,
+    "q": 101,
+    "hardness": 45.9,
+    "family": "bdd",
+    "dominance_gap": 6.100000000000001
+  },
+  {
+    "n": 80,
+    "sigma": 1.25,
+    "alpha": 10.0,
+    "q": 113,
+    "hardness": 44.8,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 80,
+    "sigma": 1.25,
+    "alpha": 11.0,
+    "q": 123,
+    "hardness": 44.0,
+    "family": "bdd",
+    "dominance_gap": 5.799999999999997
+  },
+  {
+    "n": 80,
+    "sigma": 1.25,
+    "alpha": 12.0,
+    "q": 135,
+    "hardness": 43.1,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 80,
+    "sigma": 1.25,
+    "alpha": 13.0,
+    "q": 145,
+    "hardness": 42.4,
+    "family": "bdd",
+    "dominance_gap": 5.800000000000004
+  },
+  {
+    "n": 80,
+    "sigma": 1.25,
+    "alpha": 14.0,
+    "q": 157,
+    "hardness": 41.7,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 80,
+    "sigma": 1.25,
+    "alpha": 15.0,
+    "q": 169,
+    "hardness": 41.0,
+    "family": "bdd",
+    "dominance_gap": 5.799999999999997
+  },
+  {
+    "n": 80,
+    "sigma": 1.25,
+    "alpha": 16.0,
+    "q": 179,
+    "hardness": 40.4,
+    "family": "bdd",
+    "dominance_gap": 5.800000000000004
+  },
+  {
+    "n": 80,
+    "sigma": 1.5,
+    "alpha": 8.0,
+    "q": 107,
+    "hardness": 48.7,
+    "family": "bdd",
+    "dominance_gap": 6.299999999999997
+  },
+  {
+    "n": 80,
+    "sigma": 1.5,
+    "alpha": 9.0,
+    "q": 121,
+    "hardness": 47.4,
+    "family": "bdd",
+    "dominance_gap": 6.100000000000001
+  },
+  {
+    "n": 80,
+    "sigma": 1.5,
+    "alpha": 10.0,
+    "q": 135,
+    "hardness": 46.2,
+    "family": "bdd",
+    "dominance_gap": 5.899999999999999
+  },
+  {
+    "n": 80,
+    "sigma": 1.5,
+    "alpha": 11.0,
+    "q": 149,
+    "hardness": 45.3,
+    "family": "bdd",
+    "dominance_gap": 5.900000000000006
+  },
+  {
+    "n": 80,
+    "sigma": 1.5,
+    "alpha": 12.0,
+    "q": 161,
+    "hardness": 44.6,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 80,
+    "sigma": 1.5,
+    "alpha": 13.0,
+    "q": 175,
+    "hardness": 43.7,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 80,
+    "sigma": 1.5,
+    "alpha": 14.0,
+    "q": 189,
+    "hardness": 43.0,
+    "family": "bdd",
+    "dominance_gap": 5.600000000000001
+  },
+  {
+    "n": 80,
+    "sigma": 1.5,
+    "alpha": 15.0,
+    "q": 201,
+    "hardness": 42.4,
+    "family": "bdd",
+    "dominance_gap": 5.600000000000001
+  },
+  {
+    "n": 80,
+    "sigma": 1.5,
+    "alpha": 16.0,
+    "q": 215,
+    "hardness": 41.7,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 80,
+    "sigma": 2.0,
+    "alpha": 8.0,
+    "q": 143,
+    "hardness": 51.0,
+    "family": "bdd",
+    "dominance_gap": 6.399999999999999
+  },
+  {
+    "n": 80,
+    "sigma": 2.0,
+    "alpha": 9.0,
+    "q": 161,
+    "hardness": 49.7,
+    "family": "bdd",
+    "dominance_gap": 6.199999999999996
+  },
+  {
+    "n": 80,
+    "sigma": 2.0,
+    "alpha": 10.0,
+    "q": 179,
+    "hardness": 48.5,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 80,
+    "sigma": 2.0,
+    "alpha": 11.0,
+    "q": 197,
+    "hardness": 47.5,
+    "family": "bdd",
+    "dominance_gap": 5.799999999999997
+  },
+  {
+    "n": 80,
+    "sigma": 2.0,
+    "alpha": 12.0,
+    "q": 215,
+    "hardness": 46.6,
+    "family": "bdd",
+    "dominance_gap": 5.799999999999997
+  },
+  {
+    "n": 80,
+    "sigma": 2.0,
+    "alpha": 13.0,
+    "q": 233,
+    "hardness": 45.8,
+    "family": "bdd",
+    "dominance_gap": 5.700000000000003
+  },
+  {
+    "n": 80,
+    "sigma": 2.0,
+    "alpha": 14.0,
+    "q": 251,
+    "hardness": 45.1,
+    "family": "bdd",
+    "dominance_gap": 5.600000000000001
+  },
+  {
+    "n": 80,
+    "sigma": 2.0,
+    "alpha": 15.0,
+    "q": 269,
+    "hardness": 44.4,
+    "family": "bdd",
+    "dominance_gap": 5.5
+  },
+  {
+    "n": 80,
+    "sigma": 2.0,
+    "alpha": 16.0,
+    "q": 287,
+    "hardness": 43.7,
+    "family": "bdd",
+    "dominance_gap": 5.5
+  },
+  {
+    "n": 80,
+    "sigma": 2.5,
+    "alpha": 8.0,
+    "q": 179,
+    "hardness": 52.8,
+    "family": "bdd",
+    "dominance_gap": 6.400000000000006
+  },
+  {
+    "n": 80,
+    "sigma": 2.5,
+    "alpha": 9.0,
+    "q": 201,
+    "hardness": 51.4,
+    "family": "bdd",
+    "dominance_gap": 6.300000000000004
+  },
+  {
+    "n": 80,
+    "sigma": 2.5,
+    "alpha": 10.0,
+    "q": 225,
+    "hardness": 50.1,
+    "family": "bdd",
+    "dominance_gap": 6.199999999999996
+  },
+  {
+    "n": 80,
+    "sigma": 2.5,
+    "alpha": 11.0,
+    "q": 247,
+    "hardness": 49.1,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 80,
+    "sigma": 2.5,
+    "alpha": 12.0,
+    "q": 269,
+    "hardness": 48.1,
+    "family": "bdd",
+    "dominance_gap": 5.799999999999997
+  },
+  {
+    "n": 80,
+    "sigma": 2.5,
+    "alpha": 13.0,
+    "q": 291,
+    "hardness": 47.3,
+    "family": "bdd",
+    "dominance_gap": 5.800000000000004
+  },
+  {
+    "n": 80,
+    "sigma": 2.5,
+    "alpha": 14.0,
+    "q": 313,
+    "hardness": 46.6,
+    "family": "bdd",
+    "dominance_gap": 5.600000000000001
+  },
+  {
+    "n": 80,
+    "sigma": 2.5,
+    "alpha": 15.0,
+    "q": 335,
+    "hardness": 45.9,
+    "family": "bdd",
+    "dominance_gap": 5.700000000000003
+  },
+  {
+    "n": 80,
+    "sigma": 2.5,
+    "alpha": 16.0,
+    "q": 359,
+    "hardness": 45.2,
+    "family": "bdd",
+    "dominance_gap": 5.5
+  },
+  {
+    "n": 80,
+    "sigma": 3.0,
+    "alpha": 8.0,
+    "q": 215,
+    "hardness": 54.3,
+    "family": "bdd",
+    "dominance_gap": 6.400000000000006
+  },
+  {
+    "n": 80,
+    "sigma": 3.0,
+    "alpha": 9.0,
+    "q": 241,
+    "hardness": 52.8,
+    "family": "bdd",
+    "dominance_gap": 6.200000000000003
+  },
+  {
+    "n": 80,
+    "sigma": 3.0,
+    "alpha": 10.0,
+    "q": 269,
+    "hardness": 51.8,
+    "family": "bdd",
+    "dominance_gap": 5.700000000000003
+  },
+  {
+    "n": 80,
+    "sigma": 3.0,
+    "alpha": 11.0,
+    "q": 295,
+    "hardness": 50.5,
+    "family": "bdd",
+    "dominance_gap": 5.799999999999997
+  },
+  {
+    "n": 80,
+    "sigma": 3.0,
+    "alpha": 12.0,
+    "q": 323,
+    "hardness": 49.4,
+    "family": "bdd",
+    "dominance_gap": 5.800000000000004
+  },
+  {
+    "n": 80,
+    "sigma": 3.0,
+    "alpha": 13.0,
+    "q": 349,
+    "hardness": 48.6,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 80,
+    "sigma": 3.0,
+    "alpha": 14.0,
+    "q": 377,
+    "hardness": 47.7,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 80,
+    "sigma": 3.0,
+    "alpha": 15.0,
+    "q": 403,
+    "hardness": 47.1,
+    "family": "bdd",
+    "dominance_gap": 5.5
+  },
+  {
+    "n": 80,
+    "sigma": 3.0,
+    "alpha": 16.0,
+    "q": 429,
+    "hardness": 46.5,
+    "family": "bdd",
+    "dominance_gap": 5.399999999999999
+  },
+  {
+    "n": 80,
+    "sigma": 4.0,
+    "alpha": 8.0,
+    "q": 287,
+    "hardness": 56.5,
+    "family": "bdd",
+    "dominance_gap": 6.600000000000001
+  },
+  {
+    "n": 80,
+    "sigma": 4.0,
+    "alpha": 9.0,
+    "q": 323,
+    "hardness": 56.1,
+    "family": "bdd",
+    "dominance_gap": 5.199999999999996
+  },
+  {
+    "n": 80,
+    "sigma": 4.0,
+    "alpha": 10.0,
+    "q": 359,
+    "hardness": 53.6,
+    "family": "bdd",
+    "dominance_gap": 6.299999999999997
+  },
+  {
+    "n": 80,
+    "sigma": 4.0,
+    "alpha": 11.0,
+    "q": 395,
+    "hardness": 52.4,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 80,
+    "sigma": 4.0,
+    "alpha": 12.0,
+    "q": 429,
+    "hardness": 51.5,
+    "family": "bdd",
+    "dominance_gap": 5.799999999999997
+  },
+  {
+    "n": 80,
+    "sigma": 4.0,
+    "alpha": 13.0,
+    "q": 465,
+    "hardness": 50.5,
+    "family": "bdd",
+    "dominance_gap": 5.899999999999999
+  },
+  {
+    "n": 80,
+    "sigma": 4.0,
+    "alpha": 14.0,
+    "q": 501,
+    "hardness": 49.7,
+    "family": "bdd",
+    "dominance_gap": 5.799999999999997
+  },
+  {
+    "n": 80,
+    "sigma": 4.0,
+    "alpha": 15.0,
+    "q": 537,
+    "hardness": 48.9,
+    "family": "bdd",
+    "dominance_gap": 5.700000000000003
+  },
+  {
+    "n": 80,
+    "sigma": 4.0,
+    "alpha": 16.0,
+    "q": 573,
+    "hardness": 48.3,
+    "family": "bdd",
+    "dominance_gap": 5.400000000000006
+  },
+  {
+    "n": 96,
+    "sigma": 0.5,
+    "alpha": 8.0,
+    "q": 99,
+    "hardness": 38.9,
+    "family": "bdd",
+    "dominance_gap": 4.399999999999999
+  },
+  {
+    "n": 96,
+    "sigma": 0.5,
+    "alpha": 9.0,
+    "q": 99,
+    "hardness": 38.9,
+    "family": "bdd",
+    "dominance_gap": 4.399999999999999
+  },
+  {
+    "n": 96,
+    "sigma": 0.5,
+    "alpha": 10.0,
+    "q": 99,
+    "hardness": 38.9,
+    "family": "bdd",
+    "dominance_gap": 4.399999999999999
+  },
+  {
+    "n": 96,
+    "sigma": 0.5,
+    "alpha": 11.0,
+    "q": 99,
+    "hardness": 38.9,
+    "family": "bdd",
+    "dominance_gap": 4.399999999999999
+  },
+  {
+    "n": 96,
+    "sigma": 0.5,
+    "alpha": 12.0,
+    "q": 99,
+    "hardness": 38.9,
+    "family": "bdd",
+    "dominance_gap": 4.399999999999999
+  },
+  {
+    "n": 96,
+    "sigma": 0.5,
+    "alpha": 13.0,
+    "q": 99,
+    "hardness": 38.9,
+    "family": "bdd",
+    "dominance_gap": 4.399999999999999
+  },
+  {
+    "n": 96,
+    "sigma": 0.5,
+    "alpha": 14.0,
+    "q": 99,
+    "hardness": 38.9,
+    "family": "bdd",
+    "dominance_gap": 4.399999999999999
+  },
+  {
+    "n": 96,
+    "sigma": 0.5,
+    "alpha": 15.0,
+    "q": 99,
+    "hardness": 38.9,
+    "family": "bdd",
+    "dominance_gap": 4.399999999999999
+  },
+  {
+    "n": 96,
+    "sigma": 0.5,
+    "alpha": 16.0,
+    "q": 99,
+    "hardness": 38.9,
+    "family": "bdd",
+    "dominance_gap": 4.399999999999999
+  },
+  {
+    "n": 96,
+    "sigma": 0.75,
+    "alpha": 8.0,
+    "q": 99,
+    "hardness": 44.1,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 96,
+    "sigma": 0.75,
+    "alpha": 9.0,
+    "q": 99,
+    "hardness": 44.1,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 96,
+    "sigma": 0.75,
+    "alpha": 10.0,
+    "q": 99,
+    "hardness": 44.1,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 96,
+    "sigma": 0.75,
+    "alpha": 11.0,
+    "q": 99,
+    "hardness": 44.1,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 96,
+    "sigma": 0.75,
+    "alpha": 12.0,
+    "q": 99,
+    "hardness": 44.1,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 96,
+    "sigma": 0.75,
+    "alpha": 13.0,
+    "q": 99,
+    "hardness": 44.1,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 96,
+    "sigma": 0.75,
+    "alpha": 14.0,
+    "q": 103,
+    "hardness": 43.8,
+    "family": "bdd",
+    "dominance_gap": 5.700000000000003
+  },
+  {
+    "n": 96,
+    "sigma": 0.75,
+    "alpha": 15.0,
+    "q": 111,
+    "hardness": 43.2,
+    "family": "bdd",
+    "dominance_gap": 5.5
+  },
+  {
+    "n": 96,
+    "sigma": 0.75,
+    "alpha": 16.0,
+    "q": 119,
+    "hardness": 42.6,
+    "family": "bdd",
+    "dominance_gap": 5.5
+  },
+  {
+    "n": 96,
+    "sigma": 1.0,
+    "alpha": 8.0,
+    "q": 99,
+    "hardness": 49.1,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 96,
+    "sigma": 1.0,
+    "alpha": 9.0,
+    "q": 99,
+    "hardness": 49.1,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 96,
+    "sigma": 1.0,
+    "alpha": 10.0,
+    "q": 99,
+    "hardness": 49.1,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 96,
+    "sigma": 1.0,
+    "alpha": 11.0,
+    "q": 109,
+    "hardness": 48.3,
+    "family": "bdd",
+    "dominance_gap": 5.700000000000003
+  },
+  {
+    "n": 96,
+    "sigma": 1.0,
+    "alpha": 12.0,
+    "q": 119,
+    "hardness": 47.3,
+    "family": "bdd",
+    "dominance_gap": 5.800000000000004
+  },
+  {
+    "n": 96,
+    "sigma": 1.0,
+    "alpha": 13.0,
+    "q": 127,
+    "hardness": 46.8,
+    "family": "bdd",
+    "dominance_gap": 5.700000000000003
+  },
+  {
+    "n": 96,
+    "sigma": 1.0,
+    "alpha": 14.0,
+    "q": 137,
+    "hardness": 46.2,
+    "family": "bdd",
+    "dominance_gap": 5.399999999999999
+  },
+  {
+    "n": 96,
+    "sigma": 1.0,
+    "alpha": 15.0,
+    "q": 147,
+    "hardness": 45.5,
+    "family": "bdd",
+    "dominance_gap": 5.5
+  },
+  {
+    "n": 96,
+    "sigma": 1.0,
+    "alpha": 16.0,
+    "q": 157,
+    "hardness": 44.9,
+    "family": "bdd",
+    "dominance_gap": 5.5
+  },
+  {
+    "n": 96,
+    "sigma": 1.25,
+    "alpha": 8.0,
+    "q": 99,
+    "hardness": 54.1,
+    "family": "bdd",
+    "dominance_gap": 5.5
+  },
+  {
+    "n": 96,
+    "sigma": 1.25,
+    "alpha": 9.0,
+    "q": 111,
+    "hardness": 52.7,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 96,
+    "sigma": 1.25,
+    "alpha": 10.0,
+    "q": 123,
+    "hardness": 51.1,
+    "family": "bdd",
+    "dominance_gap": 5.899999999999999
+  },
+  {
+    "n": 96,
+    "sigma": 1.25,
+    "alpha": 11.0,
+    "q": 135,
+    "hardness": 50.1,
+    "family": "bdd",
+    "dominance_gap": 5.899999999999999
+  },
+  {
+    "n": 96,
+    "sigma": 1.25,
+    "alpha": 12.0,
+    "q": 147,
+    "hardness": 49.3,
+    "family": "bdd",
+    "dominance_gap": 5.800000000000004
+  },
+  {
+    "n": 96,
+    "sigma": 1.25,
+    "alpha": 13.0,
+    "q": 159,
+    "hardness": 48.5,
+    "family": "bdd",
+    "dominance_gap": 5.799999999999997
+  },
+  {
+    "n": 96,
+    "sigma": 1.25,
+    "alpha": 14.0,
+    "q": 171,
+    "hardness": 47.9,
+    "family": "bdd",
+    "dominance_gap": 5.5
+  },
+  {
+    "n": 96,
+    "sigma": 1.25,
+    "alpha": 15.0,
+    "q": 185,
+    "hardness": 47.2,
+    "family": "bdd",
+    "dominance_gap": 5.399999999999999
+  },
+  {
+    "n": 96,
+    "sigma": 1.25,
+    "alpha": 16.0,
+    "q": 197,
+    "hardness": 46.6,
+    "family": "bdd",
+    "dominance_gap": 5.399999999999999
+  },
+  {
+    "n": 96,
+    "sigma": 1.5,
+    "alpha": 8.0,
+    "q": 119,
+    "hardness": 55.0,
+    "family": "bdd",
+    "dominance_gap": 6.399999999999999
+  },
+  {
+    "n": 96,
+    "sigma": 1.5,
+    "alpha": 9.0,
+    "q": 133,
+    "hardness": 53.7,
+    "family": "bdd",
+    "dominance_gap": 6.199999999999996
+  },
+  {
+    "n": 96,
+    "sigma": 1.5,
+    "alpha": 10.0,
+    "q": 147,
+    "hardness": 52.6,
+    "family": "bdd",
+    "dominance_gap": 6.100000000000001
+  },
+  {
+    "n": 96,
+    "sigma": 1.5,
+    "alpha": 11.0,
+    "q": 163,
+    "hardness": 51.6,
+    "family": "bdd",
+    "dominance_gap": 5.899999999999999
+  },
+  {
+    "n": 96,
+    "sigma": 1.5,
+    "alpha": 12.0,
+    "q": 177,
+    "hardness": 50.7,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 96,
+    "sigma": 1.5,
+    "alpha": 13.0,
+    "q": 191,
+    "hardness": 49.9,
+    "family": "bdd",
+    "dominance_gap": 5.700000000000003
+  },
+  {
+    "n": 96,
+    "sigma": 1.5,
+    "alpha": 14.0,
+    "q": 207,
+    "hardness": 49.2,
+    "family": "bdd",
+    "dominance_gap": 5.5
+  },
+  {
+    "n": 96,
+    "sigma": 1.5,
+    "alpha": 15.0,
+    "q": 221,
+    "hardness": 48.5,
+    "family": "bdd",
+    "dominance_gap": 5.600000000000001
+  },
+  {
+    "n": 96,
+    "sigma": 1.5,
+    "alpha": 16.0,
+    "q": 235,
+    "hardness": 48.0,
+    "family": "bdd",
+    "dominance_gap": 5.5
+  },
+  {
+    "n": 96,
+    "sigma": 2.0,
+    "alpha": 8.0,
+    "q": 157,
+    "hardness": 59.3,
+    "family": "bdd",
+    "dominance_gap": 5.0
+  },
+  {
+    "n": 96,
+    "sigma": 2.0,
+    "alpha": 9.0,
+    "q": 177,
+    "hardness": 57.6,
+    "family": "bdd",
+    "dominance_gap": 5.0
+  },
+  {
+    "n": 96,
+    "sigma": 2.0,
+    "alpha": 10.0,
+    "q": 197,
+    "hardness": 55.1,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 96,
+    "sigma": 2.0,
+    "alpha": 11.0,
+    "q": 217,
+    "hardness": 53.9,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 96,
+    "sigma": 2.0,
+    "alpha": 12.0,
+    "q": 235,
+    "hardness": 53.1,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 96,
+    "sigma": 2.0,
+    "alpha": 13.0,
+    "q": 255,
+    "hardness": 52.2,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 96,
+    "sigma": 2.0,
+    "alpha": 14.0,
+    "q": 275,
+    "hardness": 51.4,
+    "family": "bdd",
+    "dominance_gap": 5.600000000000001
+  },
+  {
+    "n": 96,
+    "sigma": 2.0,
+    "alpha": 15.0,
+    "q": 295,
+    "hardness": 50.7,
+    "family": "bdd",
+    "dominance_gap": 5.5
+  },
+  {
+    "n": 96,
+    "sigma": 2.0,
+    "alpha": 16.0,
+    "q": 315,
+    "hardness": 50.0,
+    "family": "bdd",
+    "dominance_gap": 5.600000000000001
+  },
+  {
+    "n": 96,
+    "sigma": 2.5,
+    "alpha": 8.0,
+    "q": 197,
+    "hardness": 61.4,
+    "family": "bdd",
+    "dominance_gap": 5.000000000000007
+  },
+  {
+    "n": 96,
+    "sigma": 2.5,
+    "alpha": 9.0,
+    "q": 221,
+    "hardness": 58.3,
+    "family": "bdd",
+    "dominance_gap": 6.400000000000006
+  },
+  {
+    "n": 96,
+    "sigma": 2.5,
+    "alpha": 10.0,
+    "q": 245,
+    "hardness": 57.0,
+    "family": "bdd",
+    "dominance_gap": 6.200000000000003
+  },
+  {
+    "n": 96,
+    "sigma": 2.5,
+    "alpha": 11.0,
+    "q": 269,
+    "hardness": 55.9,
+    "family": "bdd",
+    "dominance_gap": 6.100000000000001
+  },
+  {
+    "n": 96,
+    "sigma": 2.5,
+    "alpha": 12.0,
+    "q": 295,
+    "hardness": 54.8,
+    "family": "bdd",
+    "dominance_gap": 5.800000000000004
+  },
+  {
+    "n": 96,
+    "sigma": 2.5,
+    "alpha": 13.0,
+    "q": 319,
+    "hardness": 53.9,
+    "family": "bdd",
+    "dominance_gap": 5.800000000000004
+  },
+  {
+    "n": 96,
+    "sigma": 2.5,
+    "alpha": 14.0,
+    "q": 343,
+    "hardness": 53.1,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 96,
+    "sigma": 2.5,
+    "alpha": 15.0,
+    "q": 367,
+    "hardness": 52.4,
+    "family": "bdd",
+    "dominance_gap": 5.600000000000001
+  },
+  {
+    "n": 96,
+    "sigma": 2.5,
+    "alpha": 16.0,
+    "q": 393,
+    "hardness": 51.6,
+    "family": "bdd",
+    "dominance_gap": 5.5
+  },
+  {
+    "n": 96,
+    "sigma": 3.0,
+    "alpha": 8.0,
+    "q": 235,
+    "hardness": 61.6,
+    "family": "bdd",
+    "dominance_gap": 6.600000000000001
+  },
+  {
+    "n": 96,
+    "sigma": 3.0,
+    "alpha": 9.0,
+    "q": 265,
+    "hardness": 61.7,
+    "family": "bdd",
+    "dominance_gap": 4.799999999999997
+  },
+  {
+    "n": 96,
+    "sigma": 3.0,
+    "alpha": 10.0,
+    "q": 295,
+    "hardness": 58.5,
+    "family": "bdd",
+    "dominance_gap": 6.200000000000003
+  },
+  {
+    "n": 96,
+    "sigma": 3.0,
+    "alpha": 11.0,
+    "q": 323,
+    "hardness": 57.4,
+    "family": "bdd",
+    "dominance_gap": 6.100000000000001
+  },
+  {
+    "n": 96,
+    "sigma": 3.0,
+    "alpha": 12.0,
+    "q": 353,
+    "hardness": 56.3,
+    "family": "bdd",
+    "dominance_gap": 6.100000000000001
+  },
+  {
+    "n": 96,
+    "sigma": 3.0,
+    "alpha": 13.0,
+    "q": 383,
+    "hardness": 55.3,
+    "family": "bdd",
+    "dominance_gap": 5.900000000000006
+  },
+  {
+    "n": 96,
+    "sigma": 3.0,
+    "alpha": 14.0,
+    "q": 413,
+    "hardness": 54.4,
+    "family": "bdd",
+    "dominance_gap": 5.700000000000003
+  },
+  {
+    "n": 96,
+    "sigma": 3.0,
+    "alpha": 15.0,
+    "q": 441,
+    "hardness": 53.7,
+    "family": "bdd",
+    "dominance_gap": 5.699999999999996
+  },
+  {
+    "n": 96,
+    "sigma": 3.0,
+    "alpha": 16.0,
+    "q": 471,
+    "hardness": 53.0,
+    "family": "bdd",
+    "dominance_gap": 5.600000000000001
+  },
+  {
+    "n": 96,
+    "sigma": 4.0,
+    "alpha": 8.0,
+    "q": 315,
+    "hardness": 66.6,
+    "family": "bdd",
+    "dominance_gap": 4.300000000000011
+  },
+  {
+    "n": 96,
+    "sigma": 4.0,
+    "alpha": 9.0,
+    "q": 353,
+    "hardness": 62.4,
+    "family": "bdd",
+    "dominance_gap": 6.699999999999996
+  },
+  {
+    "n": 96,
+    "sigma": 4.0,
+    "alpha": 10.0,
+    "q": 393,
+    "hardness": 61.0,
+    "family": "bdd",
+    "dominance_gap": 6.400000000000006
+  },
+  {
+    "n": 96,
+    "sigma": 4.0,
+    "alpha": 11.0,
+    "q": 431,
+    "hardness": 59.7,
+    "family": "bdd",
+    "dominance_gap": 6.200000000000003
+  },
+  {
+    "n": 96,
+    "sigma": 4.0,
+    "alpha": 12.0,
+    "q": 471,
+    "hardness": 58.5,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 96,
+    "sigma": 4.0,
+    "alpha": 13.0,
+    "q": 509,
+    "hardness": 57.6,
+    "family": "bdd",
+    "dominance_gap": 6.0
+  },
+  {
+    "n": 96,
+    "sigma": 4.0,
+    "alpha": 14.0,
+    "q": 549,
+    "hardness": 56.6,
+    "family": "bdd",
+    "dominance_gap": 5.799999999999997
+  },
+  {
+    "n": 96,
+    "sigma": 4.0,
+    "alpha": 15.0,
+    "q": 589,
+    "hardness": 55.7,
+    "family": "bdd",
+    "dominance_gap": 5.799999999999997
+  },
+  {
+    "n": 96,
+    "sigma": 4.0,
+    "alpha": 16.0,
+    "q": 627,
+    "hardness": 55.0,
+    "family": "bdd",
+    "dominance_gap": 5.700000000000003
+  }
+]

@@ -1,6 +1,6 @@
 """
 Experiment 11: Fine Boundary Scan at n=32
-==========================================
+===================
 Run:  sage -python experiment11.py
 
 Why n=32:
@@ -18,8 +18,8 @@ New metric: roughness_norm = roughness / mean_roughness_this_run
 
 Hypothesis:
     Roughness peaks at the exact sigma where USVP and BDD have equal cost.
-    If it does: this is the publishable finding.
-    If it doesn't: the reaction coordinate needs rethinking (discuss in paper).
+    if it does: this is the publishable finding.
+    if it doesn't: the reaction coordinate needs rethinking (discuss in paper).
 
 Also runs the same scan at n=64 and n=96 for comparison.
 """
@@ -68,9 +68,7 @@ except Exception:
 
 JOBS = max(1, min(16, os.cpu_count() or 1))
 
-# ═══════════════════════════════════════════════════════════════════════════
 # ESTIMATOR
-# ═══════════════════════════════════════════════════════════════════════════
 
 def parse_rop(text):
     m = re.search(r"rop:\s*≈?\s*2\^([0-9]+(?:\.[0-9]+)?)", text)
@@ -119,9 +117,7 @@ def run_est(n, q, sigma, jobs=JOBS):
     return {"best_family":best_f,"best_bits":best_b,"best_beta":best_beta,
             "dominance_gap":dgap,"fam_best":fam_best}
 
-# ═══════════════════════════════════════════════════════════════════════════
 # LWE + GPU SAMPLER
-# ═══════════════════════════════════════════════════════════════════════════
 
 @dataclass
 class LWE_:
@@ -202,7 +198,6 @@ def feats(bc,F,xi_range):
     Fv=F[v]-np.nanmin(F[v])
     rho=np.exp(-Fv); p=rho/rho.sum()
     bar_raw=float(np.nanmax(Fv))
-    # FIX 1: normalise barrier by xi_range
     bar_norm=bar_raw/max(xi_range,1.)
     diff=np.diff(Fv)
     rough=float(np.std(diff)/(bar_raw+1e-9)) if len(diff)>1 else 0.
@@ -238,9 +233,7 @@ def run_point(n,q,sigma,seed,W=16,nb=400,np_=1200,nc=6,k=0.006,T=1.,jobs=JOBS):
                 xi_rng=xi_rng,k_sc=k_sc,
                 bc=bc.tolist(),F=F.tolist(),feats=ft,sec=sec,seed=seed)
 
-# ═══════════════════════════════════════════════════════════════════════════
 # MAIN SWEEP: fine sigma scan at multiple n values
-# ═══════════════════════════════════════════════════════════════════════════
 
 # sigmas chosen to bracket the USVP/BDD crossover at n=32
 # (crossover was between sigma=1.0 and sigma=2.0 in Exp 10)
@@ -333,7 +326,6 @@ def main():
             dgap=agg["sec"]["dominance_gap"]
             rough=agg["feats"]["roughness"]
             bar=agg["feats"]["barrier_norm"]
-            # FIX 2: tighter boundary threshold
             near="NEAR" if dgap is not None and dgap < 1.5 else ""
             print(f"{n:>4}  {sigma:>6.2f}  {q:>5}  {f:>12}  "
                   f"{'n/a' if bits is None else f'2^{bits:.1f}':>8}  "
@@ -344,7 +336,7 @@ def main():
 
     print(f"\n{len(all_results)} configs in {(time.time()-t0)/60:.1f} min")
 
-    # ── Per-n analysis ─────────────────────────────────────────────────────
+    #  Per-n analysis ─
     print("\n" + "="*70)
     print("ANALYSIS BY N")
     print("="*70)
@@ -367,7 +359,7 @@ def main():
         if transitions:
             for tr in transitions:
                 s1,s2,f1,f2=tr
-                print(f"    Family transition: {f1} → {f2} between sigma={s1:.2f} and sigma={s2:.2f}")
+                print(f"    Family transition: {f1} >>>> {f2} between sigma={s1:.2f} and sigma={s2:.2f}")
                 # roughness at transition
                 mask_near=np.abs(sigmas_n-0.5*(s1+s2)) < 0.8
                 rough_near=roughness[mask_near & np.isfinite(roughness)]
@@ -388,7 +380,7 @@ def main():
             corr=float(np.corrcoef(dgaps[valid], roughness[valid])[0,1])
             print(f"    corr(dom_gap, roughness) = {corr:.4f}")
 
-    # ── KEY TEST: roughness at transition vs away ──────────────────────────
+    #  KEY TEST: roughness at transition vs away 
     print("\n" + "="*70)
     print("KEY TEST: Is roughness highest at the USVP/BDD boundary?")
     print("="*70)
@@ -430,10 +422,10 @@ def main():
                 print("  ~ Marginal signal (p<0.15). More data needed.")
             else:
                 print("  Not significant. Roughness does not peak at boundary.")
-                print("  → Conclusion: residual-norm xi does not encode family info.")
-                print("  → Next step: use dual-lattice projection as 2nd coordinate.")
+                print("  >>>> Conclusion: residual-norm xi does not encode family info.")
+                print("  >>>> Next step: use dual-lattice projection as 2nd coordinate.")
 
-    # ── PLOTS ──────────────────────────────────────────────────────────────
+    #  PLOTS 
     fig=plt.figure(figsize=(20,14)); fig.patch.set_facecolor(BG)
     gs=gridspec.GridSpec(2,3,figure=fig,hspace=0.45,wspace=0.35)
 
@@ -465,7 +457,7 @@ def main():
                 mid=0.5*(sigs[i]+sigs[i+1])
                 ax0.axvline(mid,color=col,lw=2,linestyle="--",alpha=0.7)
                 ax0.text(mid,max(r for r in rugs if np.isfinite(r))*1.02,
-                         f"n={n}\n{fams[i]}→{fams[i+1]}",
+                         f"n={n}\n{fams[i]}>>>>{fams[i+1]}",
                          ha="center",va="bottom",color=col,fontsize=6)
     sty(ax0,"MAIN PLOT: Roughness vs sigma (per n)\n"
              "dashed lines = attack-family transition points",
@@ -528,7 +520,7 @@ def main():
 
     # 5. Summary
     ax4=fig.add_subplot(gs[1,2]); ax4.set_facecolor(PBG); ax4.axis("off")
-    lines=["EXPERIMENT 11 SUMMARY",""]
+    lines=["EXPERIMENT 11 summmarryyyy",""]
     for n in NS_SCAN:
         rows=[r for r in all_results if r["n"]==n]
         fams_n=[r["sec"]["best_family"] for r in rows]
@@ -537,7 +529,7 @@ def main():
         lines.append(f"  n={n}:")
         if trs:
             for s1,s2,f1,f2 in trs:
-                lines.append(f"    {f1}→{f2} between σ={s1:.2f} and σ={s2:.2f}")
+                lines.append(f"    {f1}>>>>{f2} between σ={s1:.2f} and σ={s2:.2f}")
         else:
             lines.append(f"    No transition (all {fams_n[0] if fams_n else '?'})")
 
@@ -572,7 +564,7 @@ def main():
                  "Does roughness peak at the attack-family transition?",
                  color="white",fontsize=12,fontweight="bold",y=1.005)
     plt.savefig("exp11_results.png",dpi=150,bbox_inches="tight",facecolor=BG)
-    print("\nPlot → exp11_results.png")
+    print("\nPlot >>>> exp11_results.png")
     plt.close()
 
     # summary file
@@ -607,7 +599,7 @@ def main():
             verdict=("SIGNIFICANT" if p<0.05 else "marginal" if p<0.15 else "not significant")
             f.write(f"  Verdict: {verdict}\n")
         f.write("="*70+"\n")
-    print("Summary → exp11_summary.txt")
+    print("Summary >>>> exp11_summary.txt")
     print(f"\nTotal: {(time.time()-t0)/60:.1f} min")
 
 if __name__=="__main__":

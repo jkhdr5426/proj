@@ -1,6 +1,6 @@
 """
 Experiment 14: Bimodal Roughness Investigation
-===============================================
+=
 Run with:  sage -python experiment14.py
            sage -python experiment14.py --quick
 
@@ -13,18 +13,18 @@ FINDING FROM EXPERIMENT 13:
 
 WHY THIS MATTERS:
   BKZ gives the SAME gate count to every instance with fixed (n,q,σ).
-  If umbrella roughness varies significantly across instances, it is
+  if umbrella roughness varies significantly across instances, it is
   detecting structural weakness that BKZ cannot see.
 
   Known cryptographic fact: some LWE instances are structurally weaker
   due to special spectral properties of their A matrix:
-    - Near-singular A → more structured error space
-    - Large condition number → numerical instability in attacks
-    - Small spectral gap → BKZ lattice reduction is more efficient
+    - Near-singular A >>>> more structured error space
+    - Large condition number >>>> numerical instability in attacks
+    - Small spectral gap >>>> BKZ lattice reduction is more efficient
 
-  If low-roughness instances correlate with special spectral properties:
-  → Umbrella sampling is a per-instance weakness detector
-  → This is a novel, practically relevant contribution
+  if low-roughness instances correlate with special spectral properties:
+  >>>> Umbrella sampling is a per-instance weakness detector
+  >>>> This is a novel, practically relevant contribution
 
 EXPERIMENT DESIGN:
   Part A: Large-scale confirmation (100 seeds, n=64)
@@ -41,7 +41,7 @@ EXPERIMENT DESIGN:
         entropy_sv:    entropy of normalized singular values
     - Correlate each with roughness
     - Key test: corr(roughness, cond_number)
-      If significant → umbrella detects conditioning-based weakness
+      if significant >>>> umbrella detects conditioning-based weakness
 
   Part C: Comparison across parameter classes
     - Same analysis for n=96 (hard, CV~0.083) to confirm
@@ -68,7 +68,6 @@ warnings.filterwarnings("ignore")
 DEFAULT_REPO = os.path.expanduser("~/lattice-estimator")
 BG = "#0f1117"; PBG = "#1a1d27"
 
-# ── GPU ──────────────────────────────────────────────────────────────────────
 try:
     import torch
     DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -80,9 +79,7 @@ except Exception:
 JOBS = max(1, min(16, os.cpu_count() or 1))
 XI_REF = 500.
 
-# ═══════════════════════════════════════════════════════════════════════════════
 # LWE + SAMPLER
-# ═══════════════════════════════════════════════════════════════════════════════
 
 def gen(n, m, q, sigma, seed):
     rng = np.random.default_rng(seed)
@@ -205,9 +202,7 @@ def run_umbrella(A, b, s, n, m, q, sigma, W=14, n_burn=300,
         "xi_true": xi_t, "xi_rand": xi_r,
     }
 
-# ═══════════════════════════════════════════════════════════════════════════════
 # SPECTRAL FEATURES OF A
-# ═══════════════════════════════════════════════════════════════════════════════
 
 def spectral_features(A: np.ndarray, q: int) -> dict:
     """
@@ -252,10 +247,8 @@ def spectral_features(A: np.ndarray, q: int) -> dict:
         "fro_norm":      fro_norm,
     }
 
-# ═══════════════════════════════════════════════════════════════════════════════
 # HARTIGAN'S DIP TEST FOR UNIMODALITY
 # (simplified version: compare to unimodal null hypothesis)
-# ═══════════════════════════════════════════════════════════════════════════════
 
 def bimodality_coefficient(x: np.ndarray) -> float:
     """
@@ -297,9 +290,7 @@ def valley_depth(x: np.ndarray, n_bins: int = 15) -> float:
     peak_max   = counts_smooth[top2].min()  # smaller of the two peaks
     return float((peak_max - valley_min) / (peak_max + 1e-9))
 
-# ═══════════════════════════════════════════════════════════════════════════════
 # MAIN EXPERIMENT
-# ═══════════════════════════════════════════════════════════════════════════════
 
 def run_config_batch(n, q, sigma, n_seeds, kw, label=""):
     """Run n_seeds independent instances, collect roughness + spectral features."""
@@ -404,9 +395,6 @@ def analyze_batch(rows, label=""):
         "corr_results": corr_results,
     }
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# PLOTTING
-# ═══════════════════════════════════════════════════════════════════════════════
 
 def plot_all(analyses: dict, save="exp14_results.png"):
     fig = plt.figure(figsize=(22, 18))
@@ -527,7 +515,7 @@ def plot_all(analyses: dict, save="exp14_results.png"):
     # Summary text
     ax7 = fig.add_subplot(gs[2, 2])
     ax7.set_facecolor(PBG); ax7.axis("off")
-    lines = ["EXPERIMENT 14 SUMMARY", ""]
+    lines = ["EXPERIMENT 14 summmarryyyy", ""]
     for label, ana in analyses.items():
         rugs = np.array(ana["roughness"])
         lines += [
@@ -544,10 +532,10 @@ def plot_all(analyses: dict, save="exp14_results.png"):
         sig = " ***" if res["p"] < 0.05 else ""
         lines.append(f"    {feat[:12]:>12}: r={res['r']:+.3f} p={res['p']:.3f}{sig}")
     lines += ["", "  INTERPRETATION:",
-              "  If BC > 0.555: bimodal confirmed",
-              "  If corr significant: spectral",
+              "  if BC > 0.555: bimodal confirmed",
+              "  if corr significant: spectral",
               "  features predict roughness",
-              "  → BKZ-blind weakness detected"]
+              "  >>>> BKZ-blind weakness detected"]
     ax7.text(0.04, 0.97, "\n".join(lines),
              transform=ax7.transAxes, va="top", ha="left",
              fontsize=7, color="white", fontfamily="monospace",
@@ -558,7 +546,7 @@ def plot_all(analyses: dict, save="exp14_results.png"):
                  "Do spectral properties of A predict per-instance roughness?",
                  color="white", fontsize=12, fontweight="bold", y=1.005)
     plt.savefig(save, dpi=150, bbox_inches="tight", facecolor=BG)
-    print(f"\nPlot → {save}")
+    print(f"\nPlot >>>> {save}")
     plt.close()
 
 def write_summary(analyses, path="exp14_summary.txt"):
@@ -584,32 +572,29 @@ def write_summary(analyses, path="exp14_summary.txt"):
         f.write(sep+"\nINTERPRETATION\n"+sep+"\n")
         f.write("""
 CASE 1 — BC > 0.555 AND significant spectral correlation:
-  → Bimodality is real and explained by A matrix structure.
-  → Umbrella sampling detects per-instance structural weakness.
-  → BKZ gives the same gate count to all instances; umbrella
+  >>>> Bimodality is real and explained by A matrix structure.
+  >>>> Umbrella sampling detects per-instance structural weakness.
+  >>>> BKZ gives the same gate count to all instances; umbrella
     discriminates between structurally strong and weak A matrices.
-  → PUBLISHABLE FINDING: "umbrella roughness as a per-instance
+  >>>> PUBLISHABLE FINDING: "umbrella roughness as a per-instance
     structural security supplement to BKZ"
 
 CASE 2 — BC > 0.555 BUT no spectral correlation:
-  → Bimodality is real but its cause is unknown.
-  → Could be WHAM sampling noise or a feature of the reaction
+  >>>> Bimodality is real but its cause is unknown.
+  >>>> Could be WHAM sampling noise or a feature of the reaction
     coordinate rather than the lattice.
-  → Inconclusive: need alternative explanations.
+  >>>> Inconclusive: need alternative explanations.
 
 CASE 3 — BC < 0.555:
-  → No confirmed bimodality. The Exp 13 CV=0.18 was not enough
+  >>>> No confirmed bimodality. The Exp 13 CV=0.18 was not enough
     data to see a clear bimodal structure.
-  → Landscape is parameter-determined, not instance-specific.
-  → Useful negative: confirms BKZ is complete for within-class
+  >>>> Landscape is parameter-determined, not instance-specific.
+  >>>> Useful negative: confirms BKZ is complete for within-class
     hardness characterization.
 """)
         f.write(sep+"\n")
-    print(f"Summary → {path}")
+    print(f"Summary >>>> {path}")
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# MAIN
-# ═══════════════════════════════════════════════════════════════════════════════
 
 if __name__ == "__main__":
     import argparse
@@ -662,16 +647,16 @@ if __name__ == "__main__":
           f"({'BIMODAL CONFIRMED' if bc>0.555 else 'not bimodal'})")
     if sig_features:
         print(f"  Significant spectral correlations: {sig_features}")
-        print(f"  → Roughness is predicted by A matrix structure!")
-        print(f"  → Umbrella sampling detects instance-level weakness BKZ misses.")
+        print(f"  >>>> Roughness is predicted by A matrix structure!")
+        print(f"  >>>> Umbrella sampling detects instance-level weakness BKZ misses.")
     else:
         print(f"  No significant spectral correlations found.")
         if bc > 0.555:
-            print(f"  → Bimodal but cause unknown. May be WHAM sampling noise.")
+            print(f"  >>>> Bimodal but cause unknown. May be WHAM sampling noise.")
         else:
-            print(f"  → Landscape is parameter-determined. BKZ is complete.")
+            print(f"  >>>> Landscape is parameter-determined. BKZ is complete.")
 
-    print("\nGenerating plots...")
+    print("\nplots generating.....")
     plot_all(analyses)
     write_summary(analyses)
 

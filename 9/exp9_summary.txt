@@ -1,6 +1,4 @@
-================================================================================
 EXPERIMENT 9 — UMBRELLA FREE-ENERGY VS HARDNESS
-================================================================================
 
 GOALS
 - Compare free-energy geometry from umbrella sampling against lattice-estimator hardness.

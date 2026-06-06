@@ -1,6 +1,4 @@
-================================================================================
 EXPERIMENT 8 — UMBRELLA TEXTURE VS REAL LATTICE-ESTIMATOR
-================================================================================
 
 GOALS
 - Replace old BKZ proxy bits with real lattice-estimator outputs.
