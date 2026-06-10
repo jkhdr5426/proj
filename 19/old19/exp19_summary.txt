@@ -1,0 +1,70 @@
+========================================================================
+EXPERIMENT 19 — COMPREHENSIVE SP CHARACTERIZATION
+========================================================================
+
+PART A: ALPHA COLLAPSE TEST
+----------------------------------------
+  alpha=6: warn_d range=[0.8373,0.8685]  CV=0.0150
+  alpha=9: warn_d range=[0.8858,0.9118]  CV=0.0118
+  alpha=12: warn_d range=[0.9160,0.9341]  CV=0.0080
+
+  r(alpha, warn_d)=0.932  r(hardness, warn_d)=0.086  r(n, warn_d)=0.328
+  Primary driver of SP: ALPHA
+
+PART B: ATTACK-FAMILY SENSITIVITY
+----------------------------------------
+  sigma=0.50  family=         bdd  warn_d=0.9514±0.0001  H_surv=0.5920  
+  sigma=0.90  family=         bdd  warn_d=0.9429±0.0006  H_surv=0.5666  
+  sigma=1.10  family=         bdd  warn_d=0.9440±0.0002  H_surv=0.5466  
+  sigma=2.00  family=         bdd  warn_d=0.9495±0.0001  H_surv=0.4925  
+
+PART C: BP CONVERGENCE QUALITY
+----------------------------------------
+        easy_low_sigma: agree=0.000  restart_H=0.9464  unique_maps=1.000  marg_var=0.00284
+       easy_high_sigma: agree=0.000  restart_H=0.9464  unique_maps=1.000  marg_var=0.00285
+                medium: agree=0.000  restart_H=0.9464  unique_maps=1.000  marg_var=0.00287
+
+  Max unique_maps fraction: 1.000
+  → STRONG RSB signal: many distinct BP fixed points
+
+PART D: DECIMATION RECOVERY
+----------------------------------------
+  n=16 sigma=0.5: dec_acc=0.000±0.000  map_acc=0.000  warn_d=0.9573
+  n=16 sigma=1.0: dec_acc=0.000±0.000  map_acc=0.000  warn_d=0.9277
+  n=20 sigma=0.5: dec_acc=0.000±0.000  map_acc=0.000  warn_d=0.9604
+  n=20 sigma=1.0: dec_acc=0.000±0.000  map_acc=0.000  warn_d=0.9327
+
+  r(warning_density, decimation_accuracy): n/a
+
+PART E: STABILITY (CV ACROSS SEEDS)
+----------------------------------------
+           warning_density: max_CV=0.0011 → STABLE
+       survey_entropy_norm: max_CV=0.0046 → STABLE
+             overlap_proxy: max_CV=0.3201 → NOISY
+          complexity_proxy: max_CV=0.0040 → STABLE
+
+========================================================================
+PAPER CLAIMS SUPPORTED BY THIS EXPERIMENT
+========================================================================
+
+1. WHAT SP IS TRACKING (Part A):
+   Primary driver of SP warning_density is alpha = q/(sigma*sqrt(n)), not hardness.
+   This means SP captures the signal-to-noise geometry of LWE.
+
+2. ATTACK-FAMILY DETECTION (Part B):
+   If t-test is significant: SP detects BDD/USVP/Dual transitions — novel finding.
+   If not significant: SP is family-blind, consistent with ξ_primal result from
+   umbrella sampling (Exp 11).
+
+3. RSB STRUCTURE (Part C):
+   If unique_maps > 0.5: LWE exhibits 1RSB-like behavior in the hard regime.
+   Multiple BP fixed points = clustered solution space = SP's theoretical sweet spot.
+
+4. ALGORITHMIC VALUE (Part D):
+   If decimation_accuracy > chance AND correlates with warning_density:
+   SP-guided decimation adds value for small-n LWE recovery.
+
+5. METRIC RELIABILITY (Part E):
+   Stable metrics (CV < 0.10) can be used in paper claims without caveats.
+   Noisy metrics need either more seeds or should be dropped from claims.
+========================================================================
